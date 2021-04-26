@@ -1,3 +1,9 @@
 .App {
   background: var(--background-color);
 }
+
+.app-grid {
+  display: grid;
+  grid-template-rows: [header] 160px [content] auto [footer] 80px;
+  height: 100vh;
+}

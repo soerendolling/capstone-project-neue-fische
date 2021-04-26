@@ -1,3 +1,59 @@
-h1 {
-  font-family: Pegasus;
+header {
+  grid-row: header;
+  position: relative;
+}
+
+main {
+  grid-row: content;
+  position: relative;
+}
+
+footer {
+  grid-row: footer;
+}
+
+.signIn-headline {
+  position: absolute;
+  top: -60px;
+  z-index: 1;
+  font-size: 105pt;
+  font-family: "Pegasus";
+  color: var(--dark-color);
+}
+
+.signIn-image {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  height: 350px;
+  border-radius: 4px;
+  opacity: 0.8;
+  background-position: -1000px -600px;
+  background-image: url(../img/signInBackground.png);
+}
+
+.signIn-input {
+  display: block;
+  margin: 0 auto;
+  width: 270px;
+  height: 64px;
+  border: solid 2px transparent;
+  border-radius: 4px;
+  background: var(--background-color);
+  opacity: 0.5;
+  text-align: center;
+  font-size: 21px;
+  color: var(--dark-color);
+}
+
+.signIn-button {
+  display: block;
+  margin: 0 auto;
+  width: 144px;
+  height: 44px;
+  border: transparent;
+  border-radius: 4px;
+  background: var(--gold-color);
+  font-size: 25px;
+  color: var(--background-color);
 }
