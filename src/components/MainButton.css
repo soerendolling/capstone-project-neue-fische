@@ -1,0 +1,11 @@
+.mainButton {
+  display: block;
+  margin: 0 auto;
+  width: 40vw;
+  height: 7vh;
+  border: transparent;
+  border-radius: 4px;
+  background: var(--gold-color);
+  font-size: 25px;
+  color: var(--background-color);
+}

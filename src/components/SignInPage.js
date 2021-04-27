@@ -1,10 +1,11 @@
 import "./SignInPage.css";
 import { ReactComponent as SignInHeadline } from "../icons/name.svg";
+import MainButton from "./MainButton";
 
 export default function SignInPage() {
   return (
     <div className="app-grid">
-      <header className="header-content">
+      <header className="signIn-header">
         <SignInHeadline className="signIn-headline__svg" />
       </header>
       <main>
@@ -17,9 +18,7 @@ export default function SignInPage() {
         </form>
       </main>
       <footer>
-        <button className="signIn-button" type="submit">
-          sign in
-        </button>
+        <MainButton />
       </footer>
     </div>
   );
