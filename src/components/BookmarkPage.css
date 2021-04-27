@@ -11,6 +11,7 @@
   letter-spacing: 4px;
   font-family: var(--subheading-font);
   font-size: var(--subheading-size);
+  font-weight: 300;
   color: var(--subheading-color);
 }
 

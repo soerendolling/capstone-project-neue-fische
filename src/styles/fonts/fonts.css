@@ -1,5 +1,5 @@
 :root {
-  --main-font: Roboto;
+  --main-font: Roboto, sans-serif;
   --title-size: 105px;
   --title-spacing: 10px;
   --heading-font: Pegasus;
