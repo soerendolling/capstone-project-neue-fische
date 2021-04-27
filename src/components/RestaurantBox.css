@@ -1,0 +1,20 @@
+.restaurant-box {
+  display: flex;
+  width: 89vw;
+  height: 20vh;
+  border: solid 2px var(--bright-color);
+  border-radius: 4px;
+  font-family: Roboto;
+}
+
+.restaurant-box__image {
+  height: auto;
+  width: 35vw;
+  margin: 5px;
+  object-fit: cover;
+}
+
+.restaurant-box__description {
+  display: flex;
+  flex-direction: column;
+}

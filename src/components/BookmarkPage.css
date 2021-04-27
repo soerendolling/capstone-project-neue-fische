@@ -1,0 +1,31 @@
+.bookmark-heading {
+  font-family: var(--heading-font);
+  letter-spacing: 4px;
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.bookmark-subheading {
+  letter-spacing: 4px;
+  font-family: var(--subheading-font);
+  font-size: var(--subheading-size);
+  color: var(--subheading-color);
+}
+
+.bookmark-main {
+  display: flex;
+  justify-content: center;
+}
+.restaurant-box {
+  display: flex;
+  width: 89vw;
+  height: 20vh;
+  border: solid 2px var(--bright-color);
+  border-radius: 4px;
+  font-family: Roboto;
+}
+
+.restaurant-box__description {
+  display: flex;
+  flex-direction: column;
+}

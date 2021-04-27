@@ -6,6 +6,7 @@
   border: transparent;
   border-radius: 4px;
   background: var(--gold-color);
-  font-size: 25px;
-  color: var(--background-color);
+  font-size: var(--mainButton-size);
+  letter-spacing: var(--mainButton-spacing);
+  color: var(--mainButton-color);
 }

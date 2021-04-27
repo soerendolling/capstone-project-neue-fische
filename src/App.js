@@ -6,7 +6,7 @@ import BookmarkPage from "./components/BookmarkPage";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Switch>
           <Route exact path="/">
             <SignInPage />

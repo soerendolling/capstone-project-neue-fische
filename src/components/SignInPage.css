@@ -9,8 +9,8 @@
   z-index: 1;
   stroke: "#000";
   text-anchor: middle;
-  font-size: 105px;
-  letter-spacing: 10px;
+  font-size: var(--title-size);
+  letter-spacing: var(--title-spacing);
   fill: none;
 }
 
