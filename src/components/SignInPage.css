@@ -1,0 +1,52 @@
+.header-content {
+  position: relative;
+}
+
+.signIn-headline__svg {
+  position: absolute;
+  bottom: -80px;
+  left: 25px;
+  z-index: 1;
+  stroke: "#000";
+  text-anchor: middle;
+  font-size: 105px;
+  letter-spacing: 10px;
+  fill: none;
+}
+
+.signIn-image {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  height: 55vh;
+  border-radius: 4px;
+  opacity: 0.8;
+  background-position: -1000px -600px;
+  background-image: url(../img/signInBackground.png);
+}
+
+.signIn-input {
+  display: block;
+  margin: 0 auto;
+  width: 60vw;
+  height: 10vh;
+  border: solid 2px transparent;
+  border-radius: 4px;
+  background: var(--background-color);
+  opacity: 0.7;
+  text-align: center;
+  font-size: 21px;
+  color: var(--dark-color);
+}
+
+.signIn-button {
+  display: block;
+  margin: 0 auto;
+  width: 40vw;
+  height: 7vh;
+  border: transparent;
+  border-radius: 4px;
+  background: var(--gold-color);
+  font-size: 25px;
+  color: var(--background-color);
+}

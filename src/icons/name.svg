@@ -1,0 +1,10 @@
+ <svg
+          xmlns="http://www.w3.org/2000/svg"
+        
+        >
+          <g stroke="var(--dark-color)">
+            <text fontFamily="Pegasus" x="140" y="100">
+              name
+            </text>
+          </g>
+        </svg>
