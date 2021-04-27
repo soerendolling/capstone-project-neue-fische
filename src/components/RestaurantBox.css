@@ -5,6 +5,7 @@
   border: solid 2px var(--bright-color);
   border-radius: 4px;
   font-family: var(--main-font);
+  letter-spacing: 2px;
 }
 
 .restaurant-box__image {
