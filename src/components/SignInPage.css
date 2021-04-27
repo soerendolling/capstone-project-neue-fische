@@ -28,8 +28,8 @@
 .signIn-input {
   display: block;
   margin: 0 auto;
-  width: 270px;
-  height: 64px;
+  width: 60vw;
+  height: 10vh;
   border: solid 2px transparent;
   border-radius: 4px;
   background: var(--background-color);
@@ -42,8 +42,8 @@
 .signIn-button {
   display: block;
   margin: 0 auto;
-  width: 144px;
-  height: 44px;
+  width: 40vw;
+  height: 7vh;
   border: transparent;
   border-radius: 4px;
   background: var(--gold-color);
