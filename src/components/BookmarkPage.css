@@ -14,18 +14,12 @@
 
 .bookmark-main {
   display: flex;
-  justify-content: center;
-}
-.restaurant-box {
-  display: flex;
-  width: 89vw;
-  height: 20vh;
-  border: solid 2px var(--bright-color);
-  border-radius: 4px;
-  font-family: Roboto;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: scroll;
 }
 
-.restaurant-box__description {
+.bookmark-footer {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }

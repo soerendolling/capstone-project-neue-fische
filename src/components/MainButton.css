@@ -1,8 +1,9 @@
 .mainButton {
   display: block;
   margin: 0 auto;
-  width: 40vw;
-  height: 7vh;
+  padding: 0 15px;
+  width: auto;
+  height: 44px;
   border: transparent;
   border-radius: 4px;
   background: var(--gold-color);

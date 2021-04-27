@@ -18,7 +18,7 @@ export default function SignInPage() {
         </form>
       </main>
       <footer>
-        <MainButton />
+        <MainButton text="sign in" />
       </footer>
     </div>
   );
