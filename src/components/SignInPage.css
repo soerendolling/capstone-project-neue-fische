@@ -1,23 +1,13 @@
-header {
-  grid-row: header;
+.header-content {
   position: relative;
-}
-
-main {
-  grid-row: content;
-  position: relative;
-}
-
-footer {
-  grid-row: footer;
 }
 
 .signIn-headline {
   position: absolute;
-  top: -60px;
+  top: -3px;
   left: 5px;
   z-index: 1;
-  font-size: 105pt;
+  font-size: 105px;
   font-family: "Pegasus";
   color: var(--dark-color);
 }

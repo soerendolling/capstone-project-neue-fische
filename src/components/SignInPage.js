@@ -3,17 +3,17 @@ import "./SignInPage.css";
 export default function SignInPage() {
   return (
     <div className="app-grid">
-      <header>
+      <header className="header-content">
         <p className="signIn-headline">name</p>
       </header>
       <main>
-        <div className="signIn-image">
+        <form className="signIn-image">
           <input
             className="signIn-input"
             type="text"
             placeholder="Fill in your name"
           />
-        </div>
+        </form>
       </main>
       <footer>
         <button className="signIn-button" type="submit">

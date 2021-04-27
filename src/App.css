@@ -5,5 +5,18 @@
 .app-grid {
   display: grid;
   grid-template-rows: [header] 160px [content] auto [footer] 80px;
+  grid-template-columns: auto;
   height: 100vh;
+}
+
+header {
+  grid-row: header;
+}
+
+main {
+  grid-row: content;
+}
+
+footer {
+  grid-row: footer;
 }
