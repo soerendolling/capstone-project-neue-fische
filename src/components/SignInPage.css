@@ -4,11 +4,9 @@
 
 .signIn-headline__svg {
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
   left: 25px;
   z-index: 1;
-  width: 278px;
-  height: 117px;
   stroke: "#000";
   text-anchor: middle;
   font-size: 105px;
