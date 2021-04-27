@@ -1,20 +1,11 @@
 import "./SignInPage.css";
+import { ReactComponent as SignInHeadline } from "../icons/name.svg";
 
 export default function SignInPage() {
   return (
     <div className="app-grid">
       <header className="header-content">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="signIn-headline__svg"
-        >
-          <g stroke="var(--dark-color)">
-            <text fontFamily="Pegasus" x="140" y="100">
-              name
-            </text>
-          </g>
-        </svg>
-        ;
+        <SignInHeadline className="signIn-headline__svg" />
       </header>
       <main>
         <form className="signIn-image">
