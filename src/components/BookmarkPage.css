@@ -1,4 +1,5 @@
 .bookmark-heading {
+  margin-top: 30px;
   font-family: var(--heading-font);
   letter-spacing: 4px;
   font-size: var(--heading-size);

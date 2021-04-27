@@ -1,3 +1,10 @@
+*,
+::after,
+::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .app-grid {
   display: grid;
   grid-template-rows: [header] 160px [content] auto [footer] 80px;
