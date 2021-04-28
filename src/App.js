@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignInPage from "./components/SignInPage";
 import BookmarkPage from "./components/BookmarkPage";
 import ResultsPage from "./components/ResultsPage";
+import TakeAwayPage from "./components/TakeAwayPage";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Route exact path="/bookmarkPage">
             <BookmarkPage />
           </Route>
-          <Route exact path="/takeAwayPage"></Route>
+          <Route exact path="/takeAwayPage">
+            <TakeAwayPage />
+          </Route>
           <Route exact path="/openPage"></Route>
           <Route exact path="/ambiencePage"></Route>
           <Route exact path="/cuisinePage"></Route>

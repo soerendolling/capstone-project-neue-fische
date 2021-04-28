@@ -1,0 +1,22 @@
+.takeAway-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.takeAway-heading {
+  margin-top: 30px;
+  font-family: var(--heading-font);
+  letter-spacing: var(--heading-spacing);
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.takeAway-subheading {
+  margin: 0;
+  letter-spacing: var(--subheading-spacing);
+  font-family: var(--subheading-font);
+  font-size: var(--subheading-size);
+  font-weight: var(--subheading-weight);
+  color: var(--subheading-color);
+}
