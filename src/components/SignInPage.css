@@ -1,4 +1,4 @@
-.header-content {
+.signIn-header {
   position: relative;
 }
 
@@ -9,8 +9,8 @@
   z-index: 1;
   stroke: "#000";
   text-anchor: middle;
-  font-size: 105px;
-  letter-spacing: 10px;
+  font-size: var(--title-size);
+  letter-spacing: var(--title-spacing);
   fill: none;
 }
 
@@ -37,16 +37,4 @@
   text-align: center;
   font-size: 21px;
   color: var(--dark-color);
-}
-
-.signIn-button {
-  display: block;
-  margin: 0 auto;
-  width: 40vw;
-  height: 7vh;
-  border: transparent;
-  border-radius: 4px;
-  background: var(--gold-color);
-  font-size: 25px;
-  color: var(--background-color);
 }

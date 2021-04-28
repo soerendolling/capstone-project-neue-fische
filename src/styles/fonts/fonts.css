@@ -1,8 +1,15 @@
-@font-face {
-  font-family: "Pegasus";
-  src: url("./styles/fonts/Pegasus\ Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --main-font: Roboto, sans-serif;
+  --title-size: 105px;
+  --title-spacing: 10px;
+  --heading-font: Pegasus;
+  --heading-size: 50px;
+  --heading-color: var(--dark-color);
+  --heading-spacing: 4px;
+  --subheading-size: 20px;
+  --subheading-color: var(--gold-color);
+  --subheading-spacing: 4px;
+  --mainButton-size: 25px;
+  --mainButton-color: var(--background-color);
+  --mainButton-spacing: 2px;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");

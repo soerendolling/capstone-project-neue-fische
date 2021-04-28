@@ -1,0 +1,77 @@
+.restaurant-box {
+  position: relative;
+  display: flex;
+  height: auto;
+  border: solid 2px var(--bright-color);
+  border-radius: 4px;
+  font-family: var(--main-font);
+  letter-spacing: 2px;
+}
+
+.restaurant-box__image {
+  height: 122px;
+  width: 122px;
+  margin: 5px;
+  border-radius: 6px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+.restaurant-box__description {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-left: 20px;
+}
+
+.description-heading {
+  margin: 8px 0;
+  font-weight: 200;
+}
+
+.description-cuisine {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+}
+
+.description-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.description-opening-hours {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.description-text {
+  margin: 0;
+}
+
+.description-cuisine__svg {
+  width: 13px;
+  height: 16px;
+}
+
+.description-location__svg {
+  width: 13px;
+  height: 16px;
+}
+
+.description-opening-hours__svg {
+  width: 14px;
+  height: 14px;
+}
+
+.restaurant-box-bookmark__svg {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  fill: var(--dark-color);
+}
