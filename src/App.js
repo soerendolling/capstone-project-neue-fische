@@ -9,6 +9,7 @@ import AmbiencePage from "./components/AmbiencePage";
 import CuisinePage from "./components/CuisinePage";
 import ViewPage from "./components/ViewPage";
 import OutdoorPage from "./components/OutdoorPage";
+import PartOfTownPage from "./components/PartOfTownPage";
 
 function App() {
   return (
@@ -39,7 +40,9 @@ function App() {
           <Route exact path="/outdoorPage">
             <OutdoorPage />
           </Route>
-          <Route exact path="/partOfTownPage"></Route>
+          <Route exact path="/partOfTownPage">
+            <PartOfTownPage />
+          </Route>
           <Route exact path="/resultsPage">
             <ResultsPage />
           </Route>
