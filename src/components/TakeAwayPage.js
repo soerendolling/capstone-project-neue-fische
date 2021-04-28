@@ -10,7 +10,7 @@ export default function TakeAwayPage() {
     <div className="app-grid">
       <header className="takeAway-header">
         <h1 className="takeAway-heading">Take Away</h1>
-        <h2 className="takeAway-subheading">choose from 1</h2>
+        <h2 className="takeAway-subheading">choose one or more</h2>
       </header>
       <main className="takeAway-main">
         <div className="takeAway-tag__layout">
