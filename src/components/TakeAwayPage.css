@@ -25,20 +25,10 @@ a {
   color: var(--subheading-color);
 }
 
-.takeAway-main__tag-content {
+.takeAway-tag__layout {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-}
-
-.takeAway-tag {
-  padding: 5px 10px;
-  border: solid 4px transparent;
-  border-radius: 4px;
-  box-shadow: 3px 3px 6px var(--bright-color);
-  font-size: var(--tag-size);
-  text-align: center;
-  letter-spacing: var(--tag-spacing);
 }
 
 .takeAway-main__amount {

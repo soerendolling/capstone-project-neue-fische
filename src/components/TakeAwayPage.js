@@ -1,4 +1,5 @@
 import "./TakeAwayPage.css";
+import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/takeAway-progress.svg";
@@ -12,11 +13,11 @@ export default function TakeAwayPage() {
         <h2 className="takeAway-subheading">Bookmarks</h2>
       </header>
       <main className="takeAway-main">
-        <div className="takeAway-main__tag-content">
-          <div className="takeAway-tag">eat in</div>
-          <div className="takeAway-tag">take Away</div>
-          <div className="takeAway-tag">pick up</div>
-          <div className="takeAway-tag">delivery</div>
+        <div className="takeAway-tag__layout">
+          <FilterTag text="eat in" />
+          <FilterTag text="pre order" />
+          <FilterTag text="pick up" />
+          <FilterTag text="delivery" />
         </div>
         <div className="takeAway-main__amount">50</div>
       </main>
