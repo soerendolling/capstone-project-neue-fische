@@ -11,15 +11,21 @@ export default function TakeAwayPage() {
         <h1 className="takeAway-heading">Take Away</h1>
         <h2 className="takeAway-subheading">Bookmarks</h2>
       </header>
-      <main className="takeAway-main"></main>
+      <main className="takeAway-main">
+        <div className="takeAway-main__tag-content">
+          <div className="takeAway-tag">eat in</div>
+          <div className="takeAway-tag">take Away</div>
+          <div className="takeAway-tag">pick up</div>
+          <div className="takeAway-tag">delivery</div>
+        </div>
+        <div className="takeAway-main__amount">50</div>
+      </main>
       <footer className="takeAway-footer">
-        <Link>
+        <Link to={`/bookmarkPage`}>
           <LeftArrow />
         </Link>
-        <Link>
-          <Progress />
-        </Link>
-        <Link>
+        <Progress />
+        <Link to={`/openPage`}>
           <RightArrow />
         </Link>
       </footer>
