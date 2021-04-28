@@ -14,6 +14,7 @@ function App() {
           <Route exact path="/bookmarkPage">
             <BookmarkPage />
           </Route>
+          <Route exact path="/takeAwayPage"></Route>
         </Switch>
       </div>
     </Router>
