@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+}
+
+.outdoor-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outdoor-heading {
+  margin-top: 30px;
+  font-family: var(--heading-font);
+  letter-spacing: var(--heading-spacing);
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.outdoor-subheading {
+  margin: 0;
+  letter-spacing: var(--subheading-filter-spacing);
+  font-family: var(--subheading-filter-font);
+  font-size: var(--subheading-filter-size);
+  font-weight: var(--subheading-filter-weight);
+  color: var(--subheading-color);
+}
+
+.outdoor-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 64vh;
+  text-align: center;
+}
+
+.outdoor-tag__layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.outdoor-main__amount {
+  font-family: var(--amount-font);
+  font-size: var(--amount-size);
+  text-decoration: underline;
+  color: var(--dark-color);
+}
+
+.outdoor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
