@@ -37,10 +37,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  height: 85%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  overflow-y: scroll;
 }
 
 .open-main__amount {
