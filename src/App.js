@@ -11,7 +11,7 @@ function App() {
           <Route exact path="/">
             <SignInPage />
           </Route>
-          <Route exact path="/BookmarkPage">
+          <Route exact path="/bookmarkPage">
             <BookmarkPage />
           </Route>
         </Switch>

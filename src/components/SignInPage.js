@@ -1,6 +1,7 @@
 import "./SignInPage.css";
 import { ReactComponent as SignInHeadline } from "../icons/name.svg";
 import MainButton from "./MainButton";
+import { Link } from "react-router-dom";
 
 export default function SignInPage() {
   return (
@@ -11,6 +12,7 @@ export default function SignInPage() {
       <main>
         <form className="signIn-image">
           <input
+            id="name"
             className="signIn-input"
             type="text"
             placeholder="fill in your name"
@@ -18,7 +20,9 @@ export default function SignInPage() {
         </form>
       </main>
       <footer>
-        <MainButton text="sign in" />
+        <Link to={`/bookmarkPage`}>
+          <MainButton text="sign in" />
+        </Link>
       </footer>
     </div>
   );
