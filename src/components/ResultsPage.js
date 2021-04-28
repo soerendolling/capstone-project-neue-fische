@@ -2,6 +2,7 @@ import "./ResultsPage.css";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as SaveHeart } from "../icons/save-heart.svg";
 import { Link } from "react-router-dom";
+import MainButton from "./MainButton";
 
 export default function ResultsPage() {
   return (
@@ -24,9 +25,7 @@ export default function ResultsPage() {
           </button>
         </Link>
         <Link to={`/takeAwayPage`}>
-          <button className="results-footer__button" type="submit">
-            start again
-          </button>
+          <MainButton className="results-footer__button" text="start again" />
         </Link>
       </footer>
     </div>

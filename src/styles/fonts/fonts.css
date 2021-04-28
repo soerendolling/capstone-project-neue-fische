@@ -4,13 +4,10 @@
   --title-spacing: 10px;
   --heading-font: Pegasus;
   --heading-size: 50px;
-  --heading-color: var(--dark-color);
   --heading-spacing: 4px;
   --subheading-size: 20px;
-  --subheading-color: var(--gold-color);
   --subheading-spacing: 4px;
   --subheading-weight: 300;
   --mainButton-size: 25px;
-  --mainButton-color: var(--background-color);
   --mainButton-spacing: 2px;
 }
