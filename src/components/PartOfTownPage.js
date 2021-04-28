@@ -39,7 +39,7 @@ export default function PartOfTownPage() {
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/resultPage`}>
+        <Link to={`/resultsPage`}>
           <RightArrow />
         </Link>
       </footer>

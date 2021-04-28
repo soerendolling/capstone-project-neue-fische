@@ -9,7 +9,7 @@ export default function OutdoorPage() {
   return (
     <div className="app-grid">
       <header className="outdoor-header">
-        <h1 className="outdoor-heading">outdoor</h1>
+        <h1 className="outdoor-heading">Outdoor</h1>
         <h2 className="outdoor-subheading">choose one or more</h2>
       </header>
       <main className="outdoor-main">
