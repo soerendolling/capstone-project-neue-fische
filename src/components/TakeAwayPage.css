@@ -25,6 +25,13 @@ a {
   color: var(--subheading-color);
 }
 
+.takeAway-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
 .takeAway-tag__layout {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +41,8 @@ a {
 .takeAway-main__amount {
   font-family: var(--amount-font);
   font-size: var(--amount-size);
+  text-decoration: underline;
+  color: var(--dark-color);
 }
 
 .takeAway-footer {

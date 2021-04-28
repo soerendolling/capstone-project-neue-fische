@@ -10,7 +10,7 @@ export default function TakeAwayPage() {
     <div className="app-grid">
       <header className="takeAway-header">
         <h1 className="takeAway-heading">Take Away</h1>
-        <h2 className="takeAway-subheading">Bookmarks</h2>
+        <h2 className="takeAway-subheading">choose from 1</h2>
       </header>
       <main className="takeAway-main">
         <div className="takeAway-tag__layout">
@@ -19,7 +19,9 @@ export default function TakeAwayPage() {
           <FilterTag text="pick up" />
           <FilterTag text="delivery" />
         </div>
-        <div className="takeAway-main__amount">50</div>
+        <Link to={`/ResultsPage`}>
+          <p className="takeAway-main__amount">50</p>
+        </Link>
       </main>
       <footer className="takeAway-footer">
         <Link to={`/bookmarkPage`}>

@@ -13,7 +13,6 @@ export default function RestaurantBox() {
         alt="a restaurant"
         className="restaurant-box__image"
       />
-
       <section className="restaurant-box__description">
         <h1 className="description-heading">I Vigneri</h1>
         <span className="description-cuisine">
