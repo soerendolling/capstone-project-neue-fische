@@ -8,6 +8,9 @@
   --subheading-size: 20px;
   --subheading-spacing: 4px;
   --subheading-weight: 300;
+  --subheading-filter-size: 16px;
+  --subheading-filter-spacing: 4px;
+  --subheading-filter-weight: 300;
   --amount-font: Pegasus;
   --amount-size: 40px;
   --mainButton-size: 25px;
