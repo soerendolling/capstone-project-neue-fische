@@ -25,4 +25,25 @@
 .bookmark-footer {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.bookmark-footer__button {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: auto;
+  height: 44px;
+  border: transparent;
+  border-radius: 4px;
+  background: var(--gold-color);
+  font-size: var(--mainButton-size);
+  letter-spacing: var(--mainButton-spacing);
+  color: var(--mainButton-color);
+}
+
+.bookmark-footer__svg {
+  height: 26px;
+  width: 26px;
+  margin-right: 12px;
 }

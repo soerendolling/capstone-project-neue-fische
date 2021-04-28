@@ -1,6 +1,6 @@
 import "./BookmarkPage.css";
-import MainButton from "./MainButton";
 import RestaurantBox from "./RestaurantBox";
+import { ReactComponent as Find } from "../icons/find.svg";
 
 export default function BookmarkPage() {
   return (
@@ -17,7 +17,10 @@ export default function BookmarkPage() {
         <RestaurantBox />
       </main>
       <footer className="bookmark-footer">
-        <MainButton text="start filtering" />
+        <button className="bookmark-footer__button" type="submit">
+          <Find className="bookmark-footer__svg" />
+          start
+        </button>
       </footer>
     </div>
   );
