@@ -8,6 +8,10 @@
   --subheading-size: 20px;
   --subheading-spacing: 4px;
   --subheading-weight: 300;
+  --amount-font: Pegasus;
+  --amount-size: 40px;
   --mainButton-size: 25px;
   --mainButton-spacing: 2px;
+  --tag-size: 25px;
+  --tag-spacing: 3px;
 }

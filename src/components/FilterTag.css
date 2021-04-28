@@ -1,0 +1,9 @@
+.tag {
+  padding: 5px 10px;
+  border: solid 4px transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
+  font-size: var(--tag-size);
+  text-align: center;
+  letter-spacing: var(--tag-spacing);
+}
