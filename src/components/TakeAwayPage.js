@@ -1,4 +1,8 @@
 import "./TakeAwayPage.css";
+import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
+import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
+import { ReactComponent as Progress } from "../icons/takeAway-progress.svg";
+import { Link } from "react-router-dom";
 
 export default function TakeAwayPage() {
   return (
@@ -8,7 +12,17 @@ export default function TakeAwayPage() {
         <h2 className="takeAway-subheading">Bookmarks</h2>
       </header>
       <main className="takeAway-main"></main>
-      <footer className="takeAway-footer"></footer>
+      <footer className="takeAway-footer">
+        <Link>
+          <LeftArrow />
+        </Link>
+        <Link>
+          <Progress />
+        </Link>
+        <Link>
+          <RightArrow />
+        </Link>
+      </footer>
     </div>
   );
 }

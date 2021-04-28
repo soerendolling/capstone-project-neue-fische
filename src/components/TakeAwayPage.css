@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .takeAway-header {
   display: flex;
   flex-direction: column;
@@ -19,4 +23,10 @@
   font-size: var(--subheading-size);
   font-weight: var(--subheading-weight);
   color: var(--subheading-color);
+}
+
+.takeAway-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
