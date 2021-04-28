@@ -29,6 +29,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 64vh;
   text-align: center;
 }
 
@@ -36,6 +37,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  height: 85%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-y: scroll;
 }
 
 .open-main__amount {
@@ -47,6 +52,6 @@ a {
 
 .open-footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }

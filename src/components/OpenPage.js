@@ -14,10 +14,18 @@ export default function OpenPage() {
       </header>
       <main className="open-main">
         <div className="open-tag__layout">
-          <FilterTag text="eat in" />
-          <FilterTag text="pre order" />
-          <FilterTag text="pick up" />
-          <FilterTag text="delivery" />
+          <FilterTag text="fine with all" />
+          <FilterTag text="elegant" />
+          <FilterTag text="cosy" />
+          <FilterTag text="modern" />
+          <FilterTag text="busy" />
+          <FilterTag text="traditional" />
+          <FilterTag text="trendy" />
+          <FilterTag text="rustic" />
+          <FilterTag text="alternative" />
+          <FilterTag text="warm" />
+          <FilterTag text="hanseatic" />
+          <FilterTag text="posh" />
         </div>
         <Link to={`/ResultsPage`}>
           <p className="open-main__amount">50</p>
