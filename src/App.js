@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignInPage from "./components/SignInPage";
 import BookmarkPage from "./components/BookmarkPage";
+import ResultsPage from "./components/ResultsPage";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           <Route exact path="/viewPage"></Route>
           <Route exact path="/outdoorPage"></Route>
           <Route exact path="/partOfTownPage"></Route>
-          <Route exact path="/resultPage"></Route>
+          <Route exact path="/resultsPage">
+            <ResultsPage />
+          </Route>
           <Route exact path="/restaurantDetailedPage"></Route>
           <Route exact path="/loadingPage"></Route>
         </Switch>

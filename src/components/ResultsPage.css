@@ -1,4 +1,14 @@
-.bookmark-heading {
+a {
+  text-decoration: none;
+}
+
+.results-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-heading {
   margin-top: 30px;
   font-family: var(--heading-font);
   letter-spacing: var(--heading-spacing);
@@ -6,7 +16,7 @@
   color: var(--heading-color);
 }
 
-.bookmark-subheading {
+.results-subheading {
   margin: 0;
   letter-spacing: var(--subheading-spacing);
   font-family: var(--subheading-font);
@@ -15,20 +25,20 @@
   color: var(--subheading-color);
 }
 
-.bookmark-main {
+.results-main {
   display: flex;
   flex-direction: column;
   gap: 15px;
   overflow-y: scroll;
 }
 
-.bookmark-footer {
+.results-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.bookmark-footer__button {
+.results-footer__button {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -42,8 +52,8 @@
   color: var(--mainButton-color);
 }
 
-.bookmark-footer__svg {
-  height: 26px;
-  width: 26px;
-  margin-right: 12px;
+.results-footer__bookmark {
+  width: 25px;
+  height: 25px;
+  fill: var(--background-color);
 }
