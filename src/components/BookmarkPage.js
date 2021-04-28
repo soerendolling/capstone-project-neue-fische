@@ -5,7 +5,7 @@ import { ReactComponent as Find } from "../icons/find.svg";
 export default function BookmarkPage() {
   return (
     <div className="app-grid">
-      <header className="bookmark-header">
+      <header>
         <h1 className="bookmark-heading">Hi Soeren,</h1>
         <h2 className="bookmark-subheading">Bookmarks</h2>
       </header>
