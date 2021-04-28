@@ -5,7 +5,8 @@ import BookmarkPage from "./components/BookmarkPage";
 import ResultsPage from "./components/ResultsPage";
 import TakeAwayPage from "./components/TakeAwayPage";
 import OpenPage from "./components/OpenPage";
-import AmbiencePage from "./components/ambiencePage";
+import AmbiencePage from "./components/AmbiencePage";
+import CuisinePage from "./components/CuisinePage";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route exact path="/ambiencePage">
             <AmbiencePage />
           </Route>
-          <Route exact path="/cuisinePage"></Route>
+          <Route exact path="/cuisinePage">
+            <CuisinePage />
+          </Route>
           <Route exact path="/viewPage"></Route>
           <Route exact path="/outdoorPage"></Route>
           <Route exact path="/partOfTownPage"></Route>

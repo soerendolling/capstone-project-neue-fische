@@ -1,4 +1,4 @@
-import "./ambiencePage.css";
+import "./AmbiencePage.css";
 import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
@@ -27,7 +27,7 @@ export default function AmbiencePage() {
           <FilterTag text="hanseatic" />
           <FilterTag text="posh" />
         </div>
-        <Link to={`/ResultsPage`}>
+        <Link to={`/resultsPage`}>
           <p className="ambience-main__amount">50</p>
         </Link>
       </main>

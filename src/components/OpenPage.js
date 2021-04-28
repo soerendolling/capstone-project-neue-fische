@@ -24,7 +24,7 @@ export default function OpenPage() {
           <FilterTag text="saturdays" />
           <FilterTag text="sundays" />
         </div>
-        <Link to={`/ResultsPage`}>
+        <Link to={`/resultsPage`}>
           <p className="open-main__amount">50</p>
         </Link>
       </main>

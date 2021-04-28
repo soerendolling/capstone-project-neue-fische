@@ -1,19 +1,19 @@
-import "./ambiencePage.css";
+import "./CuisinePage.css";
 import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
-import { ReactComponent as Progress } from "../icons/ambience-progress.svg";
+import { ReactComponent as Progress } from "../icons/cuisine-progress.svg";
 import { Link } from "react-router-dom";
 
-export default function AmbiencePage() {
+export default function CuisinePage() {
   return (
     <div className="app-grid">
-      <header className="ambience-header">
-        <h1 className="ambience-heading">Ambience</h1>
-        <h2 className="ambience-subheading">choose one or more</h2>
+      <header className="cuisine-header">
+        <h1 className="cuisine-heading">Cuisine</h1>
+        <h2 className="cuisine-subheading">choose one or more</h2>
       </header>
-      <main className="ambience-main">
-        <div className="ambience-tag__layout">
+      <main className="cuisine-main">
+        <div className="cuisine-tag__layout">
           <FilterTag text="fine with all" />
           <FilterTag text="modern" />
           <FilterTag text="classic" />
@@ -38,16 +38,16 @@ export default function AmbiencePage() {
           <FilterTag text="middle eastern" />
           <FilterTag text="peruvian" />
         </div>
-        <Link to={`/ResultsPage`}>
-          <p className="ambience-main__amount">50</p>
+        <Link to={`/resultsPage`}>
+          <p className="cuisine-main__amount">50</p>
         </Link>
       </main>
-      <footer className="ambience-footer">
-        <Link to={`/openPage`}>
+      <footer className="cuisine-footer">
+        <Link to={`/ambiencePage`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/cuisinePage`}>
+        <Link to={`/viewPage`}>
           <RightArrow />
         </Link>
       </footer>
