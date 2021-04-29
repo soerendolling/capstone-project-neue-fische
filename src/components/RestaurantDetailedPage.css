@@ -19,7 +19,6 @@
 
 .detailed-subheading {
   display: flex;
-  position: relative;
   margin: 0;
   letter-spacing: var(--subheading-spacing);
   font-family: var(--subheading-font);
@@ -51,77 +50,22 @@
   margin-top: 20px;
 }
 
-.headline-weekday__mon {
+.headline-weekday__day {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: var(--dark-color);
   font-size: 18px;
   color: var(--background-color);
   line-height: 40px;
   text-align: center;
 }
 
-.headline-weekday__tue {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
+.open {
   background: var(--dark-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
 }
 
-.headline-weekday__wed {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: var(--dark-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
-}
-.headline-weekday__thu {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: var(--dark-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
-}
-.headline-weekday__fri {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: var(--dark-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
-}
-.headline-weekday__sat {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: var(--dark-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
-}
-.headline-weekday__sun {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
+.closed {
   background: var(--bright-color);
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 40px;
-  text-align: center;
 }
 
 .detailed-info__layout {
@@ -155,4 +99,13 @@
 .detailed-footer {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.header-bookmark {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  fill: var(--dark-color);
 }

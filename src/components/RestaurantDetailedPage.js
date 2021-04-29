@@ -30,19 +30,14 @@ export default function RestaurantDetailedPage() {
           <h2>-</h2>
           <h2>ambience</h2>
         </div>
-        {/* <div className="headline-icons__layout">
-          <Heart className="headline-icons__svg" />
-          <WWW className="headline-icons__svg" />
-          
-        </div> */}
         <div className="headline-weekday__layout">
-          <div className="headline-weekday__mon">M</div>
-          <div className="headline-weekday__tue">T</div>
-          <div className="headline-weekday__wed">W</div>
-          <div className="headline-weekday__thu">T</div>
-          <div className="headline-weekday__fri">F</div>
-          <div className="headline-weekday__sat">S</div>
-          <div className="headline-weekday__sun">S</div>
+          <div className="headline-weekday__day open">M</div>
+          <div className="headline-weekday__day open">T</div>
+          <div className="headline-weekday__day open">W</div>
+          <div className="headline-weekday__day open">T</div>
+          <div className="headline-weekday__day open">F</div>
+          <div className="headline-weekday__day open">S</div>
+          <div className="headline-weekday__day closed">S</div>
         </div>
         <div className="detailed-info__layout">
           <div className="detailed-info__text-layout">
@@ -88,6 +83,7 @@ export default function RestaurantDetailedPage() {
         <Link to="/resultsPage">
           <LeftArrow />
         </Link>
+        <Heart className="header-bookmark" />
       </footer>
     </div>
   );
