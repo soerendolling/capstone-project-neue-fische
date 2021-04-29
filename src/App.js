@@ -10,6 +10,7 @@ import CuisinePage from "./components/CuisinePage";
 import ViewPage from "./components/ViewPage";
 import OutdoorPage from "./components/OutdoorPage";
 import PartOfTownPage from "./components/PartOfTownPage";
+import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
 
 function App() {
   return (
@@ -46,7 +47,9 @@ function App() {
           <Route exact path="/resultsPage">
             <ResultsPage />
           </Route>
-          <Route exact path="/restaurantDetailedPage"></Route>
+          <Route exact path="/restaurantDetailedPage">
+            <RestaurantDetailedPage />
+          </Route>
           <Route exact path="/loadingPage"></Route>
         </Switch>
       </div>

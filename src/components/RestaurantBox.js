@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function RestaurantBox() {
   return (
-    <Link to={`/restaunrantDetailedPage`}>
+    <Link to={`/restaurantDetailedPage`}>
       <article className="restaurant-box">
         <img
           src={restaurantImgOne}

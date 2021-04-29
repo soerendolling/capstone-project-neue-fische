@@ -1,0 +1,40 @@
+.RestaurantDetailedPage {
+  display: grid;
+  grid-template-rows: [header] 230px [content] auto [footer] 80px;
+  grid-template-columns: [left-gutter] 20px [content] auto [right-gutter] 20px;
+  height: 100vh;
+}
+
+.detailed-header {
+  grid-column: 1/4;
+}
+
+.detailed-heading {
+  margin-top: 40px;
+  font-family: var(--heading-font);
+  letter-spacing: var(--heading-spacing);
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.detailed-subheading {
+  display: flex;
+  margin: 0;
+  letter-spacing: var(--subheading-spacing);
+  font-family: var(--subheading-font);
+  font-size: 14px;
+  color: var(--subheading-color);
+}
+
+.detailed-header__image {
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+}
+
+.detailed-info__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
