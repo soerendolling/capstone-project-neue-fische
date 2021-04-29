@@ -19,7 +19,7 @@ export default function TakeAwayPage() {
           <FilterTag text="pick up" />
           <FilterTag text="delivery" />
         </div>
-        <Link to={`/ResultsPage`}>
+        <Link to={`/resultsPage`}>
           <p className="takeAway-main__amount">50</p>
         </Link>
       </main>

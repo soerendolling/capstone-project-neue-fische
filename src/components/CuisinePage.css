@@ -2,13 +2,13 @@ a {
   text-decoration: none;
 }
 
-.takeAway-header {
+.cuisine-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.takeAway-heading {
+.cuisine-heading {
   margin-top: 30px;
   font-family: var(--heading-font);
   letter-spacing: var(--heading-spacing);
@@ -16,7 +16,7 @@ a {
   color: var(--heading-color);
 }
 
-.takeAway-subheading {
+.cuisine-subheading {
   margin: 0;
   letter-spacing: var(--subheading-filter-spacing);
   font-family: var(--subheading-filter-font);
@@ -25,29 +25,32 @@ a {
   color: var(--subheading-color);
 }
 
-.takeAway-main {
+.cuisine-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 64vh;
   text-align: center;
 }
 
-.takeAway-tag__layout {
+.cuisine-tag__layout {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  height: 85%;
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow-y: scroll;
 }
 
-.takeAway-main__amount {
+.cuisine-main__amount {
   font-family: var(--amount-font);
   font-size: var(--amount-size);
   text-decoration: underline;
   color: var(--dark-color);
 }
 
-.takeAway-footer {
+.cuisine-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
