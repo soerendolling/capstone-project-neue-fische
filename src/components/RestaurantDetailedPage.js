@@ -9,7 +9,7 @@ import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
 import { ReactComponent as Heart } from "../icons/heart2.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
-import { ReactComponent as WWW } from "../icons/internet.svg";
+// import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 
