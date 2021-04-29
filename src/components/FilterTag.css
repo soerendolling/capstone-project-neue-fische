@@ -3,7 +3,9 @@
   border: solid 4px transparent;
   border-radius: 4px;
   box-shadow: 3px 3px 6px var(--bright-color);
+  background: var(--background-color);
   font-size: var(--tag-size);
   text-align: center;
   letter-spacing: var(--tag-spacing);
+  color: var(--dark-color);
 }
