@@ -3,6 +3,7 @@ import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/outdoor-progress.svg";
+import { ReactComponent as Sun } from "../icons/sun.svg";
 import { Link } from "react-router-dom";
 
 export default function OutdoorPage() {
@@ -13,6 +14,10 @@ export default function OutdoorPage() {
         <h2 className="outdoor-subheading">choose one or more</h2>
       </header>
       <main className="outdoor-main">
+        <div className="outdoor-weather__layout">
+          <Sun className="outdoor-weather__svg" />
+          <p className="outdoor-wheater__text">26° degrees</p>
+        </div>
         <div className="outdoor-tag__layout">
           <FilterTag text="no outdoor seating" />
           <FilterTag text="terrace" />

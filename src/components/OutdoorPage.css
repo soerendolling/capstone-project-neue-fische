@@ -33,6 +33,22 @@ a {
   text-align: center;
 }
 
+.outdoor-weather__layout {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.outdoor-weather__svg {
+  width: 75px;
+  height: 75px;
+}
+
+.outdoor-wheater__text {
+  font-size: var(--tag-size);
+  letter-spacing: var(--tag-spacing);
+}
+
 .outdoor-tag__layout {
   display: flex;
   flex-wrap: wrap;

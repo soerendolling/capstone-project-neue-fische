@@ -22,7 +22,7 @@ a {
   font-family: var(--subheading-filter-font);
   font-size: var(--subheading-filter-size);
   font-weight: var(--subheading-filter-weight);
-  color: var(--subheading-filter-color);
+  color: var(--subheading-color);
 }
 
 .takeAway-main {
