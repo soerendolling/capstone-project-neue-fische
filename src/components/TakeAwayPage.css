@@ -36,6 +36,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .takeAway-main__amount {
