@@ -5,7 +5,7 @@ import BookmarkPage from "./components/BookmarkPage";
 import ResultsPage from "./components/ResultsPage";
 import TakeAwayPage from "./components/TakeAwayPage";
 import OpenPage from "./components/OpenPage";
-import AmbiencePage from "./components/ambiencePageTwo";
+import AmbiencePage from "./components/AmbiencePage";
 import CuisinePage from "./components/CuisinePage";
 import ViewPage from "./components/ViewPage";
 import OutdoorPage from "./components/OutdoorPage";

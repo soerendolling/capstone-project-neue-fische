@@ -1,4 +1,4 @@
-import "./ambiencePageTwo.css";
+import "./AmbiencePage.css";
 import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
