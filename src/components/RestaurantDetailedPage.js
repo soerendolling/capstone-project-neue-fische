@@ -13,7 +13,12 @@ import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 
-export default function RestaurantDetailedPage() {
+export default function RestaurantDetailedPage({ restaurantData }) {
+  console.log(restaurantData);
+
+  const singleRestaurant = restaurantData.find((item) => item.id === 1);
+  console.log(singleRestaurant);
+
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -24,7 +29,7 @@ export default function RestaurantDetailedPage() {
         />
       </header>
       <main>
-        <h1 className="detailed-heading">I Vigneri</h1>
+        <h1 className="detailed-heading">name</h1>
         <div className="detailed-subheading">
           <h2>italian</h2>
           <h2>-</h2>
@@ -48,7 +53,9 @@ export default function RestaurantDetailedPage() {
 
             <span className="info-line">
               <Terrace className="info-svg" />
-              <p className="info-text">terrace</p>
+              <p className="info-text">
+                {/* {restaurants.location.restaurantOutdoorDetail} */}
+              </p>
             </span>
             <span className="info-line">
               <Binoculars className="info-svg" />
@@ -66,15 +73,15 @@ export default function RestaurantDetailedPage() {
             </span>
             <span className="info-line">
               <Vegetarian className="info-svg" />
-              <p className="info-text">Vegetarian options</p>
+              <p className="info-text">veg</p>
             </span>
             <span className="info-line">
               <Pin className="info-svg" />
-              <p className="info-text">Große Bäckerstraße 12, 22222 Hamburg</p>
+              <p className="info-text"></p>
             </span>
             <span className="info-line">
               <Phone className="info-svg" />
-              <p className="info-text">0401234566</p>
+              <p className="info-text"></p>
             </span>
           </div>
         </div>

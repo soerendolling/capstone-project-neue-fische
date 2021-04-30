@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 import SignInPage from "./components/SignInPage";
 import BookmarkPage from "./components/BookmarkPage";
 import ResultsPage from "./components/ResultsPage";
@@ -13,6 +14,20 @@ import PartOfTownPage from "./components/PartOfTownPage";
 import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
 
 function App() {
+  const [restaurants, setRestaurants] = useState([]);
+
+  useEffect(() => {
+    const fetchRestaurants = () => {
+      return fetch("restaurants.json")
+        .then((response) => response.json())
+        .then((restaurantData) => {
+          const newData = restaurantData.results;
+          setRestaurants(newData);
+        });
+    };
+    fetchRestaurants();
+  }, []);
+
   return (
     <Router>
       <div>
@@ -45,10 +60,10 @@ function App() {
             <PartOfTownPage />
           </Route>
           <Route exact path="/resultsPage">
-            <ResultsPage />
+            <ResultsPage restaurantData={restaurants} />
           </Route>
           <Route exact path="/restaurantDetailedPage">
-            <RestaurantDetailedPage />
+            <RestaurantDetailedPage restaurantData={restaurants} />
           </Route>
           <Route exact path="/loadingPage"></Route>
         </Switch>
