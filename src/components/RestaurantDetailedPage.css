@@ -19,10 +19,14 @@
 
 .detailed-subheading {
   display: flex;
-  margin: 0;
-  letter-spacing: var(--subheading-spacing);
-  font-family: var(--subheading-font);
-  font-size: 14px;
+  margin-top: 5px;
+}
+
+.detailed-subheading h2 {
+  font-weight: var(--subheading-filter-weight);
+  letter-spacing: var(--subheading-filter-spacing);
+  font-family: var(--subheading-filter-font);
+  font-size: var(--subheading-filter-size);
   color: var(--subheading-color);
 }
 
@@ -47,7 +51,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .headline-weekday__day {
