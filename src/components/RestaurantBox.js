@@ -6,7 +6,7 @@ import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Heart } from "../icons/heart.svg";
 import { Link } from "react-router-dom";
 
-export default function RestaurantBox() {
+export default function RestaurantBox({ name, cuisine, area }) {
   return (
     <Link to={`/restaurantDetailedPage`}>
       <article className="restaurant-box">
@@ -16,14 +16,14 @@ export default function RestaurantBox() {
           className="restaurant-box__image"
         />
         <section className="restaurant-box__description">
-          <h1 className="description-heading">I Vigneri</h1>
+          <h1 className="description-heading">{name}</h1>
           <span className="description-cuisine">
             <Tray className="description-cuisine__svg" />
-            <p className="description-text">italian</p>
+            <p className="description-text">{cuisine}</p>
           </span>
           <span className="description-location">
             <Pin className="description-location__svg" />
-            <p className="description-text">Neustadt</p>
+            <p className="description-text">{area}</p>
           </span>
           <span className="description-opening-hours">
             <Clock className="description-opening-hours__svg" />
