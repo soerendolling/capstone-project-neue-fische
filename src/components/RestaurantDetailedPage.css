@@ -1,0 +1,115 @@
+.RestaurantDetailedPage {
+  display: grid;
+  grid-template-rows: [header] 230px [content] auto [footer] 80px;
+  grid-template-columns: [left-gutter] 20px [content] auto [right-gutter] 20px;
+  height: 100vh;
+}
+
+.detailed-header {
+  grid-column: 1/4;
+}
+
+.detailed-heading {
+  margin-top: 40px;
+  font-family: var(--heading-font);
+  letter-spacing: var(--heading-spacing);
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.detailed-subheading {
+  display: flex;
+  margin-top: 5px;
+}
+
+.detailed-subheading h2 {
+  font-weight: var(--subheading-filter-weight);
+  letter-spacing: var(--subheading-filter-spacing);
+  font-family: var(--subheading-filter-font);
+  font-size: var(--subheading-filter-size);
+  color: var(--subheading-color);
+}
+
+.detailed-header__image {
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+}
+
+.headline-icons__layout {
+  display: flex;
+  gap: 20px;
+  margin: 15px;
+}
+
+.headline-icons__svg {
+  height: 30px;
+  width: 30px;
+  fill: var(--dark-color);
+}
+
+.headline-weekday__layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.headline-weekday__day {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: var(--background-color);
+  line-height: 40px;
+  text-align: center;
+}
+
+.open {
+  background: var(--dark-color);
+}
+
+.closed {
+  background: var(--bright-color);
+}
+
+.detailed-info__layout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.detailed-info__text-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-text {
+  margin: 0;
+}
+
+.info-svg {
+  height: 16px;
+  width: 16px;
+  fill: var(--dark-color);
+}
+
+.info-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.detailed-footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header-bookmark {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  fill: var(--dark-color);
+}
