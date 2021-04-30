@@ -24,9 +24,10 @@ export default function ResultsPage() {
     console.log(restaurants);
     return restaurants.map((restaurant) => {
       const { id, name, kitchen, area } = restaurant;
+      const cuisine = kitchen[0];
       console.log(name);
       return (
-        <RestaurantBox key={id} name={name} cuisine={kitchen} area={area} />
+        <RestaurantBox key={id} name={name} cuisine={cuisine} area={area} />
       );
     });
   }
