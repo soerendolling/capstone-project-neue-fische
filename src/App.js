@@ -62,7 +62,7 @@ function App() {
           <Route exact path="/resultsPage">
             <ResultsPage restaurantData={restaurants} />
           </Route>
-          <Route exact path="/restaurantDetailedPage">
+          <Route exact path="/restaurantDetailedPage/:id">
             <RestaurantDetailedPage restaurantData={restaurants} />
           </Route>
           <Route exact path="/loadingPage"></Route>

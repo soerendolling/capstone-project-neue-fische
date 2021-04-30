@@ -12,13 +12,15 @@ export default function ResultsPage({ restaurantData }) {
       const area = location.area[0];
       const ambience = atmosphere[0];
       return (
-        <RestaurantBox
-          key={id}
-          name={name}
-          cuisine={cuisine}
-          area={area}
-          atmosphere={ambience}
-        />
+        <Link to={`/restaurantDetailedPage/${id}`}>
+          <RestaurantBox
+            key={id}
+            name={name}
+            cuisine={cuisine}
+            area={area}
+            atmosphere={ambience}
+          />
+        </Link>
       );
     });
   }
