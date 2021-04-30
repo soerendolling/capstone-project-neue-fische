@@ -17,7 +17,7 @@ import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
-    (restaurant) => restaurant.id == id
+    (restaurant) => restaurant.id === Number(id)
   );
 
   console.log(singleRestaurant);
