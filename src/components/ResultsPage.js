@@ -23,9 +23,9 @@ export default function ResultsPage() {
   function renderRestaurants() {
     console.log(restaurants);
     return restaurants.map((restaurant) => {
-      const { id, name, kitchen, area } = restaurant;
+      const { id, name, kitchen, location } = restaurant;
       const cuisine = kitchen[0];
-      console.log(name);
+      const area = location.area[0];
       return (
         <RestaurantBox key={id} name={name} cuisine={cuisine} area={area} />
       );
