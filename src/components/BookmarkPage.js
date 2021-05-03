@@ -12,10 +12,6 @@ export default function BookmarkPage() {
       </header>
       <main className="bookmark-main">
         <RestaurantBox />
-        <RestaurantBox />
-        <RestaurantBox />
-        <RestaurantBox />
-        <RestaurantBox />
       </main>
       <footer className="bookmark-footer">
         <Link to={`/takeAwayPage`}>

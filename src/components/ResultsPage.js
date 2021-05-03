@@ -1,33 +1,26 @@
 import "./ResultsPage.css";
-import { useState, useEffect } from "react";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as SaveHeart } from "../icons/save-heart.svg";
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton";
 
-export default function ResultsPage() {
-  const [restaurants, setRestaurants] = useState([]);
-
-  useEffect(() => {
-    const fetchRestaurants = () => {
-      return fetch("restaurants.json")
-        .then((response) => response.json())
-        .then((restaurantData) => {
-          const newData = restaurantData.results;
-          setRestaurants(newData);
-        });
-    };
-    fetchRestaurants();
-  }, []);
-
+export default function ResultsPage({ restaurantData }) {
   function renderRestaurants() {
-    console.log(restaurants);
-    return restaurants.map((restaurant) => {
-      const { id, name, kitchen, area } = restaurant;
+    return restaurantData.map((restaurant) => {
+      const { id, name, kitchen, location, atmosphere } = restaurant;
       const cuisine = kitchen[0];
-      console.log(name);
+      const area = location.area[0];
+      const ambience = atmosphere[0];
       return (
-        <RestaurantBox key={id} name={name} cuisine={cuisine} area={area} />
+        <Link to={`/restaurantDetailedPage/${id}`}>
+          <RestaurantBox
+            key={id}
+            name={name}
+            cuisine={cuisine}
+            area={area}
+            atmosphere={ambience}
+          />
+        </Link>
       );
     });
   }

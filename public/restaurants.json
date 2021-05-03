@@ -141,7 +141,7 @@
         "area": ["saint georg"],
         "view": "alster",
         "restaurantOutdoor": false,
-        "restaurantOutdoorDetail": "",
+        "restaurantOutdoorDetail": "No",
         "barOutdoor": true,
         "barOutdoorDetail": "rooftop",
         "water": "alster",

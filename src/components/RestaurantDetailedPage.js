@@ -1,5 +1,6 @@
 import "./RestaurantDetailedPage.css";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
 import { ReactComponent as Clock } from "../icons/clock.svg";
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
@@ -13,7 +14,14 @@ import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 
-export default function RestaurantDetailedPage() {
+export default function RestaurantDetailedPage({ restaurantData }) {
+  let { id } = useParams();
+  const singleRestaurant = restaurantData.find(
+    (restaurant) => restaurant.id === Number(id)
+  );
+
+  console.log(singleRestaurant);
+
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -24,11 +32,11 @@ export default function RestaurantDetailedPage() {
         />
       </header>
       <main>
-        <h1 className="detailed-heading">I Vigneri</h1>
+        <h1 className="detailed-heading">{singleRestaurant.name}</h1>
         <div className="detailed-subheading">
-          <h2>italian</h2>
+          <h2>{singleRestaurant.kitchen[0]}</h2>
           <h2>-</h2>
-          <h2>ambience</h2>
+          <h2>{singleRestaurant.atmosphere[0]}</h2>
         </div>
         <div className="headline-weekday__layout">
           <div className="headline-weekday__day open">M</div>
@@ -48,11 +56,13 @@ export default function RestaurantDetailedPage() {
 
             <span className="info-line">
               <Terrace className="info-svg" />
-              <p className="info-text">terrace</p>
+              <p className="info-text">
+                {singleRestaurant.location.restaurantOutdoorDetailed}
+              </p>
             </span>
             <span className="info-line">
               <Binoculars className="info-svg" />
-              <p className="info-text">no view</p>
+              <p className="info-text">{singleRestaurant.location.view}</p>
             </span>
             <span className="info-line">
               <NoSmoking className="info-svg" />
@@ -66,15 +76,15 @@ export default function RestaurantDetailedPage() {
             </span>
             <span className="info-line">
               <Vegetarian className="info-svg" />
-              <p className="info-text">Vegetarian options</p>
+              <p className="info-text">veg</p>
             </span>
             <span className="info-line">
               <Pin className="info-svg" />
-              <p className="info-text">Große Bäckerstraße 12, 22222 Hamburg</p>
+              <p className="info-text">{singleRestaurant.contact.adress}</p>
             </span>
             <span className="info-line">
               <Phone className="info-svg" />
-              <p className="info-text">0401234566</p>
+              <p className="info-text">{singleRestaurant.contact.number}</p>
             </span>
           </div>
         </div>

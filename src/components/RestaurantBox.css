@@ -26,18 +26,20 @@ a {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-left: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .description-heading {
-  margin: 8px 0;
-  font-weight: 200;
+  width: 80%;
+  height: 34%;
+  font-size: 16px;
 }
 
 .description-cuisine {
   display: flex;
   align-items: center;
-  margin: 0;
+  margin-top: 2px;
   gap: 10px;
 }
 
@@ -55,6 +57,7 @@ a {
 
 .description-text {
   margin: 0;
+  font-size: 14px;
 }
 
 .description-cuisine__svg {
@@ -75,7 +78,7 @@ a {
 .restaurant-box-bookmark__svg {
   position: absolute;
   right: 10px;
-  top: 12px;
+  top: 8px;
   width: 18px;
   height: 18px;
   fill: var(--dark-color);
