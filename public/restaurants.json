@@ -7,6 +7,7 @@
   "results": [
     {
       "id": 1,
+      "isBookmarked": true,
       "name": "Heritage Restaurant",
       "kitchen": ["international", "steak"],
       "take-away": false,
@@ -151,6 +152,7 @@
     },
     {
       "id": 2,
+      "isBookmarked": false,
       "name": "Clouds Heaven's Bar and Kitchen",
       "kitchen": ["international", "steak"],
       "take-away": false,
@@ -295,6 +297,7 @@
     },
     {
       "id": 3,
+      "isBookmarked": false,
       "name": "Witwenball",
       "kitchen": ["modern", "seasonal"],
       "takeAway": false,
@@ -439,6 +442,7 @@
     },
     {
       "id": 4,
+      "isBookmarked": false,
       "name": "Salt and Silver Zentrale",
       "kitchen": ["levante"],
       "takeAway": false,
@@ -583,6 +587,7 @@
     },
     {
       "id": 5,
+      "isBookmarked": false,
       "name": "Salt and Silver Restaurant",
       "kitchen": ["latin-american"],
       "takeAway": false,
@@ -727,6 +732,7 @@
     },
     {
       "id": 6,
+      "isBookmarked": false,
       "name": "Nikkei Nine",
       "kitchen": ["fusion", "peruvian", "japanese", "sushi"],
       "takeAway": false,
@@ -871,6 +877,7 @@
     },
     {
       "id": 7,
+      "isBookmarked": false,
       "name": "Osteria I Vigneri Enoteca",
       "kitchen": ["modern", "italian"],
       "takeAway": false,
@@ -1015,6 +1022,7 @@
     },
     {
       "id": 8,
+      "isBookmarked": false,
       "name": "Trattoria da Enzo",
       "kitchen": ["classic", "italian"],
       "takeAway": true,
@@ -1159,6 +1167,7 @@
     },
     {
       "id": 9,
+      "isBookmarked": false,
       "name": "Pizza Bande",
       "kitchen": ["pizza", "modern"],
       "takeAway": true,
@@ -1303,6 +1312,7 @@
     },
     {
       "id": 10,
+      "isBookmarked": false,
       "name": "Bistro Carmagnole",
       "kitchen": ["french"],
       "takeAway": true,
@@ -1447,6 +1457,7 @@
     },
     {
       "id": 11,
+      "isBookmarked": false,
       "name": "Le Plat du Jour",
       "kitchen": ["french", "brasserie"],
       "takeAway": false,
@@ -1591,6 +1602,7 @@
     },
     {
       "id": 12,
+      "isBookmarked": false,
       "name": "Carls Brasserie ",
       "kitchen": ["regional", "french", "brasserie"],
       "takeAway": false,
@@ -1735,6 +1747,7 @@
     },
     {
       "id": 13,
+      "isBookmarked": false,
       "name": "Estancia Steaks",
       "kitchen": ["steak", "argentinian"],
       "takeAway": false,
@@ -1879,6 +1892,7 @@
     },
     {
       "id": 14,
+      "isBookmarked": false,
       "name": "Schlachterbörse",
       "kitchen": ["steak"],
       "takeAway": false,
@@ -2023,6 +2037,7 @@
     },
     {
       "id": 15,
+      "isBookmarked": false,
       "name": "Bootshaus",
       "kitchen": ["steak"],
       "takeAway": false,
@@ -2167,6 +2182,7 @@
     },
     {
       "id": 16,
+      "isBookmarked": false,
       "name": "Broooklyn Burger Bar",
       "kitchen": ["burger", "american"],
       "takeAway": false,
@@ -2311,6 +2327,7 @@
     },
     {
       "id": 17,
+      "isBookmarked": false,
       "name": "Dulfs Burger Karoviertel",
       "kitchen": ["burger"],
       "takeAway": false,
@@ -2455,6 +2472,7 @@
     },
     {
       "id": 18,
+      "isBookmarked": false,
       "name": "Nil",
       "kitchen": ["international", "mediterranean"],
       "takeAway": true,
@@ -2599,6 +2617,7 @@
     },
     {
       "id": 19,
+      "isBookmarked": false,
       "name": "Old Commercial Room",
       "kitchen": ["german", "regional", "hanseatic", "traditional"],
       "takeAway": false,
@@ -2750,6 +2769,7 @@
     },
     {
       "id": 20,
+      "isBookmarked": false,
       "name": "Deichgraf",
       "kitchen": ["german", "regional", "hanseatic", "traditional"],
       "takeAway": true,
@@ -2894,6 +2914,7 @@
     },
     {
       "id": 21,
+      "isBookmarked": false,
       "name": "Frau Möller",
       "kitchen": ["german", "einfach"],
       "takeAway": true,
@@ -3038,6 +3059,7 @@
     },
     {
       "id": 22,
+      "isBookmarked": false,
       "name": "Erikas Eck",
       "kitchen": ["german", "traditional", "einfach"],
       "takeAway": true,
@@ -3182,6 +3204,7 @@
     },
     {
       "id": 23,
+      "isBookmarked": false,
       "name": "Das Dorf",
       "kitchen": ["german", "seasonal", "regional"],
       "takeAway": true,

@@ -36,7 +36,7 @@ function App() {
             <SignInPage />
           </Route>
           <Route exact path="/bookmarkPage">
-            <BookmarkPage />
+            <BookmarkPage restaurantData={restaurants} />
           </Route>
           <Route exact path="/takeAwayPage">
             <TakeAwayPage />
