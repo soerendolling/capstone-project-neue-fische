@@ -4,11 +4,8 @@ import { ReactComponent as Clock } from "../icons/clock.svg";
 import { ReactComponent as Tray } from "../icons/tray.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Heart } from "../icons/heart.svg";
-import { useParams } from "react-router-dom";
 
 export default function RestaurantBox({ name, cuisine, area }) {
-  // let { id } = useParams();
-
   return (
     <article className="restaurant-box">
       <img
