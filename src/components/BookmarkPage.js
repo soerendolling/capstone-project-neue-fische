@@ -30,7 +30,7 @@ export default function BookmarkPage({ restaurantData }) {
             cuisine={cuisine}
             area={area}
             atmosphere={ambience}
-            bookmark={isBookmarked}
+            bookmarked={isBookmarked}
           />
         </Link>
       );

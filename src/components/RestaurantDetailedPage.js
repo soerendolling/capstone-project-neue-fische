@@ -20,8 +20,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     (restaurant) => restaurant.id === Number(id)
   );
 
-  console.log(singleRestaurant);
-
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">

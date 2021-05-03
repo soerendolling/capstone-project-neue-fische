@@ -12,6 +12,7 @@ import ViewPage from "./components/ViewPage";
 import OutdoorPage from "./components/OutdoorPage";
 import PartOfTownPage from "./components/PartOfTownPage";
 import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
+import LoadingPage from "./components/LoadingPage";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -33,6 +34,9 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/">
+            <LoadingPage />
+          </Route>
+          <Route exact path="/signInPage">
             <SignInPage />
           </Route>
           <Route exact path="/bookmarkPage">
@@ -65,7 +69,6 @@ function App() {
           <Route exact path="/restaurantDetailedPage/:id">
             <RestaurantDetailedPage restaurantData={restaurants} />
           </Route>
-          <Route exact path="/loadingPage"></Route>
         </Switch>
       </div>
     </Router>

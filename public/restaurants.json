@@ -297,7 +297,7 @@
     },
     {
       "id": 3,
-      "isBookmarked": false,
+      "isBookmarked": true,
       "name": "Witwenball",
       "kitchen": ["modern", "seasonal"],
       "takeAway": false,
@@ -1457,7 +1457,7 @@
     },
     {
       "id": 11,
-      "isBookmarked": false,
+      "isBookmarked": true,
       "name": "Le Plat du Jour",
       "kitchen": ["french", "brasserie"],
       "takeAway": false,
