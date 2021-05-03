@@ -7,10 +7,10 @@ import { ReactComponent as Heart } from "../icons/heart.svg";
 import { useParams } from "react-router-dom";
 
 export default function RestaurantBox({ name, cuisine, area }) {
-  let { id } = useParams();
+  // let { id } = useParams();
 
   return (
-    <article key={id} className="restaurant-box">
+    <article className="restaurant-box">
       <img
         src={restaurantImgOne}
         alt="a restaurant"
