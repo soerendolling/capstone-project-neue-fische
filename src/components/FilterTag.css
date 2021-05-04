@@ -1,4 +1,4 @@
-.tag {
+.tag-false {
   padding: 5px 10px;
   border: solid 4px transparent;
   border-radius: 4px;
@@ -10,10 +10,22 @@
   color: var(--dark-color);
 }
 
-.tag {
+.tag-true .tag-false {
   -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1)
     both;
   animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.tag-true {
+  padding: 5px 10px;
+  border: solid 4px transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
+  background: var(--gold-color);
+  font-size: var(--tag-size);
+  text-align: center;
+  letter-spacing: var(--tag-spacing);
+  color: var(--background-color);
 }
 
 @-webkit-keyframes slide-in-blurred-left {
