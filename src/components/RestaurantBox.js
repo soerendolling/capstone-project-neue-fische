@@ -7,7 +7,7 @@ import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 
 export default function RestaurantBox({ name, cuisine, area, bookmarked }) {
-  function handleBookmarked() {
+  function renderBookmark() {
     if (bookmarked === true) {
       return <HeartFull className="restaurant-box-bookmark__svg" />;
     } else {
@@ -37,7 +37,7 @@ export default function RestaurantBox({ name, cuisine, area, bookmarked }) {
           <p className="description-text">Open</p>
         </span>
       </section>
-      {handleBookmarked()}
+      {renderBookmark()}
     </article>
   );
 }

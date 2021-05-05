@@ -5,36 +5,30 @@ import { Link } from "react-router-dom";
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = restaurantData.filter(
-    (savedRestaurants) => savedRestaurants.isBookmarked === true
+    (restaurants) => restaurants.isBookmarked === true
   );
 
   function renderRestaurants() {
-    return bookmarkedRestaurants.map((restaurant) => {
-      const {
-        id,
-        name,
-        kitchen,
-        location,
-        atmosphere,
-        isBookmarked,
-      } = restaurant;
-      const cuisine = kitchen[0];
-      const area = location.area[0];
-      const ambience = atmosphere[0];
+    return bookmarkedRestaurants.map(
+      ({ id, name, kitchen, location, atmosphere, isBookmarked }) => {
+        const [cuisine] = kitchen;
+        const [area] = location.area;
+        const [ambience] = atmosphere;
 
-      return (
-        <Link to={`/restaurantDetailedPage/${id}`}>
-          <RestaurantBox
-            key={id}
-            name={name}
-            cuisine={cuisine}
-            area={area}
-            atmosphere={ambience}
-            bookmarked={isBookmarked}
-          />
-        </Link>
-      );
-    });
+        return (
+          <Link to={`/restaurant-detailed-page/${id}`}>
+            <RestaurantBox
+              key={id}
+              name={name}
+              cuisine={cuisine}
+              area={area}
+              atmosphere={ambience}
+              bookmarked={isBookmarked}
+            />
+          </Link>
+        );
+      }
+    );
   }
 
   return (
@@ -45,7 +39,7 @@ export default function BookmarkPage({ restaurantData }) {
       </header>
       <main className="bookmark-main">{renderRestaurants()}</main>
       <footer className="bookmark-footer">
-        <Link to={`/takeAwayPage`}>
+        <Link to={`/take-away-page`}>
           <button className="bookmark-footer__button" type="submit">
             <Find className="bookmark-footer__svg" />
             start

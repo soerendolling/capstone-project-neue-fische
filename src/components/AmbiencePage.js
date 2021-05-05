@@ -27,16 +27,16 @@ export default function AmbiencePage() {
           <FilterTag text="hanseatic" />
           <FilterTag text="posh" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="ambience-main__amount">50</p>
         </Link>
       </main>
       <footer className="ambience-footer">
-        <Link to={`/openPage`}>
+        <Link to={`/open-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/cuisinePage`}>
+        <Link to={`/cuisine-page`}>
           <RightArrow />
         </Link>
       </footer>

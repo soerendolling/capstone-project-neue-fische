@@ -30,16 +30,16 @@ export default function PartOfTownPage() {
           <FilterTag text="eppendorf" />
           <FilterTag text="michel" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="partOfTown-main__amount">50</p>
         </Link>
       </main>
       <footer className="partOfTown-footer">
-        <Link to={`/outdoorPage`}>
+        <Link to={`/outdoor-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <RightArrow />
         </Link>
       </footer>

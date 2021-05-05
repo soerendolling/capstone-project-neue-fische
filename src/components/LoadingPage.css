@@ -1,8 +1,3 @@
-/* .loading-grid {
-    grid-template-columns: [header];
-  background: var(--background-color);
-} */
-
 .loading-main {
   display: flex;
   justify-content: center;

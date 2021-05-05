@@ -38,16 +38,16 @@ export default function CuisinePage() {
           <FilterTag text="middle eastern" />
           <FilterTag text="peruvian" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="cuisine-main__amount">50</p>
         </Link>
       </main>
       <footer className="cuisine-footer">
-        <Link to={`/ambiencePage`}>
+        <Link to={`/ambience-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/viewPage`}>
+        <Link to={`/view-page`}>
           <RightArrow />
         </Link>
       </footer>

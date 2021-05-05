@@ -88,7 +88,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         </div>
       </main>
       <footer className="detailed-footer">
-        <Link to="/resultsPage">
+        <Link to="/results-page">
           <LeftArrow />
         </Link>
         <Heart className="header-bookmark" />
