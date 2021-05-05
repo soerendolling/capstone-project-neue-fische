@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function TakeAwayPage({ restaurantData }) {
-  const [filter, setFilter] = useState();
+  const [filter, setFilter] = useState(restaurantData);
 
   let filteredRestaurants;
   if (filter === "pre order") {
@@ -21,8 +21,7 @@ export default function TakeAwayPage({ restaurantData }) {
     filteredRestaurants = restaurantData.filter(
       (restaurantInfo) =>
         restaurantInfo.takeAway === true ||
-        restaurantInfo.takeAwayDetails === "pick up" ||
-        restaurantInfo.deliveryDetails === "pre order"
+        restaurantInfo.takeAwayDetails === "pick up"
     );
   } else if (filter === "delivery") {
     filteredRestaurants = restaurantData.filter(
@@ -47,6 +46,8 @@ export default function TakeAwayPage({ restaurantData }) {
   function handlePreOrderFilter() {
     setFilter("pre order");
   }
+
+  console.log(filter);
 
   const currentResults = filteredRestaurants.length;
 
