@@ -7,18 +7,26 @@ import MainButton from "./MainButton";
 export default function ResultsPage({ restaurantData }) {
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const { id, name, kitchen, location, atmosphere } = restaurant;
+      const {
+        id,
+        name,
+        kitchen,
+        location,
+        atmosphere,
+        isBookmarked,
+      } = restaurant;
       const cuisine = kitchen[0];
       const area = location.area[0];
       const ambience = atmosphere[0];
       return (
-        <Link to={`/restaurantDetailedPage/${id}`}>
+        <Link to={`/restaurant-detailed-page/${id}`}>
           <RestaurantBox
             key={id}
             name={name}
             cuisine={cuisine}
             area={area}
             atmosphere={ambience}
+            bookmarked={isBookmarked}
           />
         </Link>
       );
@@ -33,12 +41,12 @@ export default function ResultsPage({ restaurantData }) {
       </header>
       <main className="results-main">{renderRestaurants()}</main>
       <footer className="results-footer">
-        <Link to={`/bookmarkPage`}>
+        <Link to={`/bookmark-page`}>
           <button className="results-footer__button">
             <SaveHeart className="results-footer__bookmark" />
           </button>
         </Link>
-        <Link to={`/takeAwayPage`}>
+        <Link to={`/take-away-page`}>
           <MainButton className="results-footer__button" text="start again" />
         </Link>
       </footer>

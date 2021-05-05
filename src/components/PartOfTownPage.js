@@ -9,7 +9,7 @@ export default function PartOfTownPage() {
   return (
     <div className="app-grid">
       <header className="partOfTown-header">
-        <h1 className="partOfTown-heading">Part of Town</h1>
+        <h1 className="partOfTown-heading">Suburb</h1>
         <h2 className="partOfTown-subheading">choose one or more</h2>
       </header>
       <main className="partOfTown-main">
@@ -26,20 +26,20 @@ export default function PartOfTownPage() {
           <FilterTag text="habor" />
           <FilterTag text="hafencity" />
           <FilterTag text="st. pauli" />
-          <FilterTag text="gro0 flottbek" />
+          <FilterTag text="groß flottbek" />
           <FilterTag text="eppendorf" />
           <FilterTag text="michel" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="partOfTown-main__amount">50</p>
         </Link>
       </main>
       <footer className="partOfTown-footer">
-        <Link to={`/outdoorPage`}>
+        <Link to={`/outdoor-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <RightArrow />
         </Link>
       </footer>

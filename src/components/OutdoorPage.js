@@ -25,16 +25,16 @@ export default function OutdoorPage() {
           <FilterTag text="rooftop" />
           <FilterTag text="park" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="outdoor-main__amount">50</p>
         </Link>
       </main>
       <footer className="outdoor-footer">
-        <Link to={`/viewPage`}>
+        <Link to={`/view-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/partOfTownPage`}>
+        <Link to={`/part-of-town-page`}>
           <RightArrow />
         </Link>
       </footer>

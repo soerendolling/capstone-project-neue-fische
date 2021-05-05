@@ -20,16 +20,16 @@ export default function ViewPage() {
           <FilterTag text="canal view" />
           <FilterTag text="alster lake view" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="view-main__amount">50</p>
         </Link>
       </main>
       <footer className="view-footer">
-        <Link to={`/cuisinePage`}>
+        <Link to={`/cuisine-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/outdoorPage`}>
+        <Link to={`/outdoor-page`}>
           <RightArrow />
         </Link>
       </footer>

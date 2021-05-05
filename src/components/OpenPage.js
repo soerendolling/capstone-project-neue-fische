@@ -24,16 +24,16 @@ export default function OpenPage() {
           <FilterTag text="saturdays" />
           <FilterTag text="sundays" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="open-main__amount">50</p>
         </Link>
       </main>
       <footer className="open-footer">
-        <Link to={`/takeAwayPage`}>
+        <Link to={`/take-away-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/ambiencePage`}>
+        <Link to={`/ambience-page`}>
           <RightArrow />
         </Link>
       </footer>

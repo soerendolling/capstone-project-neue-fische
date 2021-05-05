@@ -19,16 +19,16 @@ export default function TakeAwayPage() {
           <FilterTag text="pick up" />
           <FilterTag text="delivery" />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="takeAway-main__amount">50</p>
         </Link>
       </main>
       <footer className="takeAway-footer">
-        <Link to={`/bookmarkPage`}>
+        <Link to={`/bookmark-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/openPage`}>
+        <Link to={`/open-page`}>
           <RightArrow />
         </Link>
       </footer>
