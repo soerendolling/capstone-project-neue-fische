@@ -20,15 +20,19 @@ function App() {
   const location = useLocation();
 
   const filters = parse(location.search);
-  /*
-    This is an example of how to deal with the filtering.
-    In your code, you should have all the filtering stuff in a
-    separate module, then import it here and use it 
-  */
 
   const filteredRestaurants = restaurants.filter((restaurant) => {
     if (filters.takeAway?.includes("delivery")) {
       return restaurant.delivery === true;
+    } else if (filters.takeAway?.includes("pre order")) {
+      return (
+        restaurant.takeAwayDetails === "pre order" ||
+        restaurant.deliveryDetails === "pre order"
+      );
+    } else if (filters.takeAway?.includes("pick up")) {
+      return (
+        restaurant.takeAwayDetails === "pick up" || restaurant.takeAway === true
+      );
     }
     return true;
   });
