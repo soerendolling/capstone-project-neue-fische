@@ -20,7 +20,7 @@ export default function SignInPage() {
         </form>
       </main>
       <footer>
-        <Link to={`/bookmarkPage`}>
+        <Link to={`/bookmark-page`}>
           <MainButton text="sign in" />
         </Link>
       </footer>

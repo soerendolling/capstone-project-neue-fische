@@ -3,9 +3,18 @@ import restaurantImgOne from "../img/restaurant1.png";
 import { ReactComponent as Clock } from "../icons/clock.svg";
 import { ReactComponent as Tray } from "../icons/tray.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
-import { ReactComponent as Heart } from "../icons/heart.svg";
+import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
+import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 
-export default function RestaurantBox({ name, cuisine, area }) {
+export default function RestaurantBox({ name, cuisine, area, bookmarked }) {
+  function renderBookmark() {
+    if (bookmarked === true) {
+      return <HeartFull className="restaurant-box-bookmark__svg" />;
+    } else {
+      return <HeartEmpty className="restaurant-box-bookmark__svg" />;
+    }
+  }
+
   return (
     <article className="restaurant-box">
       <img
@@ -28,7 +37,7 @@ export default function RestaurantBox({ name, cuisine, area }) {
           <p className="description-text">Open</p>
         </span>
       </section>
-      <Heart className="restaurant-box-bookmark__svg" />
+      {renderBookmark()}
     </article>
   );
 }

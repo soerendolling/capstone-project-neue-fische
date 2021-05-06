@@ -69,11 +69,11 @@ export default function TakeAwayPage({ restaurantData }) {
         </Link>
       </main>
       <footer className="takeAway-footer">
-        <Link to={`/bookmarkPage`}>
+        <Link to={`/bookmark-page`}>
           <LeftArrow />
         </Link>
         <Progress />
-        <Link to={`/openPage`}>
+        <Link to={`/open-page`}>
           <RightArrow />
         </Link>
       </footer>
