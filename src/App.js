@@ -42,8 +42,9 @@ function App() {
           <Route exact path="/bookmark-page">
             <BookmarkPage restaurantData={restaurants} />
           </Route>
-          <Route exact path="/take-away-page">
-            <TakeAwayPage />
+
+          <Route exact path="/takeAwayPage">
+            <TakeAwayPage restaurantData={restaurants} />
           </Route>
           <Route exact path="/open-page">
             <OpenPage />
