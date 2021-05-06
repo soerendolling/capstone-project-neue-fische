@@ -14,28 +14,13 @@ import PartOfTownPage from "./components/PartOfTownPage";
 import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
 import LoadingPage from "./components/LoadingPage";
 import { parse } from "./utilities/queryString";
+import { takeAwayFilter } from "./models/takeAwayFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const location = useLocation();
-
   const filters = parse(location.search);
-
-  const filteredRestaurants = restaurants.filter((restaurant) => {
-    if (filters.takeAway?.includes("delivery")) {
-      return restaurant.delivery === true;
-    } else if (filters.takeAway?.includes("pre order")) {
-      return (
-        restaurant.takeAwayDetails === "pre order" ||
-        restaurant.deliveryDetails === "pre order"
-      );
-    } else if (filters.takeAway?.includes("pick up")) {
-      return (
-        restaurant.takeAwayDetails === "pick up" || restaurant.takeAway === true
-      );
-    }
-    return true;
-  });
+  const filteredRestaurantsTakeAway = takeAwayFilter(restaurants, filters);
 
   useEffect(() => {
     const fetchRestaurants = () => {
@@ -59,7 +44,7 @@ function App() {
           <BookmarkPage restaurantData={restaurants} />
         </Route>
         <Route exact path="/take-away-page">
-          <TakeAwayPage restaurantData={filteredRestaurants} />
+          <TakeAwayPage restaurantData={filteredRestaurantsTakeAway} />
         </Route>
         <Route exact path="/open-page">
           <OpenPage />
