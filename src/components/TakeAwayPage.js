@@ -5,16 +5,7 @@ import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/takeAway-progress.svg";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { stringify, parse } from "../utilities/queryString";
-
-function toggleValueInArray(array, value) {
-  if (array.includes(value)) {
-    return array.filter((filter) => {
-      return filter !== value;
-    });
-  } else {
-    return [...array, value];
-  }
-}
+import { toggleValueInArray } from "../models/toggleValueInArray";
 
 export default function TakeAwayPage({ restaurantData }) {
   const location = useLocation();

@@ -3,7 +3,8 @@ import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/open-progress.svg";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import { stringify, parse } from "../utilities/queryString";
 
 export default function OpenPage() {
   return (
