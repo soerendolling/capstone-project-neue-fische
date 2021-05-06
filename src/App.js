@@ -15,13 +15,14 @@ import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
 import LoadingPage from "./components/LoadingPage";
 import { parse } from "./utilities/queryString";
 import { takeAwayFilter } from "./models/takeAwayFilter";
+import { openingTimesFilter } from "./models/openingTimesFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const location = useLocation();
   const filters = parse(location.search);
-  const filteredRestaurantsTakeAway = takeAwayFilter(restaurants, filters);
-
+  const filteredByTakeAway = takeAwayFilter(restaurants, filters);
+  const filteredByOpeningTimes = openingTimesFilter(restaurants, filters);
   useEffect(() => {
     const fetchRestaurants = () => {
       return fetch("/restaurants.json")
@@ -44,10 +45,10 @@ function App() {
           <BookmarkPage restaurantData={restaurants} />
         </Route>
         <Route exact path="/take-away-page">
-          <TakeAwayPage restaurantData={filteredRestaurantsTakeAway} />
+          <TakeAwayPage restaurantData={filteredByTakeAway} />
         </Route>
         <Route exact path="/open-page">
-          <OpenPage />
+          <OpenPage restaurantData={filteredByOpeningTimes} />
         </Route>
         <Route exact path="/ambience-page">
           <AmbiencePage />
