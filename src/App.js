@@ -12,6 +12,7 @@ import ViewPage from "./components/ViewPage";
 import OutdoorPage from "./components/OutdoorPage";
 import PartOfTownPage from "./components/PartOfTownPage";
 import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
+import LoadingPage from "./components/LoadingPage";
 import { parse } from "./utilities/queryString";
 
 function App() {
@@ -47,11 +48,11 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/sign-in-page">
           <SignInPage />
         </Route>
         <Route exact path="/bookmark-page">
-          <BookmarkPage />
+          <BookmarkPage restaurantData={restaurants} />
         </Route>
         <Route exact path="/take-away-page">
           <TakeAwayPage restaurantData={filteredRestaurants} />
@@ -80,7 +81,9 @@ function App() {
         <Route exact path="/restaurant-detailed-page/:id">
           <RestaurantDetailedPage restaurantData={restaurants} />
         </Route>
-        <Route exact path="/loadingPage"></Route>
+        <Route exact path="/">
+          <LoadingPage />
+        </Route>
       </Switch>
     </div>
   );

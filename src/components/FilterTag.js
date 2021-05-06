@@ -1,20 +1,14 @@
-import { useState } from "react";
 import "./FilterTag.css";
 
-export default function FilterTag({ text, handleClick }) {
-  const [isToggled, setIsToggled] = useState(false);
-
-  function handleToggle() {
-    setIsToggled(!isToggled);
+export default function FilterTag({ text, onClick, isToggled }) {
+  function handleClick() {
+    onClick(text);
   }
 
   return (
     <button
       className={isToggled ? "tag-true" : "tag-false"}
-      onClick={() => {
-        handleClick();
-        handleToggle();
-      }}
+      onClick={handleClick}
     >
       {text}
     </button>
