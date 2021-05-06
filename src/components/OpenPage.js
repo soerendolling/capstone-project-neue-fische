@@ -52,39 +52,39 @@ export default function OpenPage({ restaurantData }) {
             isToggled={isTagToggled("today")}
           />
           <FilterTag
-            text="mondays"
+            text="monday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("mondays")}
+            isToggled={isTagToggled("monday")}
           />
           <FilterTag
-            text="tuesdays"
+            text="tuesday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("tuesdays")}
+            isToggled={isTagToggled("tuesday")}
           />
           <FilterTag
-            text="wednesdays"
+            text="wednesday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("wednesdays")}
+            isToggled={isTagToggled("wednesday")}
           />
           <FilterTag
-            text="thursdays"
+            text="thursday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("thursdays")}
+            isToggled={isTagToggled("thursday")}
           />
           <FilterTag
-            text="fridays"
+            text="friday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("fridays")}
+            isToggled={isTagToggled("friday")}
           />
           <FilterTag
-            text="saturdays"
+            text="saturday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("saturdays")}
+            isToggled={isTagToggled("saturday")}
           />
           <FilterTag
-            text="sundays"
+            text="sunday"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("sundays")}
+            isToggled={isTagToggled("sunday")}
           />
         </div>
         <Link to={`/results-page`}>
