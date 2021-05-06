@@ -71,12 +71,12 @@ export default function TakeAwayPage({ restaurantData }) {
             isToggled={isTagToggled("delivery")}
           />
         </div>
-        <Link to={`/resultsPage`}>
+        <Link to={`/results-page`}>
           <p className="takeAway-main__amount">{restaurantData.length}</p>
         </Link>
       </main>
       <footer className="takeAway-footer">
-        <Link to="/bookmarkPage">
+        <Link to="/bookmark-page">
           <LeftArrow />
         </Link>
         <Progress />
@@ -84,7 +84,7 @@ export default function TakeAwayPage({ restaurantData }) {
           to={(location) => {
             return {
               ...location,
-              pathname: "/openPage",
+              pathname: "/open-page",
             };
           }}
         >
