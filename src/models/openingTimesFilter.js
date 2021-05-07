@@ -8,10 +8,10 @@ export function openingTimesFilter(restaurants, filters) {
   return restaurants.filter((restaurant) => {
     if (filters.openingTimes?.includes("now")) {
       return (
-        restaurant.openingTimes[today].general.open > hour &&
-        restaurant.openingTimes[today].general.close < hour &&
-        restaurant.openingTimes[today].lunch.open > hour &&
-        restaurant.openingTimes[today].lunch.close > hour
+        (restaurant.openingTimes[today].general.open > hour &&
+          restaurant.openingTimes[today].general.close < hour) ||
+        (restaurant.openingTimes[today].lunch.open > hour &&
+          restaurant.openingTimes[today].lunch.close > hour)
       );
     } else if (filters.openingTimes?.includes("today")) {
       return restaurant.openingTimes[today].general.open > 0;
