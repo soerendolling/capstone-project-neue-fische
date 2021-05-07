@@ -37,24 +37,14 @@ export default function TakeAwayPage({ restaurantData }) {
     <div className="app-grid">
       <header className="takeAway-header">
         <h1 className="takeAway-heading">Take Away</h1>
-        <h2 className="takeAway-subheading">choose one or more</h2>
+        <h2 className="takeAway-subheading">choose one or none</h2>
       </header>
       <main className="takeAway-main">
         <div className="takeAway-tag__layout">
           <FilterTag
-            text="eat in"
+            text="take away"
             onClick={handleFilterClick}
-            isToggled={isTagToggled("eat in")}
-          />
-          <FilterTag
-            text="pre order"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("pre order")}
-          />
-          <FilterTag
-            text="pick up"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("pick up")}
+            isToggled={isTagToggled("take away")}
           />
           <FilterTag
             text="delivery"

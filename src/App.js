@@ -22,7 +22,11 @@ function App() {
   const location = useLocation();
   const filters = parse(location.search);
   const filteredByTakeAway = takeAwayFilter(restaurants, filters);
-  const filteredByOpeningTimes = openingTimesFilter(restaurants, filters);
+  const filteredByOpeningTimes = openingTimesFilter(
+    filteredByTakeAway,
+    filters
+  );
+
   useEffect(() => {
     const fetchRestaurants = () => {
       return fetch("/restaurants.json")
