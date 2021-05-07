@@ -1,9 +1,9 @@
 export function openingTimesFilter(restaurants, filters) {
-  let currentDate = new Date();
-  let options = { weekday: "long" };
-  const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
-  const today = getDay.toLocaleLowerCase();
-  const hour = currentDate.getHours();
+  // let currentDate = new Date();
+  // let options = { weekday: "long" };
+  // const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
+  // const today = getDay.toLocaleLowerCase();
+  // const hour = currentDate.getHours();
 
   return restaurants.filter((restaurant) => {
     if (filters.openingTimes?.includes("now")) {
