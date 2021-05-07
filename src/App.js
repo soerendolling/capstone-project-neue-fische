@@ -16,6 +16,7 @@ import LoadingPage from "./components/LoadingPage";
 import { parse } from "./utilities/queryString";
 import { takeAwayFilter } from "./models/takeAwayFilter";
 import { openingTimesFilter } from "./models/openingTimesFilter";
+import { ambienceFilter } from "./models/ambienceFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -26,6 +27,7 @@ function App() {
     filteredByTakeAway,
     filters
   );
+  const filteredByAmbience = ambienceFilter(filteredByOpeningTimes, filters);
 
   useEffect(() => {
     const fetchRestaurants = () => {
@@ -55,7 +57,7 @@ function App() {
           <OpenPage restaurantData={filteredByOpeningTimes} />
         </Route>
         <Route exact path="/ambience-page">
-          <AmbiencePage />
+          <AmbiencePage restaurantData={filteredByAmbience} />
         </Route>
         <Route exact path="/cuisine-page">
           <CuisinePage />

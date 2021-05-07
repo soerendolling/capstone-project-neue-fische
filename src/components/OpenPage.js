@@ -88,7 +88,7 @@ export default function OpenPage({ restaurantData }) {
           />
         </div>
         <Link to={`/results-page`}>
-          <p className="takeAway-main__amount">{restaurantData.length}</p>
+          <p className="open-main__amount">{restaurantData.length}</p>
         </Link>
       </main>
       <footer className="open-footer">
