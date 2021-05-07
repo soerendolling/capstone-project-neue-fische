@@ -1,15 +1,20 @@
 export function openingTimesFilter(restaurants, filters) {
-  // let currentDate = new Date();
-  // let options = { weekday: "long" };
-  // const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
-  // const today = getDay.toLocaleLowerCase();
-  // const hour = currentDate.getHours();
+  let currentDate = new Date();
+  let options = { weekday: "long" };
+  const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
+  const today = getDay.toLowerCase();
+  const hour = currentDate.getHours();
 
   return restaurants.filter((restaurant) => {
     if (filters.openingTimes?.includes("now")) {
-      // return restaurant.openingTimes.{today}general.open > 0 && restaurant.openingTimes.{today}.lunch.open > 0 === hour;
+      return (
+        restaurant.openingTimes[today].general.open > hour &&
+        restaurant.openingTimes[today].general.close < hour &&
+        restaurant.openingTimes[today].lunch.open > hour &&
+        restaurant.openingTimes[today].lunch.close > hour
+      );
     } else if (filters.openingTimes?.includes("today")) {
-      // return restaurant.openingTimes.${today}.general.open > 0 === today;
+      return restaurant.openingTimes[today].general.open > 0;
     } else if (filters.openingTimes?.includes("monday")) {
       return restaurant.openingTimes.monday.general.open > 0;
     } else if (filters.openingTimes?.includes("tuesday")) {
