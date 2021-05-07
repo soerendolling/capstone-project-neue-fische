@@ -19,7 +19,14 @@ export default function ResultsPage({ restaurantData }) {
       const area = location.area[0];
       const firstAmbience = ambience[0];
       return (
-        <Link to={`/restaurant-detailed-page/${id}`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: `/restaurant-detailed-page/${id}`,
+            };
+          }}
+        >
           <RestaurantBox
             key={id}
             name={name}

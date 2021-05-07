@@ -19,6 +19,23 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
   );
+  console.log(singleRestaurant);
+  const monday = singleRestaurant.openingTimes.monday.general.open > 0;
+  const tuesday = singleRestaurant.openingTimes.tuesday.general.open > 0;
+  const wednesday = singleRestaurant.openingTimes.wednesday.general.open > 0;
+  const thursday = singleRestaurant.openingTimes.thursday.general.open > 0;
+  const friday = singleRestaurant.openingTimes.friday.general.open > 0;
+  const saturday = singleRestaurant.openingTimes.saturday.general.open > 0;
+  const sunday = singleRestaurant.openingTimes.sunday.general.open > 0;
+
+  let classForWeekday;
+  if (sunday) {
+    classForWeekday = " open";
+  } else {
+    classForWeekday = " closed";
+  }
+
+  console.log(monday);
 
   return (
     <div className="RestaurantDetailedPage">
@@ -32,18 +49,18 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       <main>
         <h1 className="detailed-heading">{singleRestaurant.name}</h1>
         <div className="detailed-subheading">
-          <h2>{singleRestaurant.kitchen[0]}</h2>
+          <h2>{singleRestaurant.cuisine[0]}</h2>
           <h2>-</h2>
-          <h2>{singleRestaurant.atmosphere[0]}</h2>
+          <h2>{singleRestaurant.ambience[0]}</h2>
         </div>
         <div className="headline-weekday__layout">
-          <div className="headline-weekday__day open">M</div>
-          <div className="headline-weekday__day open">T</div>
-          <div className="headline-weekday__day open">W</div>
-          <div className="headline-weekday__day open">T</div>
-          <div className="headline-weekday__day open">F</div>
-          <div className="headline-weekday__day open">S</div>
-          <div className="headline-weekday__day closed">S</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>M</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>T</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>W</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>T</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>F</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>S</div>
+          <div className={`headline-weekday__day${classForWeekday}`}>S</div>
         </div>
         <div className="detailed-info__layout">
           <div className="detailed-info__text-layout">
@@ -88,7 +105,14 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         </div>
       </main>
       <footer className="detailed-footer">
-        <Link to="/results-page">
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <LeftArrow />
         </Link>
         <Heart className="header-bookmark" />
