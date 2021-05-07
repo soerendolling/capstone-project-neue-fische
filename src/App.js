@@ -83,7 +83,7 @@ function App() {
           <ResultsPage restaurantData={filteredByPartOfTown} />
         </Route>
         <Route exact path="/restaurant-detailed-page/:id">
-          <RestaurantDetailedPage restaurantData={restaurants} />
+          <RestaurantDetailedPage restaurantData={filteredByPartOfTown} />
         </Route>
         <Route exact path="/">
           <LoadingPage />
