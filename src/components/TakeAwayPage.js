@@ -52,7 +52,14 @@ export default function TakeAwayPage({ restaurantData }) {
             isToggled={isTagToggled("delivery")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="takeAway-main__amount">{restaurantData.length}</p>
         </Link>
       </main>

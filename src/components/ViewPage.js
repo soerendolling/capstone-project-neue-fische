@@ -61,7 +61,14 @@ export default function ViewPage({ restaurantData }) {
             isToggled={isTagToggled("alster lake view")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="view-main__amount">{restaurantData.length}</p>
         </Link>
       </main>

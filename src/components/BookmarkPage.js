@@ -10,19 +10,19 @@ export default function BookmarkPage({ restaurantData }) {
 
   function renderRestaurants() {
     return bookmarkedRestaurants.map(
-      ({ id, name, kitchen, location, atmosphere, isBookmarked }) => {
-        const [cuisine] = kitchen;
+      ({ id, name, cuisine, location, ambience, isBookmarked }) => {
+        const [firstCuisine] = cuisine;
         const [area] = location.area;
-        const [ambience] = atmosphere;
+        const [firstAmbience] = ambience;
 
         return (
           <Link to={`/restaurant-detailed-page/${id}`}>
             <RestaurantBox
               key={id}
               name={name}
-              cuisine={cuisine}
+              cuisine={firstCuisine}
               area={area}
-              atmosphere={ambience}
+              atmosphere={firstAmbience}
               bookmarked={isBookmarked}
             />
           </Link>

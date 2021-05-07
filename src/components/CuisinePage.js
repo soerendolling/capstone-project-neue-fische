@@ -151,7 +151,14 @@ export default function CuisinePage({ restaurantData }) {
             isToggled={isTagToggled("peruvian")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="cuisine-main__amount">{restaurantData.length}</p>
         </Link>
       </main>
