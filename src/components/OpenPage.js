@@ -10,8 +10,8 @@ import { toggleValueInArray } from "../models/toggleValueInArray";
 export default function OpenPage({ restaurantData }) {
   const location = useLocation();
   const history = useHistory();
-  const parsedQueryString = parse(location.search);
 
+  const parsedQueryString = parse(location.search);
   const selectedFilters = parsedQueryString.openingTimes || [];
 
   function handleFilterClick(name) {
