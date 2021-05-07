@@ -10,22 +10,22 @@ export default function ResultsPage({ restaurantData }) {
       const {
         id,
         name,
-        kitchen,
+        cuisine,
         location,
-        atmosphere,
+        ambience,
         isBookmarked,
       } = restaurant;
-      const cuisine = kitchen[0];
+      const firstCuisine = cuisine[0];
       const area = location.area[0];
-      const ambience = atmosphere[0];
+      const firstAmbience = ambience[0];
       return (
         <Link to={`/restaurant-detailed-page/${id}`}>
           <RestaurantBox
             key={id}
             name={name}
-            cuisine={cuisine}
+            cuisine={firstCuisine}
             area={area}
-            atmosphere={ambience}
+            atmosphere={firstAmbience}
             bookmarked={isBookmarked}
           />
         </Link>

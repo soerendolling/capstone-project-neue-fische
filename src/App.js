@@ -19,6 +19,7 @@ import { openingTimesFilter } from "./models/openingTimesFilter";
 import { ambienceFilter } from "./models/ambienceFilter";
 import { cuisineFilter } from "./models/cuisineFilter";
 import { viewFilter } from "./models/viewFilter";
+import { outdoorFilter } from "./models/outdoorFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -32,6 +33,7 @@ function App() {
   const filteredByAmbience = ambienceFilter(filteredByOpeningTimes, filters);
   const filteredByCuisine = cuisineFilter(filteredByAmbience, filters);
   const filteredByView = viewFilter(filteredByCuisine, filters);
+  const filteredByOutdoor = outdoorFilter(filteredByView, filters);
 
   useEffect(() => {
     const fetchRestaurants = () => {
@@ -70,7 +72,7 @@ function App() {
           <ViewPage restaurantData={filteredByView} />
         </Route>
         <Route exact path="/outdoor-page">
-          <OutdoorPage />
+          <OutdoorPage restaurantData={filteredByOutdoor} />
         </Route>
         <Route exact path="/part-of-town-page">
           <PartOfTownPage />
