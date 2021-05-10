@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .RestaurantDetailedPage {
   display: grid;
   grid-template-rows: [header] 230px [content] auto [footer] 80px;
@@ -18,7 +22,6 @@
 }
 
 .detailed-subheading {
-  display: flex;
   margin-top: 5px;
 }
 
