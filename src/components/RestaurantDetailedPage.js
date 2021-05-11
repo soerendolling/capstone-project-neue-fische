@@ -17,6 +17,7 @@ import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Lunch } from "../icons/lunch.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
+import { ReactComponent as Email } from "../icons/at.svg";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -206,8 +207,8 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       smokingInside
         ? "smoking allowed"
         : smokingOutside
-        ? "smoking outside allowed"
-        : "none smoking"
+        ? "smoking outside"
+        : "non smoking"
     }`;
 
     return (
@@ -258,6 +259,20 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
+  function showEmail() {
+    const email = singleRestaurant.contact.email;
+    if (email !== "") {
+      return (
+        <span className="info-line">
+          <Email className="info-svg" />
+          <a href={`mailto:${email}`}>
+            <p className="info-text">{email}</p>
+          </a>
+        </span>
+      );
+    }
+  }
+
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -283,21 +298,23 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <div className={`headline-weekday__day${classForSunday}`}>S</div>
         </div>
         <div className="detailed-info__layout">
-          <div className="detailed-info__text-layout">
+          <div className="detailed-info__text-top">
             {showLunch()}
             {showOpeningTimes()}
+            {showMeatlessOptions()}
             {showOutdoor()}
             {showView()}
-            {showSmoking()}
             {showPrice()}
-          </div>
-          <div className="detailed-info__text-layout">
             {showSize()}
             {showTakeAwayOptions()}
             {showDelivery()}
-            {showMeatlessOptions()}
+
+            {showSmoking()}
+          </div>
+          <div className="detailed-info__text-bottom">
             {showAdress()}
             {showNumber()}
+            {showEmail()}
             {showWebsite()}
           </div>
         </div>
