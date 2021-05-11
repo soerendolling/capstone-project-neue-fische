@@ -75,11 +75,7 @@ export default function CuisinePage({ restaurantData }) {
             onClick={handleFilterClick}
             isToggled={isTagToggled("german")}
           />
-          <FilterTag
-            text="hanseatic"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("hanseatic")}
-          />
+
           <FilterTag
             text="fish"
             onClick={handleFilterClick}
