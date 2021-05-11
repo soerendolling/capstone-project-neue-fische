@@ -140,12 +140,12 @@
       },
       "location": {
         "area": ["saint georg"],
-        "view": "alster",
+        "view": "alster lake",
         "restaurantOutdoor": false,
         "restaurantOutdoorDetail": "No",
         "barOutdoor": true,
         "barOutdoorDetail": "rooftop",
-        "water": "alster",
+        "water": "alster lake",
         "publicTransport": ["central station"]
       },
       "img": ""
@@ -865,12 +865,12 @@
       },
       "location": {
         "area": ["neustadt", "jungfernstieg"],
-        "view": "alster",
+        "view": "alster lake",
         "restaurantOutdoor": false,
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "alster",
+        "water": "alster lake",
         "publicTransport": ["u3", "u1", "u2", "s1"]
       },
       "img": ""
@@ -1015,7 +1015,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "alster",
+        "water": "alster lake",
         "publicTransport": ["u3", "u1", "u2", "s1"]
       },
       "img": ""
@@ -1595,7 +1595,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "alster",
+        "water": "alster lake",
         "publicTransport": ["u3", "s1", "u2", "u1"]
       },
       "img": ""
@@ -3052,7 +3052,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "alster",
+        "water": "alster lake",
         "publicTransport": ["u3", "s1", "s11", "s21", "s31", "u1", "u2"]
       },
       "img": ""

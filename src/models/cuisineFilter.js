@@ -20,8 +20,6 @@ export function cuisineFilter(restaurants, filters) {
       return restaurant.cuisine.includes("local");
     } else if (filters.cuisine?.includes("german")) {
       return restaurant.cuisine.includes("german");
-    } else if (filters.cuisine?.includes("hanseatic")) {
-      return restaurant.cuisine.includes("hanseatic");
     } else if (filters.cuisine?.includes("fish")) {
       return restaurant.cuisine.includes("fish");
     } else if (filters.cuisine?.includes("austrian")) {

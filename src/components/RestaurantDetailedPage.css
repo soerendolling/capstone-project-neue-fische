@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .RestaurantDetailedPage {
   display: grid;
   grid-template-rows: [header] 230px [content] auto [footer] 80px;
@@ -18,7 +22,6 @@
 }
 
 .detailed-subheading {
-  display: flex;
   margin-top: 5px;
 }
 
@@ -73,19 +76,30 @@
 }
 
 .detailed-info__layout {
-  display: flex;
-  justify-content: space-between;
   margin-top: 25px;
+  letter-spacing: 2px;
 }
 
-.detailed-info__text-layout {
+.detailed-info__text-top {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: 100px;
+  overflow-x: scroll;
+}
+
+.detailed-info__text-bottom {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 8px;
 }
 
 .info-text {
   margin: 0;
+  color: var(--dark-color);
 }
 
 .info-svg {
@@ -97,6 +111,7 @@
 .info-line {
   display: flex;
   gap: 10px;
+  margin-right: 13px;
   align-items: center;
 }
 

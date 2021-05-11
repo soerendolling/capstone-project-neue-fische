@@ -87,7 +87,14 @@ export default function OpenPage({ restaurantData }) {
             isToggled={isTagToggled("sunday")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="open-main__amount">{restaurantData.length}</p>
         </Link>
       </main>

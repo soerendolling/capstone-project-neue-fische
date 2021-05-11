@@ -18,6 +18,9 @@ import { takeAwayFilter } from "./models/takeAwayFilter";
 import { openingTimesFilter } from "./models/openingTimesFilter";
 import { ambienceFilter } from "./models/ambienceFilter";
 import { cuisineFilter } from "./models/cuisineFilter";
+import { viewFilter } from "./models/viewFilter";
+import { outdoorFilter } from "./models/outdoorFilter";
+import { partOfTownFilter } from "./models/partOfTownFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -30,6 +33,9 @@ function App() {
   );
   const filteredByAmbience = ambienceFilter(filteredByOpeningTimes, filters);
   const filteredByCuisine = cuisineFilter(filteredByAmbience, filters);
+  const filteredByView = viewFilter(filteredByCuisine, filters);
+  const filteredByOutdoor = outdoorFilter(filteredByView, filters);
+  const filteredByPartOfTown = partOfTownFilter(filteredByOutdoor, filters);
 
   useEffect(() => {
     const fetchRestaurants = () => {
@@ -65,19 +71,19 @@ function App() {
           <CuisinePage restaurantData={filteredByCuisine} />
         </Route>
         <Route exact path="/view-page">
-          <ViewPage />
+          <ViewPage restaurantData={filteredByView} />
         </Route>
         <Route exact path="/outdoor-page">
-          <OutdoorPage />
+          <OutdoorPage restaurantData={filteredByOutdoor} />
         </Route>
         <Route exact path="/part-of-town-page">
-          <PartOfTownPage />
+          <PartOfTownPage restaurantData={filteredByPartOfTown} />
         </Route>
         <Route exact path="/results-page">
-          <ResultsPage restaurantData={restaurants} />
+          <ResultsPage restaurantData={filteredByPartOfTown} />
         </Route>
         <Route exact path="/restaurant-detailed-page/:id">
-          <RestaurantDetailedPage restaurantData={restaurants} />
+          <RestaurantDetailedPage restaurantData={filteredByPartOfTown} />
         </Route>
         <Route exact path="/">
           <LoadingPage />

@@ -75,11 +75,7 @@ export default function CuisinePage({ restaurantData }) {
             onClick={handleFilterClick}
             isToggled={isTagToggled("german")}
           />
-          <FilterTag
-            text="hanseatic"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("hanseatic")}
-          />
+
           <FilterTag
             text="fish"
             onClick={handleFilterClick}
@@ -151,7 +147,14 @@ export default function CuisinePage({ restaurantData }) {
             isToggled={isTagToggled("peruvian")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="cuisine-main__amount">{restaurantData.length}</p>
         </Link>
       </main>

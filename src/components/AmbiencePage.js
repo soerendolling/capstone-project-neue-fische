@@ -89,7 +89,14 @@ export default function AmbiencePage({ restaurantData }) {
             isToggled={isTagToogled("hanseatic")}
           />
         </div>
-        <Link to={`/results-page`}>
+        <Link
+          to={(location) => {
+            return {
+              ...location,
+              pathname: "/results-page",
+            };
+          }}
+        >
           <p className="ambience-main__amount">{restaurantData.length}</p>
         </Link>
       </main>
