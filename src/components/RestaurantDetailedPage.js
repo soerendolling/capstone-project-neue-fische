@@ -18,7 +18,7 @@ import { ReactComponent as Lunch } from "../icons/lunch.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
-// import { ReactComponent as Michelin } from "../icons/michelin.svg";
+import { ReactComponent as Michelin } from "../icons/michelin.svg";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -276,20 +276,20 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
-  // function showMichelin() {
-  //   const michelin = singleRestaurant.michelinAwarded;
-  //   const michelinInfo = `${michelin[0]} ${michelin[1]}`;
-  //   console.log(michelinInfo);
-  //   console.log(michelin);
-  //   if (michelinInfo === undefined) {
-  //     return (
-  //       <span className="info-line">
-  //         <Michelin className="info-svg" />
-  //         <p className="info-text">{michelinInfo}</p>
-  //       </span>
-  //     );
-  //   }
-  // }
+  function showMichelin() {
+    const michelin = singleRestaurant.michelinAwarded;
+    const michelinInfo = `${michelin[0]} ${michelin[1]}`;
+    console.log(michelinInfo);
+    console.log(michelin);
+    if (michelin.lenght !== 0) {
+      return (
+        <span className="info-line">
+          <Michelin className="info-svg" />
+          <p className="info-text">{michelinInfo}</p>
+        </span>
+      );
+    }
+  }
 
   return (
     <div className="RestaurantDetailedPage">
@@ -320,7 +320,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             {showLunch()}
             {showOpeningTimes()}
             {showMeatlessOptions()}
-            {/* {showMichelin()} */}
+            {showMichelin()}
             {showOutdoor()}
             {showView()}
             {showPrice()}
