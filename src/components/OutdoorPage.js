@@ -27,7 +27,6 @@ export default function OutdoorPage({ restaurantData }) {
       .then((incomingData) => {
         const newWeather = incomingData.current;
         setWeather(newWeather);
-        console.log(incomingData);
       })
       .catch((error) => {
         console.log(error);
@@ -53,6 +52,8 @@ export default function OutdoorPage({ restaurantData }) {
   function showTemp() {
     if (weather !== undefined) {
       return weather.temp_c;
+    } else {
+      return -100;
     }
   }
 
