@@ -20,7 +20,7 @@ export default function OutdoorPage({ restaurantData }) {
 
   useEffect(() => {
     const url =
-      "http://api.weatherapi.com/v1/current.json?key=487e8af21edb4a54b1f142156211105&q=Hamburg&aqi=no";
+      "https://api.weatherapi.com/v1/current.json?key=487e8af21edb4a54b1f142156211105&q=Hamburg&aqi=no";
 
     fetch(url)
       .then((res) => res.json())
