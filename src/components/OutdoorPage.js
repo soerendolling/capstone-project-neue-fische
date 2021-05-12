@@ -52,8 +52,6 @@ export default function OutdoorPage({ restaurantData }) {
   function showTemp() {
     if (weather !== undefined) {
       return weather.temp_c;
-    } else {
-      return -100;
     }
   }
 
