@@ -7,35 +7,20 @@ import MainButton from "./MainButton";
 export default function ResultsPage({ restaurantData }) {
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const {
-        id,
-        name,
-        cuisine,
-        location,
-        ambience,
-        isBookmarked,
-      } = restaurant;
+      const { id, name, cuisine, location, ambience, isBookmarked } =
+        restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
       const firstAmbience = ambience[0];
       return (
-        <Link
-          to={(location) => {
-            return {
-              ...location,
-              pathname: `/restaurant-detailed-page/${id}`,
-            };
-          }}
-        >
-          <RestaurantBox
-            key={id}
-            name={name}
-            cuisine={firstCuisine}
-            area={area}
-            atmosphere={firstAmbience}
-            bookmarked={isBookmarked}
-          />
-        </Link>
+        <RestaurantBox
+          restaurantId={id}
+          name={name}
+          cuisine={firstCuisine}
+          area={area}
+          atmosphere={firstAmbience}
+          bookmarked={isBookmarked}
+        />
       );
     });
   }
