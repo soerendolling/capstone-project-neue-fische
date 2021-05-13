@@ -7,6 +7,11 @@ import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import {
+  sendDataToLocalStorage,
+  getDataFromLocalStorage,
+  removeDataFromLocalStorageById,
+} from "../utilities/localStorage";
 
 export default function RestaurantBox({
   restaurantId,
@@ -17,9 +22,16 @@ export default function RestaurantBox({
 }) {
   const [clicked, setClicked] = useState(false);
 
-  const handleBookmarked = () => {
-    !clicked ? setClicked(true) : setClicked(false);
-  };
+  const restaurantBookmarked = { restaurantId, name, cuisine, area };
+  function handleBookmarked() {
+    if (!clicked) {
+      setClicked(true);
+      sendDataToLocalStorage(restaurantBookmarked);
+    } else {
+      setClicked(false);
+      removeDataFromLocalStorageById(restaurantId);
+    }
+  }
   console.log(clicked);
 
   function renderBookmark() {
