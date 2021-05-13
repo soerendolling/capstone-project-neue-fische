@@ -15,14 +15,15 @@ export default function RestaurantBox({
   area,
   bookmarked,
 }) {
-  const [clicked, setClicked] = useState();
+  const [clicked, setClicked] = useState(false);
 
   const handleBookmarked = () => {
-    alert("hi");
+    !clicked ? setClicked(true) : setClicked(false);
   };
+  console.log(clicked);
 
   function renderBookmark() {
-    if (bookmarked === true) {
+    if (clicked) {
       return (
         <HeartFull
           className="restaurant-box-bookmark__svg"
@@ -33,7 +34,7 @@ export default function RestaurantBox({
       return (
         <HeartEmpty
           className="restaurant-box-bookmark__svg"
-          onClick={console.log("empty")}
+          onClick={handleBookmarked}
         />
       );
     }
