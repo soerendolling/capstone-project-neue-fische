@@ -9,17 +9,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   sendDataToLocalStorage,
-  getDataFromLocalStorage,
   removeDataFromLocalStorageById,
 } from "../utilities/localStorage";
 
-export default function RestaurantBox({
-  restaurantId,
-  name,
-  cuisine,
-  area,
-  bookmarked,
-}) {
+export default function RestaurantBox({ restaurantId, name, cuisine, area }) {
   const [clicked, setClicked] = useState(false);
 
   const restaurantBookmarked = { restaurantId, name, cuisine, area };

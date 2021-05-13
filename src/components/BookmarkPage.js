@@ -2,28 +2,27 @@ import "./BookmarkPage.css";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as Find } from "../icons/find.svg";
 import { Link } from "react-router-dom";
+import {
+  getDataFromLocalStorage,
+  removeDataFromLocalStorageById,
+} from "../utilities/localStorage";
 
 export default function BookmarkPage({ restaurantData }) {
-  const bookmarkedRestaurants = restaurantData.filter(
-    (restaurants) => restaurants.isBookmarked === true
-  );
+  const bookmarkedRestaurants = getDataFromLocalStorage();
+
+  console.log(bookmarkedRestaurants);
 
   function renderRestaurants() {
     return bookmarkedRestaurants.map(
-      ({ id, name, cuisine, location, ambience, isBookmarked }) => {
-        const [firstCuisine] = cuisine;
-        const [area] = location.area;
-        const [firstAmbience] = ambience;
-
+      ({ id, name, cuisine, area, ambience }) => {
         return (
           <Link to={`/restaurant-detailed-page/${id}`}>
             <RestaurantBox
               key={id}
               name={name}
-              cuisine={firstCuisine}
+              cuisine={cuisine}
               area={area}
-              atmosphere={firstAmbience}
-              bookmarked={isBookmarked}
+              atmosphere={ambience}
             />
           </Link>
         );

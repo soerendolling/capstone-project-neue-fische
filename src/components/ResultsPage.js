@@ -7,8 +7,7 @@ import MainButton from "./MainButton";
 export default function ResultsPage({ restaurantData }) {
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const { id, name, cuisine, location, ambience, isBookmarked } =
-        restaurant;
+      const { id, name, cuisine, location, ambience } = restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
       const firstAmbience = ambience[0];
@@ -19,7 +18,6 @@ export default function ResultsPage({ restaurantData }) {
           cuisine={firstCuisine}
           area={area}
           atmosphere={firstAmbience}
-          bookmarked={isBookmarked}
         />
       );
     });
