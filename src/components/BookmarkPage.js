@@ -14,17 +14,15 @@ export default function BookmarkPage({ restaurantData }) {
 
   function renderRestaurants() {
     return bookmarkedRestaurants.map(
-      ({ id, name, cuisine, area, ambience }) => {
+      ({ restaurantId, name, cuisine, area, ambience }) => {
         return (
-          <Link to={`/restaurant-detailed-page/${id}`}>
-            <RestaurantBox
-              key={id}
-              name={name}
-              cuisine={cuisine}
-              area={area}
-              atmosphere={ambience}
-            />
-          </Link>
+          <RestaurantBox
+            restaurantId={restaurantId}
+            name={name}
+            cuisine={cuisine}
+            area={area}
+            atmosphere={ambience}
+          />
         );
       }
     );
