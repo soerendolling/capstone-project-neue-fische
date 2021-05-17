@@ -36,7 +36,6 @@ export default function ResultsPage({ restaurantData }) {
       const { id, name, cuisine, location, openingTimes } = restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
-
       return (
         <RestaurantBox
           key={id}

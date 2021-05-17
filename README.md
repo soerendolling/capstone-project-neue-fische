@@ -1,72 +1,57 @@
-## Hey welcome to my capstone project
+## Hello there, welcome to my capstone project
 
-# Getting Started with Create React App
+Eten = "essen" auf Platt.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I am in the process of developing an App which guides you through a certain amount of questions to find your desired local hamburg restaurant. Whereby I am focussing more on information which existing platforms do not always provide such as the combination of atmosphere and kitchen, size of venue and detailed outside seating.
 
-## Available Scripts
+### Loading Page
 
-In the project directory, you can run:
+![Loading Page](src/img/screenshots/loading-page.png)
 
-### `npm start`
+### Sign-in Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Sign-in Page](src/img/screenshots/sign-in-page.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Bookmark Page with no Restaurants saved
 
-### `npm test`
+![Bookmark Page no results](src/img/screenshots/bookmark-page-empty.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Bookmark Page with Restaurants saved
 
-### `npm run build`
+![Bookmark Page no results](src/img/screenshots/bookmark-page-filled.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Take Away Filter
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Take Away Filter](src/img/screenshots/take-away-page.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Opening Times Filter
 
-### `npm run eject`
+![Open Filter](src/img/screenshots/open-page.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Ambience Filter
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Ambience Filter](src/img/screenshots/ambience-page.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Cuisine Filter
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Cuisine Filter](src/img/screenshots/cuisine-page.png)
 
-## Learn More
+### View Filter
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![View Filter](src/img/screenshots/view-page.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Outdoor Filter
 
-### Code Splitting
+![Outdoor Filter](src/img/screenshots/outdoor-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Part of Town Filter
 
-### Analyzing the Bundle Size
+![Part of TownFilter](src/img/screenshots/part-of-town-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Results Page
 
-### Making a Progressive Web App
+![Results Page](src/img/screenshots/results-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Restaurant Detailed Page
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Restaurant Detailed Page](src/img/screenshots/restaurant-detailed-page.png)

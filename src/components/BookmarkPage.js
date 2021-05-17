@@ -8,6 +8,8 @@ export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
   const bookmarkedArray = bookmarkedRestaurants.length;
 
+  console.log(restaurantData);
+
   function renderRestaurants() {
     if (bookmarkedArray === 0) {
       return (
@@ -29,6 +31,7 @@ export default function BookmarkPage({ restaurantData }) {
               cuisine={cuisine}
               area={area}
               getBookmarked={isBookmarked}
+              // openingTimes={"true"}
             />
           );
         }
