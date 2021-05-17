@@ -18,6 +18,7 @@ export default function RestaurantBox({
   cuisine,
   area,
   getBookmarked,
+  openingTimes,
 }) {
   const [clicked, setClicked] = useState(getBookmarked);
 
@@ -29,6 +30,7 @@ export default function RestaurantBox({
     area,
     isBookmarked,
   };
+
   function handleBookmarked() {
     if (!clicked) {
       setClicked(true);
@@ -38,9 +40,6 @@ export default function RestaurantBox({
       removeDataFromLocalStorageById(restaurantId);
     }
   }
-
-  console.log(getBookmarked);
-  console.log(clicked);
 
   function renderBookmark() {
     if (clicked) {
@@ -57,6 +56,27 @@ export default function RestaurantBox({
           onClick={handleBookmarked}
         />
       );
+    }
+  }
+
+  function getOpeningTime() {
+    let currentDate = new Date();
+    let options = { weekday: "long" };
+    const getDay = new Intl.DateTimeFormat("en-US", options).format(
+      currentDate
+    );
+    const today = getDay.toLowerCase();
+    const hour = currentDate.getHours();
+
+    if (
+      (openingTimes[today].general.open < hour &&
+        openingTimes[today].general.close > hour) ||
+      (openingTimes[today].lunch.open < hour &&
+        openingTimes[today].lunch.close > hour)
+    ) {
+      return "Open";
+    } else {
+      return "Closed";
     }
   }
 
@@ -88,7 +108,7 @@ export default function RestaurantBox({
             </span>
             <span className="description-opening-hours">
               <Clock className="description-opening-hours__svg" />
-              <p className="description-text">Open</p>
+              <p className="description-text">{getOpeningTime()}</p>
             </span>
           </section>
         </article>
