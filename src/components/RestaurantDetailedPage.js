@@ -276,18 +276,18 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
-  // function showMichelin() {
-  //   const michelin = singleRestaurant.michelinAwarded;
-  //   const michelinInfo = `${michelin[0]} ${michelin[1]}`;
-  //   if (michelin.lenght !== 0) {
-  //     return (
-  //       <span className="info-line">
-  //         <Michelin className="info-svg" />
-  //         <p className="info-text">{michelinInfo}</p>
-  //       </span>
-  //     );
-  //   }
-  // }
+  function showMichelin() {
+    const michelin = singleRestaurant.michelinAwarded;
+    const michelinInfo = `${michelin[0]} ${michelin[1]}`;
+    if (michelin.lenght !== 0) {
+      return (
+        <span className="info-line">
+          <Michelin className="info-svg" />
+          <p className="info-text">{michelinInfo}</p>
+        </span>
+      );
+    }
+  }
 
   return (
     <div className="RestaurantDetailedPage">
@@ -318,7 +318,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             {showLunch()}
             {showOpeningTimes()}
             {showMeatlessOptions()}
-            {/* {showMichelin()} */}
+            {showMichelin()}
             {showOutdoor()}
             {showView()}
             {showPrice()}

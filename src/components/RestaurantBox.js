@@ -108,7 +108,7 @@ export default function RestaurantBox({
             </span>
             <span className="description-opening-hours">
               <Clock className="description-opening-hours__svg" />
-              <p className="description-text">{getOpeningTime()}</p>
+              <p className="description-text">Open</p>
             </span>
           </section>
         </article>

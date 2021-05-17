@@ -20,3 +20,16 @@ export function removeDataFromLocalStorageById(restaurantId) {
 
   localStorage.setItem("restaurant", JSON.stringify(newData));
 }
+
+export function getNameFromLocalStorage() {
+  const data = JSON.parse(localStorage.getItem("name")) || [];
+
+  return data;
+}
+
+export function sendNameToLocalStorage(items) {
+  const data = getDataFromLocalStorage();
+
+  data.push(items);
+  localStorage.setItem("name", JSON.stringify(data));
+}
