@@ -2,30 +2,38 @@ import "./BookmarkPage.css";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as Find } from "../icons/find.svg";
 import { Link } from "react-router-dom";
-import {
-  getDataFromLocalStorage,
-  removeDataFromLocalStorageById,
-} from "../utilities/localStorage";
+import { getDataFromLocalStorage } from "../utilities/localStorage";
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
-
-  console.log(bookmarkedRestaurants);
+  const bookmarkedArray = bookmarkedRestaurants.length;
 
   function renderRestaurants() {
-    return bookmarkedRestaurants.map(
-      ({ restaurantId, name, cuisine, area, ambience }) => {
-        return (
-          <RestaurantBox
-            restaurantId={restaurantId}
-            name={name}
-            cuisine={cuisine}
-            area={area}
-            atmosphere={ambience}
-          />
-        );
-      }
-    );
+    if (bookmarkedArray === 0) {
+      return (
+        <div>
+          <h2 className="bookmark-main__default-text">Nothing saved yet!</h2>
+          <h2 className="bookmark-main__default-text">
+            Click on start to beginn the journey
+          </h2>
+        </div>
+      );
+    } else {
+      return bookmarkedRestaurants.map(
+        ({ restaurantId, name, cuisine, area, isBookmarked }) => {
+          return (
+            <RestaurantBox
+              key={restaurantId}
+              restaurantId={restaurantId}
+              name={name}
+              cuisine={cuisine}
+              area={area}
+              getBookmarked={isBookmarked}
+            />
+          );
+        }
+      );
+    }
   }
 
   return (
@@ -34,7 +42,15 @@ export default function BookmarkPage({ restaurantData }) {
         <h1 className="bookmark-heading">Hi Soeren,</h1>
         <h2 className="bookmark-subheading">Bookmarks</h2>
       </header>
-      <main className="bookmark-main">{renderRestaurants()}</main>
+      <main
+        className={
+          bookmarkedArray === 0
+            ? "bookmark-main__default"
+            : "bookmark-main__list"
+        }
+      >
+        {renderRestaurants()}
+      </main>
       <footer className="bookmark-footer">
         <Link to={`/take-away-page`}>
           <button className="bookmark-footer__button" type="submit">

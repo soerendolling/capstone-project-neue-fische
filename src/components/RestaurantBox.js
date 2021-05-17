@@ -10,15 +10,18 @@ import { useState } from "react";
 import {
   sendDataToLocalStorage,
   removeDataFromLocalStorageById,
-  getDataFromLocalStorage,
 } from "../utilities/localStorage";
 
-export default function RestaurantBox({ restaurantId, name, cuisine, area }) {
-  const [clicked, setClicked] = useState(false);
+export default function RestaurantBox({
+  restaurantId,
+  name,
+  cuisine,
+  area,
+  getBookmarked,
+}) {
+  const [clicked, setClicked] = useState(getBookmarked);
 
-  const bookmarkedRestaurants = getDataFromLocalStorage();
-
-  let isBookmarked = !clicked;
+  const isBookmarked = true;
   const restaurantBookmarked = {
     restaurantId,
     name,
@@ -28,18 +31,19 @@ export default function RestaurantBox({ restaurantId, name, cuisine, area }) {
   };
   function handleBookmarked() {
     if (!clicked) {
-      isBookmarked = true;
       setClicked(true);
       sendDataToLocalStorage(restaurantBookmarked);
     } else {
-      isBookmarked = false;
       setClicked(false);
       removeDataFromLocalStorageById(restaurantId);
     }
   }
 
+  console.log(getBookmarked);
+  console.log(clicked);
+
   function renderBookmark() {
-    if (bookmarkedRestaurants[0]?.isBookmarked || clicked) {
+    if (clicked) {
       return (
         <HeartFull
           className="restaurant-box-bookmark__svg"
@@ -57,7 +61,7 @@ export default function RestaurantBox({ restaurantId, name, cuisine, area }) {
   }
 
   return (
-    <div key={restaurantId}>
+    <div>
       <Link
         to={(location) => {
           return {

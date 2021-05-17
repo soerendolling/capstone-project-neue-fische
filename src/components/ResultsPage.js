@@ -3,21 +3,49 @@ import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as SaveHeart } from "../icons/save-heart.svg";
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton";
+import { getDataFromLocalStorage } from "../utilities/localStorage";
 
 export default function ResultsPage({ restaurantData }) {
+  const bookmarkedRestaurants = getDataFromLocalStorage();
+
+  console.log(bookmarkedRestaurants);
+
+  function checkIfBookmarked(id) {
+    const theBookmarkedRestaurant = bookmarkedRestaurants.find((restaurant) => {
+      return restaurant.restaurantId === id;
+    });
+    if (theBookmarkedRestaurant) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function checkIfBookmarkedTwo(id) {
+    for (let index = 0; index < bookmarkedRestaurants.length; index++) {
+      const element = bookmarkedRestaurants[index];
+      if (element.restaurantId === id) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const { id, name, cuisine, location, ambience } = restaurant;
+      const { id, name, cuisine, location } = restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
-      const firstAmbience = ambience[0];
+
       return (
         <RestaurantBox
+          key={id}
           restaurantId={id}
           name={name}
           cuisine={firstCuisine}
           area={area}
-          atmosphere={firstAmbience}
+          getBookmarked={checkIfBookmarkedTwo(id)}
         />
       );
     });
