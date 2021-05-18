@@ -1,37 +1,12 @@
 import "./TakeAwayPage.css";
-import FilterTag from "./FilterTag";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/takeAway-progress.svg";
-import { Link, useHistory, useLocation } from "react-router-dom";
-import { stringify, parse } from "../utilities/queryString";
-import { toggleValueInArray } from "../models/toggleValueInArray";
+import { Link } from "react-router-dom";
+import FilterTagsRender from "./FilterTagsRender";
 
 export default function TakeAwayPage({ restaurantData }) {
-  const location = useLocation();
-  const history = useHistory();
-  const parsedQueryString = parse(location.search);
-
-  const selectedFilters = parsedQueryString.takeAway || [];
-
-  function handleFilterClick(name) {
-    const newFilters = toggleValueInArray(selectedFilters, name);
-    const parsedOldQueryString = parse(location.search);
-
-    const newQueryString = stringify({
-      ...parsedOldQueryString,
-      takeAway: newFilters,
-    });
-
-    history.replace({
-      ...location,
-      search: newQueryString,
-    });
-  }
-
-  function isTagToggled(tagName) {
-    return selectedFilters.includes(tagName);
-  }
+  const tags = ["take away", "delivery"];
 
   return (
     <div className="app-grid">
@@ -41,16 +16,7 @@ export default function TakeAwayPage({ restaurantData }) {
       </header>
       <main className="takeAway-main">
         <div className="takeAway-tag__layout">
-          <FilterTag
-            text="take away"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("take away")}
-          />
-          <FilterTag
-            text="delivery"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("delivery")}
-          />
+          <FilterTagsRender filterPage="takeAway" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

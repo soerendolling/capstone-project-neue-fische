@@ -28,6 +28,7 @@ export default function FilterTagsRender({ filterPage, filterTags }) {
 
   return filterTags.map((tag) => (
     <FilterTag
+      key={tag}
       text={tag}
       onClick={handleFilterClick}
       isToggled={isTagToogled(tag)}
