@@ -10,7 +10,10 @@ import {
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
   const bookmarkedRestaurantsLength = bookmarkedRestaurants.length;
-  const userName = getNameFromLocalStorage();
+  const newName = getNameFromLocalStorage();
+  const userName = newName === "" ? "there" : newName;
+
+  console.log(newName);
 
   function renderRestaurants() {
     const [openingTimes] = restaurantData.map(({ openingTimes }) => {
