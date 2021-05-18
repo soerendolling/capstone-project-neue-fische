@@ -13,8 +13,6 @@ export default function BookmarkPage({ restaurantData }) {
   const newName = getNameFromLocalStorage();
   const userName = newName === "" ? "there" : newName;
 
-  console.log(newName);
-
   function renderRestaurants() {
     const [openingTimes] = restaurantData.map(({ openingTimes }) => {
       return openingTimes;
