@@ -8,14 +8,11 @@ import { ReactComponent as Cloudy } from "../icons/sun.svg";
 import { ReactComponent as PartlyCloudy } from "../icons/cloud-sun.svg";
 import { ReactComponent as Rain } from "../icons/cloud-rain.svg";
 import { ReactComponent as Thunder } from "../icons/cloud-lightning.svg";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { stringify, parse } from "../utilities/queryString";
-import { toggleValueInArray } from "../models/toggleValueInArray";
+import FilterTagsRender from "./FilterTagsRender";
 
 export default function OutdoorPage({ restaurantData }) {
-  const location = useLocation();
-  const history = useHistory();
   const [weather, setWeather] = useState();
 
   useEffect(() => {
@@ -55,26 +52,7 @@ export default function OutdoorPage({ restaurantData }) {
     }
   }
 
-  const parsedQueryString = parse(location.search);
-  const selectedFilters = parsedQueryString.outdoor || [];
-
-  function handleFilterClick(name) {
-    const newFilters = toggleValueInArray(selectedFilters, name);
-    const parsedOldQueryString = parse(location.search);
-
-    const newQueryString = stringify({
-      ...parsedOldQueryString,
-      outdoor: newFilters,
-    });
-    history.replace({
-      ...location,
-      search: newQueryString,
-    });
-  }
-
-  function isTagToggled(tagName) {
-    return selectedFilters.includes(tagName);
-  }
+  const tags = ["terrace", "backyard", "rooftop", "park"];
 
   return (
     <div className="app-grid">
@@ -88,26 +66,7 @@ export default function OutdoorPage({ restaurantData }) {
           <p className="outdoor-wheater__text">{`${showTemp()}° degrees`}</p>
         </div>
         <div className="outdoor-tag__layout">
-          <FilterTag
-            text="terrace"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("terrace")}
-          />
-          <FilterTag
-            text="backyard"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("backyard")}
-          />
-          <FilterTag
-            text="rooftop"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("rooftop")}
-          />
-          <FilterTag
-            text="park"
-            onClick={handleFilterClick}
-            isToggled={isTagToggled("park")}
-          />
+          <FilterTagsRender filterPage="outdoor" filterTags={tags} />
         </div>
         <Link
           to={(location) => {
