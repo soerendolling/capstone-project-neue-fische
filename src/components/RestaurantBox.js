@@ -80,8 +80,6 @@ export default function RestaurantBox({
     }
   }
 
-  console.log(openingTimes);
-
   return (
     <div>
       <Link

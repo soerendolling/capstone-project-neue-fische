@@ -2,14 +2,20 @@ import "./BookmarkPage.css";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as Find } from "../icons/find.svg";
 import { Link } from "react-router-dom";
-import { getDataFromLocalStorage } from "../utilities/localStorage";
+import {
+  getDataFromLocalStorage,
+  getNameFromLocalStorage,
+} from "../utilities/localStorage";
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
   const bookmarkedArray = bookmarkedRestaurants.length;
+  const restaurants = restaurantData;
+
+  const userName = getNameFromLocalStorage();
 
   function renderRestaurants() {
-    const [openingTimes] = restaurantData.map(({ openingTimes }) => {
+    const [openingTimes] = restaurants.map(({ openingTimes }) => {
       return openingTimes;
     });
 
@@ -44,7 +50,7 @@ export default function BookmarkPage({ restaurantData }) {
   return (
     <div className="app-grid">
       <header>
-        <h1 className="bookmark-heading">Hi Soeren,</h1>
+        <h1 className="bookmark-heading">{`Hi ${userName},`}</h1>
         <h2 className="bookmark-subheading">Bookmarks</h2>
       </header>
       <main

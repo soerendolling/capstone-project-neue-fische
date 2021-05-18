@@ -28,7 +28,7 @@ export function getNameFromLocalStorage() {
 }
 
 export function sendNameToLocalStorage(items) {
-  const data = getDataFromLocalStorage();
+  const data = getDataFromLocalStorage("name");
 
   data.push(items);
   localStorage.setItem("name", JSON.stringify(data));
