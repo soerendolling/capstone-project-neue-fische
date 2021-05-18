@@ -2,11 +2,11 @@ a {
   text-decoration: none;
 }
 
-div {
+.restaurant-box {
   position: relative;
 }
 
-.restaurant-box {
+.restaurant-box__content {
   display: flex;
   height: auto;
   border: solid 2px var(--bright-color);

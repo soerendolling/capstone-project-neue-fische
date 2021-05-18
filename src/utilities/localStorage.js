@@ -1,5 +1,5 @@
 export function getDataFromLocalStorage() {
-  const data = JSON.parse(localStorage.getItem("restaurant")) || [];
+  const data = JSON.parse(localStorage.getItem("restaurants")) || [];
 
   return data;
 }
@@ -8,7 +8,7 @@ export function sendDataToLocalStorage(items) {
   const data = getDataFromLocalStorage();
 
   data.push(items);
-  localStorage.setItem("restaurant", JSON.stringify(data));
+  localStorage.setItem("restaurants", JSON.stringify(data));
 }
 
 export function removeDataFromLocalStorageById(restaurantId) {
@@ -18,11 +18,11 @@ export function removeDataFromLocalStorageById(restaurantId) {
     return item.restaurantId !== restaurantId;
   });
 
-  localStorage.setItem("restaurant", JSON.stringify(newData));
+  localStorage.setItem("restaurants", JSON.stringify(newData));
 }
 
 export function getNameFromLocalStorage() {
-  const data = JSON.parse(localStorage.getItem("name")) || [];
+  const data = JSON.parse(localStorage.getItem("name")) || "";
 
   return data;
 }

@@ -20,7 +20,7 @@ export default function RestaurantBox({
   getBookmarked,
   openingTimes,
 }) {
-  const [clicked, setClicked] = useState(getBookmarked);
+  const [bookmarked, setBookmarked] = useState(getBookmarked);
 
   const isBookmarked = true;
   const restaurantBookmarked = {
@@ -32,17 +32,17 @@ export default function RestaurantBox({
   };
 
   function handleBookmarked() {
-    if (!clicked) {
-      setClicked(true);
+    if (!bookmarked) {
+      setBookmarked(true);
       sendDataToLocalStorage(restaurantBookmarked);
     } else {
-      setClicked(false);
+      setBookmarked(false);
       removeDataFromLocalStorageById(restaurantId);
     }
   }
 
   function renderBookmark() {
-    if (clicked) {
+    if (bookmarked) {
       return (
         <HeartFull
           className="restaurant-box-bookmark__svg"
@@ -81,7 +81,7 @@ export default function RestaurantBox({
   }
 
   return (
-    <div>
+    <div className="restaurant-box">
       <Link
         to={(location) => {
           return {
@@ -90,7 +90,7 @@ export default function RestaurantBox({
           };
         }}
       >
-        <article className="restaurant-box">
+        <article className="restaurant-box__content">
           <img
             src={restaurantImgOne}
             alt="a restaurant"

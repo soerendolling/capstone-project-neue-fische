@@ -9,17 +9,15 @@ import {
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
-  const bookmarkedArray = bookmarkedRestaurants.length;
-  const restaurants = restaurantData;
-
+  const bookmarkedRestaurantsLength = bookmarkedRestaurants.length;
   const userName = getNameFromLocalStorage();
 
   function renderRestaurants() {
-    const [openingTimes] = restaurants.map(({ openingTimes }) => {
+    const [openingTimes] = restaurantData.map(({ openingTimes }) => {
       return openingTimes;
     });
 
-    if (bookmarkedArray === 0) {
+    if (bookmarkedRestaurantsLength === 0) {
       return (
         <div>
           <h2 className="bookmark-main__default-text">Nothing saved yet!</h2>
@@ -55,7 +53,7 @@ export default function BookmarkPage({ restaurantData }) {
       </header>
       <main
         className={
-          bookmarkedArray === 0
+          bookmarkedRestaurantsLength === 0
             ? "bookmark-main__default"
             : "bookmark-main__list"
         }
