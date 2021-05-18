@@ -1,6 +1,6 @@
 import { useHistory, useLocation } from "react-router-dom";
 import { stringify, parse } from "../utilities/queryString";
-import { toggleValueInArray } from "../models/toggleValueInArray";
+import { toggleValueInArray } from "../utilities/filters/toggleValueInArray";
 import FilterTag from "./FilterTag";
 
 export default function FilterTagsRender({ filterPage, filterTags }) {
