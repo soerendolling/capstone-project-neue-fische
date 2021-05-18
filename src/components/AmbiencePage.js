@@ -30,6 +30,30 @@ export default function AmbiencePage({ restaurantData }) {
     return selectedFilters.includes(tagName);
   }
 
+  function renderFilterTags() {
+    const tags = [
+      "elegant",
+      "cosy",
+      "modern",
+      "busy",
+      "traditional",
+      "trendy",
+      "rustic",
+      "alternative",
+      "warm",
+      "hanseatic",
+    ];
+    return tags.map((tag) => {
+      return (
+        <FilterTag
+          text={tag}
+          onClick={handleFilterClick}
+          isToggled={isTagToogled(tag)}
+        />
+      );
+    });
+  }
+
   return (
     <div className="app-grid">
       <header className="ambience-header">
@@ -37,58 +61,7 @@ export default function AmbiencePage({ restaurantData }) {
         <h2 className="ambience-subheading">choose one or more</h2>
       </header>
       <main className="ambience-main">
-        <div className="ambience-tag__layout">
-          <FilterTag
-            text="elegant"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("elegant")}
-          />
-          <FilterTag
-            text="cosy"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("cosy")}
-          />
-          <FilterTag
-            text="modern"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("modern")}
-          />
-          <FilterTag
-            text="busy"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("busy")}
-          />
-          <FilterTag
-            text="traditional"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("traditional")}
-          />
-          <FilterTag
-            text="trendy"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("trendy")}
-          />
-          <FilterTag
-            text="rustic"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("rustic")}
-          />
-          <FilterTag
-            text="alternative"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("alternative")}
-          />
-          <FilterTag
-            text="warm"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("warm")}
-          />
-          <FilterTag
-            text="hanseatic"
-            onClick={handleFilterClick}
-            isToggled={isTagToogled("hanseatic")}
-          />
-        </div>
+        <div className="ambience-tag__layout">{renderFilterTags()}</div>
         <Link
           to={(location) => {
             return {
