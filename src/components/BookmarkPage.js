@@ -9,6 +9,10 @@ export default function BookmarkPage({ restaurantData }) {
   const bookmarkedArray = bookmarkedRestaurants.length;
 
   function renderRestaurants() {
+    const [openingTimes] = restaurantData.map(({ openingTimes }) => {
+      return openingTimes;
+    });
+
     if (bookmarkedArray === 0) {
       return (
         <div>
@@ -29,7 +33,7 @@ export default function BookmarkPage({ restaurantData }) {
               cuisine={cuisine}
               area={area}
               getBookmarked={isBookmarked}
-              // openingTimes={getOpeningTimes(restaurantId)}
+              openingTimes={openingTimes}
             />
           );
         }

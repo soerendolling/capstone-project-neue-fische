@@ -80,6 +80,8 @@ export default function RestaurantBox({
     }
   }
 
+  console.log(openingTimes);
+
   return (
     <div>
       <Link
@@ -108,7 +110,7 @@ export default function RestaurantBox({
             </span>
             <span className="description-opening-hours">
               <Clock className="description-opening-hours__svg" />
-              <p className="description-text">Open</p>
+              <p className="description-text">{getOpeningTime()}</p>
             </span>
           </section>
         </article>
