@@ -3,39 +3,49 @@ import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as SaveHeart } from "../icons/save-heart.svg";
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton";
+import { getDataFromLocalStorage } from "../utilities/localStorage";
 
 export default function ResultsPage({ restaurantData }) {
+  const bookmarkedRestaurants = getDataFromLocalStorage();
+
+  // function checkIfBookmarked(id) {
+  //   const theBookmarkedRestaurant = bookmarkedRestaurants.find((restaurant) => {
+  //     return restaurant.restaurantId === id;
+  //   });
+
+  //   if (theBookmarkedRestaurant) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+  function checkIfBookmarked(id) {
+    for (let index = 0; index < bookmarkedRestaurants.length; index++) {
+      const currentRestaurant = bookmarkedRestaurants[index];
+      if (currentRestaurant.restaurantId === id) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const {
-        id,
-        name,
-        cuisine,
-        location,
-        ambience,
-        isBookmarked,
-      } = restaurant;
+      const { id, name, cuisine, location, openingTimes } = restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
-      const firstAmbience = ambience[0];
       return (
-        <Link
-          to={(location) => {
-            return {
-              ...location,
-              pathname: `/restaurant-detailed-page/${id}`,
-            };
-          }}
-        >
-          <RestaurantBox
-            key={id}
-            name={name}
-            cuisine={firstCuisine}
-            area={area}
-            atmosphere={firstAmbience}
-            bookmarked={isBookmarked}
-          />
-        </Link>
+        <RestaurantBox
+          key={id}
+          restaurantId={id}
+          name={name}
+          cuisine={firstCuisine}
+          area={area}
+          getBookmarked={checkIfBookmarked(id)}
+          openingTimes={openingTimes}
+        />
       );
     });
   }

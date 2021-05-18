@@ -279,9 +279,9 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   function showMichelin() {
     const michelin = singleRestaurant.michelinAwarded;
     const michelinInfo = `${michelin[0]} ${michelin[1]}`;
-    console.log(michelinInfo);
     console.log(michelin);
-    if (michelin.lenght !== 0) {
+    console.log(michelinInfo);
+    if (michelin !== "") {
       return (
         <span className="info-line">
           <Michelin className="info-svg" />
