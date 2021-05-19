@@ -3,7 +3,7 @@ import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/partOfTown-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsRender from "./FilterTagsRender";
+import FilterTagsRender from "./FilterTagsGroup";
 
 export default function PartOfTownPage({ restaurantData }) {
   const tags = [

@@ -5,7 +5,7 @@ import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/ambience-progress.svg";
 import { Link } from "react-router-dom";
 
-import FilterTagsRender from "./FilterTagsRender";
+import FilterTagsRender from "./FilterTagsGroup";
 
 export default function AmbiencePage({ restaurantData }) {
   const tags = [

@@ -10,8 +10,6 @@ export default function OutdoorWeatherWidget() {
     "https://api.weatherapi.com/v1/current.json?key=487e8af21edb4a54b1f142156211105&q=Hamburg&aqi=no"
   );
 
-  console.log(data);
-
   function showWeatherIcon() {
     if (data !== undefined) {
       if (data.current?.condition.text.includes("Partly cloudy")) {
