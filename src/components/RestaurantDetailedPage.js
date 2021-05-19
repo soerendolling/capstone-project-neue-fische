@@ -1,6 +1,5 @@
 import "./RestaurantDetailedPage.css";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
 import { ReactComponent as Clock } from "../icons/clock.svg";
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
@@ -21,6 +20,8 @@ import { ReactComponent as Email } from "../icons/at.svg";
 import { ReactComponent as Michelin } from "../icons/michelin.svg";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
+  let history = useHistory();
+
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
@@ -336,16 +337,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         </div>
       </main>
       <footer className="detailed-footer">
-        <Link
-          to={(location) => {
-            return {
-              ...location,
-              pathname: "/results-page",
-            };
-          }}
-        >
-          <LeftArrow />
-        </Link>
+        <LeftArrow onClick={() => history.goBack()} className="footer-arrow" />
         <Heart className="header-bookmark" />
       </footer>
     </div>

@@ -128,3 +128,7 @@ a {
   height: 30px;
   fill: var(--dark-color);
 }
+
+.footer-arrow {
+  cursor: pointer;
+}

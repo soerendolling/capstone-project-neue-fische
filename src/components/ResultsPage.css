@@ -50,10 +50,12 @@ a {
   font-size: var(--mainButton-size);
   letter-spacing: var(--mainButton-spacing);
   color: var(--mainButton-color);
+  cursor: pointer;
 }
 
 .results-footer__bookmark {
   width: 25px;
   height: 25px;
   fill: var(--background-color);
+  cursor: pointer;
 }
