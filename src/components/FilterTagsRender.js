@@ -22,7 +22,7 @@ export default function FilterTagsRender({ filterPage, filterTags }) {
     });
   }
 
-  function isTagToogled(tagName) {
+  function isTagToggled(tagName) {
     return selectedFilters.includes(tagName);
   }
 
@@ -31,7 +31,7 @@ export default function FilterTagsRender({ filterPage, filterTags }) {
       key={tag}
       text={tag}
       onClick={handleFilterClick}
-      isToggled={isTagToogled(tag)}
+      isToggled={isTagToggled(tag)}
     />
   ));
 }

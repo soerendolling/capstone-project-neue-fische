@@ -7,11 +7,14 @@ import { ReactComponent as Thunder } from "../icons/cloud-lightning.svg";
 
 export default function OutdoorWeatherWidget() {
   const [weather, setWeather] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const url =
       "https://api.weatherapi.com/v1/current.json?key=487e8af21edb4a54b1f142156211105&q=Hamburg&aqi=no";
 
+    setIsLoading(true);
     fetch(url)
       .then((res) => res.json())
       .then((incomingData) => {
@@ -19,7 +22,11 @@ export default function OutdoorWeatherWidget() {
         setWeather(newWeather);
       })
       .catch((error) => {
+        setError(true);
         console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -39,16 +46,19 @@ export default function OutdoorWeatherWidget() {
     }
   }
 
-  function showTemp() {
-    if (weather !== undefined) {
-      return weather.temp_c;
+  function renderTemperature() {
+    if (isLoading) {
+      return "Loading...";
+    } else if (error) {
+      return "Ops...something happened";
     }
+    return `${weather.temp_c}° degrees`;
   }
 
   return (
     <div className="outdoor-weather__layout">
       {showWeatherIcon()}
-      <p className="outdoor-wheater__text">{`${showTemp()}° degrees`}</p>
+      <p className="outdoor-wheater__text">{renderTemperature()}</p>
     </div>
   );
 }
