@@ -48,7 +48,7 @@ export default function OutdoorWeatherWidget() {
 
   function renderTemperature() {
     if (isLoading) {
-      return "Loading...";
+      return "";
     } else if (error) {
       return "Ops...something happened";
     }
