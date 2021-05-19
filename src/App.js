@@ -14,13 +14,13 @@ import PartOfTownPage from "./components/PartOfTownPage";
 import RestaurantDetailedPage from "./components/RestaurantDetailedPage";
 import LoadingPage from "./components/LoadingPage";
 import { parse } from "./utilities/queryString";
-import { takeAwayFilter } from "./models/takeAwayFilter";
-import { openingTimesFilter } from "./models/openingTimesFilter";
-import { ambienceFilter } from "./models/ambienceFilter";
-import { cuisineFilter } from "./models/cuisineFilter";
-import { viewFilter } from "./models/viewFilter";
-import { outdoorFilter } from "./models/outdoorFilter";
-import { partOfTownFilter } from "./models/partOfTownFilter";
+import { takeAwayFilter } from "./utilities/filters/takeAwayFilter";
+import { openingTimesFilter } from "./utilities/filters/openingTimesFilter";
+import { ambienceFilter } from "./utilities/filters/ambienceFilter";
+import { cuisineFilter } from "./utilities/filters/cuisineFilter";
+import { viewFilter } from "./utilities/filters/viewFilter";
+import { outdoorFilter } from "./utilities/filters/outdoorFilter";
+import { partOfTownFilter } from "./utilities/filters/partOfTownFilter";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
