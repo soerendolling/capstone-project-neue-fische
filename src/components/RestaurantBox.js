@@ -19,6 +19,7 @@ export default function RestaurantBox({
   area,
   getBookmarked,
   openingTimes,
+  img,
 }) {
   const [bookmarked, setBookmarked] = useState(getBookmarked);
 
@@ -80,6 +81,14 @@ export default function RestaurantBox({
     }
   }
 
+  function showRestaurantImg() {
+    if (img === "") {
+      return restaurantImgOne;
+    } else {
+      return img;
+    }
+  }
+
   return (
     <div className="restaurant-box">
       <Link
@@ -92,7 +101,7 @@ export default function RestaurantBox({
       >
         <article className="restaurant-box__content">
           <img
-            src={restaurantImgOne}
+            src={showRestaurantImg()}
             alt="a restaurant"
             className="restaurant-box__image"
           />

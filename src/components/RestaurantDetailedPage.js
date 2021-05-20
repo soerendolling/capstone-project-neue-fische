@@ -7,7 +7,8 @@ import { ReactComponent as Terrace } from "../icons/terrace.svg";
 import { ReactComponent as Binoculars } from "../icons/binoculars.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
-import { ReactComponent as Heart } from "../icons/heart-full.svg";
+import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
+import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
@@ -290,6 +291,14 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
+  //  const ivigneri = "https://www.ivigneri.de/Files/Pictures/1299251292-b07_gross.jpg"
+  // const heritage ="https://www.heritage-hamburg.com/wp-content/uploads/2018/12/Heritage-Hamburg_Alsterblick-von-der-Empore-1.jpg"
+  // const witwenball ="https://image.jimcdn.com/app/cms/image/transf/none/path/sae4285e8eed341c8/backgroundarea/i09499971fa82b5c6/version/1550521154/image.jpg"
+  // const saszentrale =
+  //   "https://saltandsilver.net/wp-content/uploads/2018/01/W3A3442-1024x682.jpg";
+  // const sasrestaurant =
+  //   "https://saltandsilver.net/wp-content/uploads/2018/07/W3A7551.jpg";
+
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -338,7 +347,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       </main>
       <footer className="detailed-footer">
         <LeftArrow onClick={() => history.goBack()} className="footer-arrow" />
-        <Heart className="header-bookmark" />
+        <HeartFull className="header-bookmark" />
       </footer>
     </div>
   );

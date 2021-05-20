@@ -21,7 +21,7 @@ export default function ResultsPage({ restaurantData }) {
 
   function renderRestaurants() {
     return restaurantData.map((restaurant) => {
-      const { id, name, cuisine, location, openingTimes } = restaurant;
+      const { id, name, cuisine, location, openingTimes, img } = restaurant;
       const firstCuisine = cuisine[0];
       const area = location.area[0];
       return (
@@ -33,6 +33,7 @@ export default function ResultsPage({ restaurantData }) {
           area={area}
           getBookmarked={checkIfBookmarked(id)}
           openingTimes={openingTimes}
+          img={img}
         />
       );
     });
