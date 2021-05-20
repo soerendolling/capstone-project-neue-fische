@@ -60,6 +60,8 @@ export default function RestaurantBox({
     }
   }
 
+  console.log(bookmarked);
+
   function getOpeningTime() {
     let currentDate = new Date();
     let options = { weekday: "long" };

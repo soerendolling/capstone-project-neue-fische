@@ -8,14 +8,26 @@ import { getDataFromLocalStorage } from "../utilities/localStorage";
 export default function ResultsPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
 
+  // function checkIfBookmarked(id) {
+  //   for (let index = 0; index < bookmarkedRestaurants.length; index++) {
+  //     const currentRestaurant = bookmarkedRestaurants[index];
+  //     if (currentRestaurant.restaurantId === id) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  // }
+
   function checkIfBookmarked(id) {
-    for (let index = 0; index < bookmarkedRestaurants.length; index++) {
-      const currentRestaurant = bookmarkedRestaurants[index];
-      if (currentRestaurant.restaurantId === id) {
-        return true;
-      } else {
-        return false;
-      }
+    const theBookmarkedRestaurant = bookmarkedRestaurants.find((restaurant) => {
+      return restaurant.restaurantId === id;
+    });
+
+    if (theBookmarkedRestaurant) {
+      return true;
+    } else {
+      return false;
     }
   }
 
