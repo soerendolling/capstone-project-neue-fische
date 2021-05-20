@@ -30,6 +30,7 @@ export default function RestaurantBox({
     cuisine,
     area,
     isBookmarked,
+    img,
   };
 
   function handleBookmarked() {
@@ -59,8 +60,6 @@ export default function RestaurantBox({
       );
     }
   }
-
-  console.log(bookmarked);
 
   function getOpeningTime() {
     let currentDate = new Date();

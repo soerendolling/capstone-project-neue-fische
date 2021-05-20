@@ -29,7 +29,7 @@ export default function BookmarkPage({ restaurantData }) {
       );
     } else {
       return bookmarkedRestaurants.map(
-        ({ restaurantId, name, cuisine, area, isBookmarked }) => {
+        ({ restaurantId, name, cuisine, area, isBookmarked, img }) => {
           return (
             <RestaurantBox
               key={restaurantId}
@@ -39,6 +39,7 @@ export default function BookmarkPage({ restaurantData }) {
               area={area}
               getBookmarked={isBookmarked}
               openingTimes={openingTimes}
+              img={img}
             />
           );
         }
