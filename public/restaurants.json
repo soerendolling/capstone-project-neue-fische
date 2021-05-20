@@ -77,7 +77,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -221,7 +221,7 @@
         "thursday": {
           "general": {
             "open": 17,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -365,7 +365,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -509,7 +509,7 @@
         "thursday": {
           "general": {
             "open": 17.3,
-            "closing": 23
+            "close": 23
           },
           "lunch": {
             "open": 0,
@@ -653,7 +653,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22.3
+            "close": 22.3
           },
           "lunch": {
             "open": 0,

@@ -92,9 +92,18 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   function showOpeningTimes() {
     const openingToday = singleRestaurant.openingTimes[today].general.open;
     const closingToday = singleRestaurant.openingTimes[today].general.close;
+    const numberLengthOpen = openingToday.toString().length > 2 ? 2 : 0;
+    const numberLengthClose = closingToday.toString().length > 2 ? 2 : 0;
+    const changeFormatOpen = `${(openingToday % 12).toFixed(numberLengthOpen)}`;
+    const changeFormatClose = `${(closingToday % 12).toFixed(
+      numberLengthClose
+    )}`;
+    const amPmOpen = openingToday < 12 ? "am" : "pm";
+    const amPmClose = closingToday < 12 ? "am" : "pm";
+
     const openingTimesInfo =
       openingToday > 0
-        ? `${openingToday} until ${closingToday}`
+        ? `${changeFormatOpen}${amPmOpen} until ${changeFormatClose}${amPmClose}`
         : "Closed Today";
     return (
       <span className="info-line">
@@ -118,7 +127,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showView() {
-    const view = singleRestaurant.location.view;
+    const view = `${singleRestaurant.location.view} view`;
     if (view !== "") {
       return (
         <span className="info-line">
@@ -136,7 +145,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     const takeAwayClose = singleRestaurant.openingTimes[today].takeAway.close;
     const takeAwayInfo = `${takeAwayDetails} from  ${
       takeAwayOpen ? takeAwayOpen : ""
-    }  ${takeAwayClose ? takeAwayClose : ""}`;
+    } - ${takeAwayClose ? takeAwayClose : ""}`;
     if (takeAwayOptions) {
       return (
         <span className="info-line">
@@ -225,7 +234,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showSize() {
-    const size = singleRestaurant.size;
+    const size = `${singleRestaurant.size} space`;
     if (size !== "") {
       return (
         <span className="info-line">
@@ -239,7 +248,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   function showPrice() {
     const priceTop = singleRestaurant.averagePrice.top;
     const priceBottom = singleRestaurant.averagePrice.bottom;
-    const priceInfo = `${priceBottom} - ${priceTop}`;
+    const priceInfo = `mains from ${priceBottom}€ to ${priceTop}€`;
     if (priceTop > 0) {
       return (
         <span className="info-line">
