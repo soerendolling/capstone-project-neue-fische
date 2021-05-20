@@ -76,9 +76,9 @@ export default function RestaurantBox({
       (openingTimes[today].lunch.open < hour &&
         openingTimes[today].lunch.close > hour)
     ) {
-      return "Open";
+      return "open";
     } else {
-      return "Closed";
+      return "closed";
     }
   }
 
