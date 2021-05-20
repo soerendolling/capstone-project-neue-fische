@@ -115,12 +115,13 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showView() {
-    const view = `${singleRestaurant.location.view}`;
+    const view = singleRestaurant.location.view;
+    const viewInfo = `${view} view`;
     if (view !== "") {
       return (
         <span className="info-line">
           <Binoculars className="info-svg" />
-          <p className="info-text">{view}</p>
+          <p className="info-text">{viewInfo}</p>
         </span>
       );
     }
@@ -277,7 +278,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
 
   function showMichelin() {
     const michelin = singleRestaurant.michelinAwarded;
-    const michelinInfo = `${michelin[0]} ${michelin[1]}`;
+    const michelinInfo = `${michelin[0]} - ${michelin[1]}`;
     if (michelin !== "") {
       return (
         <span className="info-line">
