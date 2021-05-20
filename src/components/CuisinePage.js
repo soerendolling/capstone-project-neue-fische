@@ -3,7 +3,7 @@ import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/cuisine-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsRender from "./FilterTagsGroup";
+import FilterTagsGroup from "./FilterTagsGroup";
 
 export default function CuisinePage({ restaurantData }) {
   const tags = [
@@ -37,7 +37,7 @@ export default function CuisinePage({ restaurantData }) {
       </header>
       <main className="cuisine-main">
         <div className="cuisine-tag__layout">
-          <FilterTagsRender filterPage="cuisine" filterTags={tags} />
+          <FilterTagsGroup filterPage="cuisine" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

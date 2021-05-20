@@ -1,11 +1,9 @@
 import "./AmbiencePage.css";
-
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/ambience-progress.svg";
 import { Link } from "react-router-dom";
-
-import FilterTagsRender from "./FilterTagsGroup";
+import FilterTagsGroup from "./FilterTagsGroup";
 
 export default function AmbiencePage({ restaurantData }) {
   const tags = [
@@ -29,7 +27,7 @@ export default function AmbiencePage({ restaurantData }) {
       </header>
       <main className="ambience-main">
         <div className="ambience-tag__layout">
-          <FilterTagsRender filterPage="ambience" filterTags={tags} />
+          <FilterTagsGroup filterPage="ambience" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

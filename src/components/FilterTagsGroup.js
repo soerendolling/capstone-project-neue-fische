@@ -3,7 +3,7 @@ import { stringify, parse } from "../utilities/queryString";
 import { toggleValueInArray } from "../utilities/toggleValueInArray";
 import FilterTag from "./FilterTag";
 
-export default function FilterTagsRender({ filterPage, filterTags }) {
+export default function FilterTagsGroup({ filterPage, filterTags }) {
   const location = useLocation();
   const history = useHistory();
   const parsedQueryString = parse(location.search);

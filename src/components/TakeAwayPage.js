@@ -3,7 +3,7 @@ import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/takeAway-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsRender from "./FilterTagsGroup";
+import FilterTagsGroup from "./FilterTagsGroup";
 
 export default function TakeAwayPage({ restaurantData }) {
   const tags = ["take away", "delivery"];
@@ -16,7 +16,7 @@ export default function TakeAwayPage({ restaurantData }) {
       </header>
       <main className="takeAway-main">
         <div className="takeAway-tag__layout">
-          <FilterTagsRender filterPage="takeAway" filterTags={tags} />
+          <FilterTagsGroup filterPage="takeAway" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

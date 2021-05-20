@@ -3,7 +3,7 @@ import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/open-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsRender from "./FilterTagsGroup";
+import FilterTagsGroup from "./FilterTagsGroup";
 
 export default function OpenPage({ restaurantData }) {
   const tags = [
@@ -26,7 +26,7 @@ export default function OpenPage({ restaurantData }) {
       </header>
       <main className="open-main">
         <div className="open-tag__layout">
-          <FilterTagsRender filterPage="openingTimes" filterTags={tags} />
+          <FilterTagsGroup filterPage="openingTimes" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

@@ -3,8 +3,8 @@ import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/outdoor-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsRender from "./FilterTagsGroup";
 import OutdoorWeatherWidget from "./OutdoorWeatherWidget";
+import FilterTagsGroup from "./FilterTagsGroup";
 
 export default function OutdoorPage({ restaurantData }) {
   const tags = ["terrace", "backyard", "rooftop", "park"];
@@ -18,7 +18,7 @@ export default function OutdoorPage({ restaurantData }) {
       <main className="outdoor-main">
         <OutdoorWeatherWidget />
         <div className="outdoor-tag__layout">
-          <FilterTagsRender filterPage="outdoor" filterTags={tags} />
+          <FilterTagsGroup filterPage="outdoor" filterTags={tags} />
         </div>
         <Link
           to={(location) => {

@@ -19,6 +19,7 @@ import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
 import { ReactComponent as Michelin } from "../icons/michelin.svg";
+import { displayTime } from "../utilities/displayTime";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let history = useHistory();
@@ -90,44 +91,31 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showOpeningTimes() {
-    const openingToday = singleRestaurant.openingTimes[today].general.open;
-    const closingToday = singleRestaurant.openingTimes[today].general.close;
-    const numberLengthOpen = openingToday.toString().length > 2 ? 2 : 0;
-    const numberLengthClose = closingToday.toString().length > 2 ? 2 : 0;
-    const changeFormatOpen = `${(openingToday % 12).toFixed(numberLengthOpen)}`;
-    const changeFormatClose = `${(closingToday % 12).toFixed(
-      numberLengthClose
-    )}`;
-    const amPmOpen = openingToday < 12 ? "am" : "pm";
-    const amPmClose = closingToday < 12 ? "am" : "pm";
-
-    const openingTimesInfo =
-      openingToday > 0
-        ? `${changeFormatOpen}${amPmOpen} until ${changeFormatClose}${amPmClose}`
-        : "Closed Today";
+    const open = singleRestaurant.openingTimes[today].general.open;
+    const close = singleRestaurant.openingTimes[today].general.close;
     return (
       <span className="info-line">
         <Clock className="info-svg" />
-        <p className="info-text">{openingTimesInfo}</p>
+        <p className="info-text">{displayTime(open, close)}</p>
       </span>
     );
   }
 
   function showLunch() {
-    const lunchTodayOpen = singleRestaurant.openingTimes[today].lunch.open;
-    const lunchTodayClose = singleRestaurant.openingTimes[today].lunch.close;
-    if (lunchTodayOpen > 0) {
+    const open = singleRestaurant.openingTimes[today].lunch.open;
+    const close = singleRestaurant.openingTimes[today].lunch.close;
+    if (open > 0) {
       return (
         <span className="info-line">
           <Lunch className="info-svg" />
-          <p className="info-text">{`${lunchTodayOpen} until ${lunchTodayClose}`}</p>
+          <p className="info-text">{displayTime(open, close)}</p>
         </span>
       );
     }
   }
 
   function showView() {
-    const view = `${singleRestaurant.location.view} view`;
+    const view = `${singleRestaurant.location.view}`;
     if (view !== "") {
       return (
         <span className="info-line">
@@ -141,11 +129,9 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   function showTakeAwayOptions() {
     const takeAwayOptions = singleRestaurant.takeAway;
     const takeAwayDetails = singleRestaurant.takeAwayDetails;
-    const takeAwayOpen = singleRestaurant.openingTimes[today].takeAway.open;
-    const takeAwayClose = singleRestaurant.openingTimes[today].takeAway.close;
-    const takeAwayInfo = `${takeAwayDetails} from  ${
-      takeAwayOpen ? takeAwayOpen : ""
-    } - ${takeAwayClose ? takeAwayClose : ""}`;
+    const open = singleRestaurant.openingTimes[today].takeAway.open;
+    const close = singleRestaurant.openingTimes[today].takeAway.close;
+    const takeAwayInfo = `${takeAwayDetails} from ${displayTime(open, close)}`;
     if (takeAwayOptions) {
       return (
         <span className="info-line">
@@ -175,7 +161,9 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     const outdoorSeating = singleRestaurant.location.restaurantOutdoor;
     const outdoorSeatingBar = singleRestaurant.location.barOutdoor;
     if (outdoorSeating || outdoorSeatingBar) {
-      const outdoorInfo = !outdoorSeating ? "At the Bar" : outdoorDetail;
+      const outdoorInfo = !outdoorSeating
+        ? "Outdoor seating at the Bar"
+        : outdoorDetail;
       return (
         <span className="info-line">
           <Terrace className="info-svg" />
