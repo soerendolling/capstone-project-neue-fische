@@ -4,7 +4,7 @@ a {
 
 .RestaurantDetailedPage {
   display: grid;
-  grid-template-rows: [header] 230px [content] auto [footer] 80px;
+  grid-template-rows: [header] auto [content] auto [footer] 80px;
   grid-template-columns: [left-gutter] 20px [content] auto [right-gutter] 20px;
   height: 100vh;
 }
