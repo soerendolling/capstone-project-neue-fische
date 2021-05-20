@@ -30,6 +30,7 @@ export default function RestaurantBox({
     cuisine,
     area,
     isBookmarked,
+    openingTimes,
     img,
   };
 

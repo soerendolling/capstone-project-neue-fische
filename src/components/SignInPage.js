@@ -24,6 +24,7 @@ export default function SignInPage() {
               className="signIn-input"
               type="text"
               placeholder="fill in your name"
+              required
             />
           </div>
           <MainButton text="sign in" />

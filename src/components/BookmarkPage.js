@@ -10,16 +10,15 @@ import {
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
   const bookmarkedRestaurantsLength = bookmarkedRestaurants.length;
-  const newName = getNameFromLocalStorage();
-  const userName = newName === "" ? "there" : newName;
+  const name = getNameFromLocalStorage();
 
-  console.log(newName);
+  function renderName() {
+    const capName = name.charAt(0).toUpperCase() + name.slice(1);
+    const userName = capName === "" ? "there" : capName;
+    return userName;
+  }
 
   function renderRestaurants() {
-    const [openingTimes] = restaurantData.map(({ openingTimes }) => {
-      return openingTimes;
-    });
-
     if (bookmarkedRestaurantsLength === 0) {
       return (
         <div>
@@ -31,7 +30,15 @@ export default function BookmarkPage({ restaurantData }) {
       );
     } else {
       return bookmarkedRestaurants.map(
-        ({ restaurantId, name, cuisine, area, isBookmarked, img }) => {
+        ({
+          restaurantId,
+          name,
+          cuisine,
+          area,
+          isBookmarked,
+          openingTimes,
+          img,
+        }) => {
           return (
             <RestaurantBox
               key={restaurantId}
@@ -52,7 +59,7 @@ export default function BookmarkPage({ restaurantData }) {
   return (
     <div className="app-grid">
       <header>
-        <h1 className="bookmark-heading">{`Hi ${userName},`}</h1>
+        <h1 className="bookmark-heading">{`Hi ${renderName()},`}</h1>
         <h2 className="bookmark-subheading">Bookmarks</h2>
       </header>
       <main
