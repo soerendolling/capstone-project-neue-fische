@@ -1,7 +1,6 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
@@ -21,27 +20,13 @@ import Size from "../components/restaurantDetailed/Size";
 import TakeAway from "../components/restaurantDetailed/TakeAway";
 import Delivery from "../components/restaurantDetailed/Delivery";
 import Smoking from "../components/restaurantDetailed/Smoking";
+import Adress from "../components/restaurantDetailed/Adress";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
   );
-
-  function showAdress() {
-    const adress = singleRestaurant.contact.adress;
-    const adressLink = `https://www.google.com/maps/search/${singleRestaurant.name}${adress}`;
-    if (adress !== "") {
-      return (
-        <span className="info-line">
-          <Pin className="info-svg" />
-          <a href={adressLink}>
-            <p className="info-text">{adress}</p>
-          </a>
-        </span>
-      );
-    }
-  }
 
   function showNumber() {
     const number = singleRestaurant.contact.number;
@@ -138,7 +123,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Smoking restaurant={singleRestaurant} />
           </div>
           <div className="detailed-info__text-bottom">
-            {showAdress()}
+            <Adress restaurant={singleRestaurant} />
             {showNumber()}
             {showEmail()}
             {showWebsite()}
