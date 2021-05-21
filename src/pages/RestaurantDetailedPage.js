@@ -14,7 +14,7 @@ import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
-import { ReactComponent as Michelin } from "../icons/michelin.svg";
+
 import { displayTime } from "../utilities/displayTime";
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
@@ -22,6 +22,7 @@ import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
 import Lunch from "../components/restaurantDetailed/Lunch";
 import OpeningTimes from "../components/restaurantDetailed/OpeningTimes";
 import Meatless from "../components/restaurantDetailed/Meatless";
+import Michelin from "../components/restaurantDetailed/Michelin";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -196,19 +197,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
-  function showMichelin() {
-    const michelin = singleRestaurant.michelinAwarded;
-    const michelinInfo = `${michelin[0]} - ${michelin[1]}`;
-    if (michelin !== "") {
-      return (
-        <span className="info-line">
-          <Michelin className="info-svg" />
-          <p className="info-text">{michelinInfo}</p>
-        </span>
-      );
-    }
-  }
-
   function showRestaurantImg() {
     if (singleRestaurant.img === "") {
       return restaurantImgOne;
@@ -252,7 +240,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Lunch restaurant={singleRestaurant} />
             <OpeningTimes restaurant={singleRestaurant} />
             <Meatless restaurant={singleRestaurant} />
-            {showMichelin()}
+            <Michelin restaurant={singleRestaurant} />
             {showOutdoor()}
             {showView()}
             {showPrice()}
