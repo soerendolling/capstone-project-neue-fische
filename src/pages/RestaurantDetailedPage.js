@@ -1,7 +1,7 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-import { ReactComponent as Clock } from "../icons/clock.svg";
+
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
 import { ReactComponent as Terrace } from "../icons/terrace.svg";
 import { ReactComponent as Binoculars } from "../icons/binoculars.svg";
@@ -22,6 +22,7 @@ import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
 import Lunch from "../components/restaurantDetailed/Lunch";
+import OpeningTimes from "../components/restaurantDetailed/OpeningTimes";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -50,17 +51,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       <span className="info-line">
         <Vegetarian className="info-svg" />
         <p className="info-text">{showMeatlessOptions}</p>
-      </span>
-    );
-  }
-
-  function showOpeningTimes() {
-    const open = singleRestaurant.openingTimes[today].general.open;
-    const close = singleRestaurant.openingTimes[today].general.close;
-    return (
-      <span className="info-line">
-        <Clock className="info-svg" />
-        <p className="info-text">{displayTime(open, close)}</p>
       </span>
     );
   }
@@ -281,7 +271,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         <div className="detailed-info__layout">
           <div className="detailed-info__text-top">
             <Lunch restaurant={singleRestaurant} />
-            {showOpeningTimes()}
+            <OpeningTimes restaurant={singleRestaurant} />
             {showMeatlessOptions()}
             {showMichelin()}
             {showOutdoor()}
