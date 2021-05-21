@@ -20,6 +20,7 @@ import Phone from "../components/restaurantDetailed/Phone";
 import Email from "../components/restaurantDetailed/Email";
 import Website from "../components/restaurantDetailed/Website";
 import Cuisine from "../components/restaurantDetailed/Cuisine";
+import Ambience from "../components/restaurantDetailed/Ambience";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -48,7 +49,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         <h1 className="detailed-heading">{singleRestaurant?.name}</h1>
         <div className="detailed-subheading">
           <Cuisine restaurant={singleRestaurant} />
-          <h2>{` ${singleRestaurant?.ambience[0]}  ${singleRestaurant?.ambience[1]} `}</h2>
+          <Ambience restaurant={singleRestaurant} />
         </div>
         <WeekdayDisplay singleRestaurant={singleRestaurant} />
         <div className="detailed-info__layout">
