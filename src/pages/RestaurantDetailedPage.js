@@ -19,6 +19,7 @@ import Adress from "../components/restaurantDetailed/Adress";
 import Phone from "../components/restaurantDetailed/Phone";
 import Email from "../components/restaurantDetailed/Email";
 import Website from "../components/restaurantDetailed/Website";
+import Cuisine from "../components/restaurantDetailed/Cuisine";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -34,20 +35,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
-  function showCuisine() {
-    const cuisineZero =
-      singleRestaurant?.cuisine[0] === undefined
-        ? ""
-        : singleRestaurant?.cuisine[0];
-    const cuisineOne =
-      singleRestaurant?.cuisine[1] === undefined
-        ? ""
-        : singleRestaurant?.cuisine[1];
-    if (cuisineZero || cuisineOne) {
-      return ` ${cuisineZero}  ${cuisineOne} `;
-    }
-  }
-
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -60,7 +47,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       <main>
         <h1 className="detailed-heading">{singleRestaurant?.name}</h1>
         <div className="detailed-subheading">
-          <h2>{showCuisine()}</h2>
+          <Cuisine restaurant={singleRestaurant} />
           <h2>{` ${singleRestaurant?.ambience[0]}  ${singleRestaurant?.ambience[1]} `}</h2>
         </div>
         <WeekdayDisplay singleRestaurant={singleRestaurant} />
