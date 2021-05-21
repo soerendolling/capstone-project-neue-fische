@@ -1,7 +1,6 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-import { ReactComponent as TakeAway } from "../icons/take-away.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
@@ -10,7 +9,7 @@ import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
-import { displayTime } from "../utilities/displayTime";
+
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
@@ -22,33 +21,13 @@ import Outdoor from "../components/restaurantDetailed/Outdoor";
 import View from "../components/restaurantDetailed/View";
 import Price from "../components/restaurantDetailed/Price";
 import Size from "../components/restaurantDetailed/Size";
+import TakeAway from "../components/restaurantDetailed/TakeAway";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
   );
-
-  let currentDate = new Date();
-  let options = { weekday: "long" };
-  const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
-  const today = getDay.toLowerCase();
-
-  function showTakeAwayOptions() {
-    const takeAwayOptions = singleRestaurant.takeAway;
-    const takeAwayDetails = singleRestaurant.takeAwayDetails;
-    const open = singleRestaurant.openingTimes[today].takeAway.open;
-    const close = singleRestaurant.openingTimes[today].takeAway.close;
-    const takeAwayInfo = `${takeAwayDetails} from ${displayTime(open, close)}`;
-    if (takeAwayOptions) {
-      return (
-        <span className="info-line">
-          <TakeAway className="info-svg" />
-          <p className="info-text">{takeAwayInfo}</p>
-        </span>
-      );
-    }
-  }
 
   function showDelivery() {
     const delivery = singleRestaurant.delivery;
@@ -188,7 +167,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <View restaurant={singleRestaurant} />
             <Price restaurant={singleRestaurant} />
             <Size restaurant={singleRestaurant} />
-            {showTakeAwayOptions()}
+            <TakeAway restaurant={singleRestaurant} />
             {showDelivery()}
             {showSmoking()}
           </div>
