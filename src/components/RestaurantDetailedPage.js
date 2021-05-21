@@ -297,6 +297,20 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     }
   }
 
+  function showCuisine() {
+    const cuisineZero =
+      singleRestaurant.cuisine[0] === undefined
+        ? ""
+        : singleRestaurant.cuisine[0];
+    const cuisineOne =
+      singleRestaurant.cuisine[1] === undefined
+        ? ""
+        : singleRestaurant.cuisine[1];
+    if (cuisineZero || cuisineOne) {
+      return ` ${cuisineZero}  ${cuisineOne} `;
+    }
+  }
+
   return (
     <div className="RestaurantDetailedPage">
       <header className="detailed-header">
@@ -309,7 +323,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       <main>
         <h1 className="detailed-heading">{singleRestaurant.name}</h1>
         <div className="detailed-subheading">
-          <h2>{` ${singleRestaurant.cuisine[0]}  ${singleRestaurant.cuisine[1]} `}</h2>
+          <h2>{showCuisine()}</h2>
           <h2>{` ${singleRestaurant.ambience[0]}  ${singleRestaurant.ambience[1]} `}</h2>
         </div>
         <div className="headline-weekday__layout">
