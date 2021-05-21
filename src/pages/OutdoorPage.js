@@ -1,10 +1,10 @@
 import "./OutdoorPage.css";
+import { Link } from "react-router-dom";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Progress } from "../icons/outdoor-progress.svg";
-import { Link } from "react-router-dom";
-import OutdoorWeatherWidget from "./OutdoorWeatherWidget";
-import FilterTagsGroup from "./FilterTagsGroup";
+import OutdoorWeatherWidget from "../components/OutdoorWeatherWidget";
+import FilterTagsGroup from "../components/FilterTagsGroup";
 
 export default function OutdoorPage({ restaurantData }) {
   const tags = ["terrace", "backyard", "rooftop", "park"];

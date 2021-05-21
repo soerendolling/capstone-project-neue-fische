@@ -1,12 +1,12 @@
 import "./BookmarkPage.css";
-import RestaurantBox from "./RestaurantBox";
-import { ReactComponent as Find } from "../icons/find.svg";
 import { Link } from "react-router-dom";
+import RestaurantBox from "../components/RestaurantBox";
+import GoBackButton from "../components/GoBackButton";
+import { ReactComponent as Find } from "../icons/find.svg";
 import {
   getDataFromLocalStorage,
   getNameFromLocalStorage,
 } from "../utilities/localStorage";
-import GoBackButton from "./GoBackButton";
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();

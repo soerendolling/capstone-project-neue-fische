@@ -19,8 +19,8 @@ import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
 import { ReactComponent as Michelin } from "../icons/michelin.svg";
 import { displayTime } from "../utilities/displayTime";
-import GoBackButton from "./GoBackButton";
-import MainButton from "./MainButton";
+import GoBackButton from "../components/GoBackButton";
+import MainButton from "../components/MainButton";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
