@@ -77,7 +77,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       <footer className="detailed-footer">
         <GoBackButton className="go-back-button__rdp" />
         <MainButton text="open on gmaps" />
-        {/* <HeartFull className="header-bookmark" /> */}
       </footer>
     </div>
   );
