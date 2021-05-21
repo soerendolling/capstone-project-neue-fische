@@ -9,31 +9,31 @@ export default function WeekdayDisplay({ singleRestaurant }) {
   let classForSaturday;
   let classForSunday;
 
-  singleRestaurant.openingTimes?.monday.general.open > 0
+  singleRestaurant?.openingTimes?.monday?.general?.open > 0
     ? (classForMonday = " open")
     : (classForMonday = " closed");
 
-  singleRestaurant.openingTimes?.tuesday.general.open > 0
+  singleRestaurant?.openingTimes?.tuesday?.general?.open > 0
     ? (classForTuesday = " open")
     : (classForTuesday = " closed");
 
-  singleRestaurant.openingTimes?.wednesday.general.open > 0
+  singleRestaurant?.openingTimes?.wednesday?.general?.open > 0
     ? (classForWednesday = " open")
     : (classForWednesday = " closed");
 
-  singleRestaurant.openingTimes?.thursday.general.open > 0
+  singleRestaurant?.openingTimes?.thursday?.general?.open > 0
     ? (classForThursday = " open")
     : (classForThursday = " closed");
 
-  singleRestaurant.openingTimes?.friday.general.open > 0
+  singleRestaurant?.openingTimes?.friday?.general?.open > 0
     ? (classForFriday = " open")
     : (classForFriday = " closed");
 
-  singleRestaurant.openingTimes?.saturday.general.open > 0
+  singleRestaurant?.openingTimes?.saturday?.general?.open > 0
     ? (classForSaturday = " open")
     : (classForSaturday = " closed");
 
-  singleRestaurant.openingTimes?.sunday.general.open > 0
+  singleRestaurant?.openingTimes?.sunday?.general?.open > 0
     ? (classForSunday = " open")
     : (classForSunday = " closed");
 

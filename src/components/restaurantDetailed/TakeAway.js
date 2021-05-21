@@ -6,10 +6,10 @@ export default function TakeAway({ restaurant }) {
   let options = { weekday: "long" };
   const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
   const today = getDay.toLowerCase();
-  const takeAwayOptions = restaurant.takeAway;
-  const takeAwayDetails = restaurant.takeAwayDetails;
-  const open = restaurant.openingTimes[today].takeAway.open;
-  const close = restaurant.openingTimes[today].takeAway.close;
+  const takeAwayOptions = restaurant?.takeAway;
+  const takeAwayDetails = restaurant?.takeAwayDetails;
+  const open = restaurant?.openingTimes[today]?.takeAway.open;
+  const close = restaurant?.openingTimes[today]?.takeAway.close;
   const takeAwayInfo = `${takeAwayDetails} from ${displayTime(open, close)}`;
   if (takeAwayOptions) {
     return (

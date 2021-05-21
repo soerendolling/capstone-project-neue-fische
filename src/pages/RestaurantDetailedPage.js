@@ -1,7 +1,7 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-import { ReactComponent as Phone } from "../icons/phone.svg";
+
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
@@ -21,6 +21,7 @@ import TakeAway from "../components/restaurantDetailed/TakeAway";
 import Delivery from "../components/restaurantDetailed/Delivery";
 import Smoking from "../components/restaurantDetailed/Smoking";
 import Adress from "../components/restaurantDetailed/Adress";
+import Phone from "../components/restaurantDetailed/Phone";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -28,22 +29,8 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     (restaurant) => restaurant.id === Number(id)
   );
 
-  function showNumber() {
-    const number = singleRestaurant.contact.number;
-    if (number !== "") {
-      return (
-        <span className="info-line">
-          <Phone className="info-svg" />
-          <a href={`tel://${number}`}>
-            <p className="info-text">{singleRestaurant.contact.number}</p>
-          </a>
-        </span>
-      );
-    }
-  }
-
   function showWebsite() {
-    const website = singleRestaurant.contact.website;
+    const website = singleRestaurant?.contact?.website;
     if (website !== "") {
       return (
         <span className="info-line">
@@ -57,7 +44,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showEmail() {
-    const email = singleRestaurant.contact.email;
+    const email = singleRestaurant?.contact?.email;
     if (email !== "") {
       return (
         <span className="info-line">
@@ -71,22 +58,22 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   }
 
   function showRestaurantImg() {
-    if (singleRestaurant.img === "") {
+    if (singleRestaurant?.img === "") {
       return restaurantImgOne;
     } else {
-      return singleRestaurant.img;
+      return singleRestaurant?.img;
     }
   }
 
   function showCuisine() {
     const cuisineZero =
-      singleRestaurant.cuisine[0] === undefined
+      singleRestaurant?.cuisine[0] === undefined
         ? ""
-        : singleRestaurant.cuisine[0];
+        : singleRestaurant?.cuisine[0];
     const cuisineOne =
-      singleRestaurant.cuisine[1] === undefined
+      singleRestaurant?.cuisine[1] === undefined
         ? ""
-        : singleRestaurant.cuisine[1];
+        : singleRestaurant?.cuisine[1];
     if (cuisineZero || cuisineOne) {
       return ` ${cuisineZero}  ${cuisineOne} `;
     }
@@ -102,10 +89,10 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         />
       </header>
       <main>
-        <h1 className="detailed-heading">{singleRestaurant.name}</h1>
+        <h1 className="detailed-heading">{singleRestaurant?.name}</h1>
         <div className="detailed-subheading">
           <h2>{showCuisine()}</h2>
-          <h2>{` ${singleRestaurant.ambience[0]}  ${singleRestaurant.ambience[1]} `}</h2>
+          <h2>{` ${singleRestaurant?.ambience[0]}  ${singleRestaurant?.ambience[1]} `}</h2>
         </div>
         <WeekdayDisplay singleRestaurant={singleRestaurant} />
         <div className="detailed-info__layout">
@@ -124,7 +111,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           </div>
           <div className="detailed-info__text-bottom">
             <Adress restaurant={singleRestaurant} />
-            {showNumber()}
+            <Phone restaurant={singleRestaurant} />
             {showEmail()}
             {showWebsite()}
           </div>

@@ -1,7 +1,7 @@
 import { ReactComponent as SizeIcon } from "../../icons/size.svg";
 
 export default function Size({ restaurant }) {
-  const size = `${restaurant.size} space`;
+  const size = `${restaurant?.size} space`;
   if (size !== "") {
     return (
       <span className="info-line">

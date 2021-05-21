@@ -1,8 +1,8 @@
 import { ReactComponent as NoSmokingIcon } from "../../icons/no-smoking.svg";
 
 export default function Smoking({ restaurant }) {
-  const smokingInside = restaurant.smoking.inside;
-  const smokingOutside = restaurant.smoking.outside;
+  const smokingInside = restaurant?.smoking?.inside;
+  const smokingOutside = restaurant?.smoking?.outside;
   const smoking = `${
     smokingInside
       ? "smoking allowed"

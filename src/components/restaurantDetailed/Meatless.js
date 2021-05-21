@@ -1,8 +1,8 @@
 import { ReactComponent as MeatlessIcon } from "../../icons/vegetarian.svg";
 
 export default function Meatless({ restaurant }) {
-  const vegetarian = restaurant.meatless.vegetarianOptions;
-  const vegan = restaurant.meatless.veganOptions;
+  const vegetarian = restaurant?.meatless?.vegetarianOptions;
+  const vegan = restaurant?.meatless?.veganOptions;
   const showMeatlessOptions =
     vegetarian && vegan
       ? "vegetarian & vegan"

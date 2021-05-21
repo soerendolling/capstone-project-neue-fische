@@ -1,8 +1,8 @@
 import { ReactComponent as DeliveryIcon } from "../../icons/delivery.svg";
 
 export default function Delivery({ restaurant }) {
-  const delivery = restaurant.delivery;
-  const deliveryDetails = restaurant.deliveryDetails;
+  const delivery = restaurant?.delivery;
+  const deliveryDetails = restaurant?.deliveryDetails;
   const deliveryInfo = deliveryDetails;
   if (delivery) {
     return (

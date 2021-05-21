@@ -1,8 +1,8 @@
 import { ReactComponent as PriceIcon } from "../../icons/euro.svg";
 
 export default function Price({ restaurant }) {
-  const priceTop = restaurant.averagePrice.top;
-  const priceBottom = restaurant.averagePrice.bottom;
+  const priceTop = restaurant?.averagePrice?.top;
+  const priceBottom = restaurant?.averagePrice?.bottom;
   const priceInfo = `mains from ${priceBottom}€ to ${priceTop}€`;
   if (priceTop > 0) {
     return (
