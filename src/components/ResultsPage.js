@@ -54,8 +54,8 @@ export default function ResultsPage({ restaurantData }) {
           <MainButton className="results-footer__button" text="start again" />
         </Link>
         <Link to={`/bookmark-page`}>
-          <button className="results-footer__back">
-            <Heart className="results-footer__bookmark" />
+          <button className="results-footer__bookmark-button">
+            <Heart className="results-footer__bookmark-svg" />
           </button>
         </Link>
       </footer>

@@ -53,7 +53,7 @@ a {
   cursor: pointer;
 }
 
-.results-footer__bookmark {
+.results-footer__bookmark-svg {
   display: flex;
   align-items: center;
   margin-top: 2px;
@@ -62,7 +62,7 @@ a {
   cursor: pointer;
 }
 
-.results-footer__back {
+.results-footer__bookmark-button {
   padding: 0 15px;
   width: auto;
   height: 44px;

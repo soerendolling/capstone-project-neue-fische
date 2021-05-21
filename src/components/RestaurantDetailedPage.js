@@ -11,7 +11,6 @@ import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
-import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
 import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Lunch } from "../icons/lunch.svg";
@@ -20,10 +19,9 @@ import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
 import { ReactComponent as Michelin } from "../icons/michelin.svg";
 import { displayTime } from "../utilities/displayTime";
+import GoBackButton from "./GoBackButton";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
-  let history = useHistory();
-
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
@@ -359,8 +357,8 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         </div>
       </main>
       <footer className="detailed-footer">
-        <LeftArrow onClick={() => history.goBack()} className="footer-arrow" />
-        <HeartFull className="header-bookmark" />
+        <GoBackButton className="go-back-button__rdp" />
+        {/* <HeartFull className="header-bookmark" /> */}
       </footer>
     </div>
   );
