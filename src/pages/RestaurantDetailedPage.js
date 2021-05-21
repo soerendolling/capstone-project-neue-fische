@@ -5,7 +5,7 @@ import restaurantImgOne from "../img/restaurant1.png";
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
-import { ReactComponent as Email } from "../icons/at.svg";
+
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
@@ -22,6 +22,7 @@ import Delivery from "../components/restaurantDetailed/Delivery";
 import Smoking from "../components/restaurantDetailed/Smoking";
 import Adress from "../components/restaurantDetailed/Adress";
 import Phone from "../components/restaurantDetailed/Phone";
+import Email from "../components/restaurantDetailed/Email";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -37,20 +38,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <WWW className="info-svg" />
           <a href={website}>
             <p className="info-text">{website}</p>
-          </a>
-        </span>
-      );
-    }
-  }
-
-  function showEmail() {
-    const email = singleRestaurant?.contact?.email;
-    if (email !== "") {
-      return (
-        <span className="info-line">
-          <Email className="info-svg" />
-          <a href={`mailto:${email}`}>
-            <p className="info-text">{email}</p>
           </a>
         </span>
       );
@@ -112,7 +99,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <div className="detailed-info__text-bottom">
             <Adress restaurant={singleRestaurant} />
             <Phone restaurant={singleRestaurant} />
-            {showEmail()}
+            <Email restaurant={singleRestaurant} />
             {showWebsite()}
           </div>
         </div>
