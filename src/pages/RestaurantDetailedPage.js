@@ -5,10 +5,8 @@ import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
-import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
-
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
@@ -22,6 +20,7 @@ import Price from "../components/restaurantDetailed/Price";
 import Size from "../components/restaurantDetailed/Size";
 import TakeAway from "../components/restaurantDetailed/TakeAway";
 import Delivery from "../components/restaurantDetailed/Delivery";
+import Smoking from "../components/restaurantDetailed/Smoking";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -56,25 +55,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         </span>
       );
     }
-  }
-
-  function showSmoking() {
-    const smokingInside = singleRestaurant.smoking.inside;
-    const smokingOutside = singleRestaurant.smoking.outside;
-    const smoking = `${
-      smokingInside
-        ? "smoking allowed"
-        : smokingOutside
-        ? "smoking outside"
-        : "non smoking"
-    }`;
-
-    return (
-      <span className="info-line">
-        <NoSmoking className="info-svg" />
-        <p className="info-text">{smoking}</p>
-      </span>
-    );
   }
 
   function showWebsite() {
@@ -155,7 +135,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Size restaurant={singleRestaurant} />
             <TakeAway restaurant={singleRestaurant} />
             <Delivery restaurant={singleRestaurant} />
-            {showSmoking()}
+            <Smoking restaurant={singleRestaurant} />
           </div>
           <div className="detailed-info__text-bottom">
             {showAdress()}
