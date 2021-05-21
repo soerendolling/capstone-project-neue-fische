@@ -13,7 +13,6 @@ import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 import { ReactComponent as Delivery } from "../icons/delivery.svg";
-import { ReactComponent as Lunch } from "../icons/lunch.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
@@ -22,6 +21,7 @@ import { displayTime } from "../utilities/displayTime";
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
+import Lunch from "../components/restaurantDetailed/Lunch";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -63,19 +63,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         <p className="info-text">{displayTime(open, close)}</p>
       </span>
     );
-  }
-
-  function showLunch() {
-    const open = singleRestaurant.openingTimes[today].lunch.open;
-    const close = singleRestaurant.openingTimes[today].lunch.close;
-    if (open > 0) {
-      return (
-        <span className="info-line">
-          <Lunch className="info-svg" />
-          <p className="info-text">{displayTime(open, close)}</p>
-        </span>
-      );
-    }
   }
 
   function showView() {
@@ -293,7 +280,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         <WeekdayDisplay singleRestaurant={singleRestaurant} />
         <div className="detailed-info__layout">
           <div className="detailed-info__text-top">
-            {showLunch()}
+            <Lunch restaurant={singleRestaurant} />
             {showOpeningTimes()}
             {showMeatlessOptions()}
             {showMichelin()}
