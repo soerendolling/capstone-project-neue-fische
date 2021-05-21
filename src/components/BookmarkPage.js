@@ -1,18 +1,17 @@
 import "./BookmarkPage.css";
 import RestaurantBox from "./RestaurantBox";
 import { ReactComponent as Find } from "../icons/find.svg";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   getDataFromLocalStorage,
   getNameFromLocalStorage,
 } from "../utilities/localStorage";
-import { ReactComponent as ArrowLeft } from "../icons/arrow-left.svg";
+import GoBackButton from "./GoBackButton";
 
 export default function BookmarkPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
   const bookmarkedRestaurantsLength = bookmarkedRestaurants.length;
   const name = getNameFromLocalStorage();
-  const history = useHistory();
 
   function renderName() {
     const capName = name.charAt(0).toUpperCase() + name.slice(1);
@@ -74,9 +73,7 @@ export default function BookmarkPage({ restaurantData }) {
         {renderRestaurants()}
       </main>
       <footer className="bookmark-footer">
-        <button className="bookmark-footer__back">
-          <ArrowLeft onClick={() => history.goBack()} />
-        </button>
+        <GoBackButton />
         <Link to={`/take-away-page`}>
           <button className="bookmark-footer__button" type="submit">
             <Find className="bookmark-footer__svg" />

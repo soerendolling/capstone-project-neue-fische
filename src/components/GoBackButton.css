@@ -1,6 +1,4 @@
-.main-button {
-  display: block;
-  margin: 0 auto;
+.go-back-button {
   padding: 0 15px;
   width: auto;
   height: 44px;
@@ -12,4 +10,5 @@
   font-weight: 200;
   letter-spacing: var(--mainButton-spacing);
   color: var(--background-color);
+  cursor: pointer;
 }
