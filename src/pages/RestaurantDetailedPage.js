@@ -1,7 +1,6 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
 import { ReactComponent as Terrace } from "../icons/terrace.svg";
 import { ReactComponent as Binoculars } from "../icons/binoculars.svg";
@@ -11,7 +10,6 @@ import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
-import { ReactComponent as Vegetarian } from "../icons/vegetarian.svg";
 import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
@@ -23,6 +21,7 @@ import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
 import Lunch from "../components/restaurantDetailed/Lunch";
 import OpeningTimes from "../components/restaurantDetailed/OpeningTimes";
+import Meatless from "../components/restaurantDetailed/Meatless";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -34,26 +33,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   let options = { weekday: "long" };
   const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
   const today = getDay.toLowerCase();
-
-  function showMeatlessOptions() {
-    const vegetarian = singleRestaurant.meatless.vegetarianOptions;
-    const vegan = singleRestaurant.meatless.veganOptions;
-    const showMeatlessOptions =
-      vegetarian && vegan
-        ? "vegetarian & vegan"
-        : vegan
-        ? "vegan options"
-        : vegetarian
-        ? "vegetarian options"
-        : "no vegetarian options on the menu";
-
-    return (
-      <span className="info-line">
-        <Vegetarian className="info-svg" />
-        <p className="info-text">{showMeatlessOptions}</p>
-      </span>
-    );
-  }
 
   function showView() {
     const view = singleRestaurant.location.view;
@@ -272,7 +251,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <div className="detailed-info__text-top">
             <Lunch restaurant={singleRestaurant} />
             <OpeningTimes restaurant={singleRestaurant} />
-            {showMeatlessOptions()}
+            <Meatless restaurant={singleRestaurant} />
             {showMichelin()}
             {showOutdoor()}
             {showView()}
