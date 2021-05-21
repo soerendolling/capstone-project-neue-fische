@@ -2,8 +2,6 @@ import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
-import { ReactComponent as Terrace } from "../icons/terrace.svg";
-import { ReactComponent as Binoculars } from "../icons/binoculars.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
@@ -14,7 +12,6 @@ import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Size } from "../icons/size.svg";
 import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
-
 import { displayTime } from "../utilities/displayTime";
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
@@ -24,6 +21,7 @@ import OpeningTimes from "../components/restaurantDetailed/OpeningTimes";
 import Meatless from "../components/restaurantDetailed/Meatless";
 import Michelin from "../components/restaurantDetailed/Michelin";
 import Outdoor from "../components/restaurantDetailed/Outdoor";
+import View from "../components/restaurantDetailed/View";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -35,19 +33,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
   let options = { weekday: "long" };
   const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
   const today = getDay.toLowerCase();
-
-  function showView() {
-    const view = singleRestaurant.location.view;
-    const viewInfo = `${view} view`;
-    if (view !== "") {
-      return (
-        <span className="info-line">
-          <Binoculars className="info-svg" />
-          <p className="info-text">{viewInfo}</p>
-        </span>
-      );
-    }
-  }
 
   function showTakeAwayOptions() {
     const takeAwayOptions = singleRestaurant.takeAway;
@@ -226,7 +211,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Meatless restaurant={singleRestaurant} />
             <Michelin restaurant={singleRestaurant} />
             <Outdoor restaurant={singleRestaurant} />
-            {showView()}
+            <View restaurant={singleRestaurant} />
             {showPrice()}
             {showSize()}
             {showTakeAwayOptions()}
