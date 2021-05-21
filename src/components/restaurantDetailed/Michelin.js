@@ -10,5 +10,7 @@ export default function showMichelin({ restaurant }) {
         <p className="info-text">{michelinInfo}</p>
       </span>
     );
+  } else {
+    return null;
   }
 }

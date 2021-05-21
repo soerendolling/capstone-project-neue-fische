@@ -23,6 +23,7 @@ import Lunch from "../components/restaurantDetailed/Lunch";
 import OpeningTimes from "../components/restaurantDetailed/OpeningTimes";
 import Meatless from "../components/restaurantDetailed/Meatless";
 import Michelin from "../components/restaurantDetailed/Michelin";
+import Outdoor from "../components/restaurantDetailed/Outdoor";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -73,23 +74,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         <span className="info-line">
           <Delivery className="info-svg" />
           <p className="info-text">{deliveryInfo}</p>
-        </span>
-      );
-    }
-  }
-
-  function showOutdoor() {
-    const outdoorDetail = singleRestaurant.location.restaurantOutdoorDetail;
-    const outdoorSeating = singleRestaurant.location.restaurantOutdoor;
-    const outdoorSeatingBar = singleRestaurant.location.barOutdoor;
-    if (outdoorSeating || outdoorSeatingBar) {
-      const outdoorInfo = !outdoorSeating
-        ? "Outdoor seating at the Bar"
-        : outdoorDetail;
-      return (
-        <span className="info-line">
-          <Terrace className="info-svg" />
-          <p className="info-text">{outdoorInfo}</p>
         </span>
       );
     }
@@ -241,7 +225,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <OpeningTimes restaurant={singleRestaurant} />
             <Meatless restaurant={singleRestaurant} />
             <Michelin restaurant={singleRestaurant} />
-            {showOutdoor()}
+            <Outdoor restaurant={singleRestaurant} />
             {showView()}
             {showPrice()}
             {showSize()}
