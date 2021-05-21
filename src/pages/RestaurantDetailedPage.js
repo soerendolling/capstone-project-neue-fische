@@ -7,7 +7,6 @@ import { ReactComponent as Phone } from "../icons/phone.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
-import { ReactComponent as Delivery } from "../icons/delivery.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
 
 import GoBackButton from "../components/GoBackButton";
@@ -22,26 +21,13 @@ import View from "../components/restaurantDetailed/View";
 import Price from "../components/restaurantDetailed/Price";
 import Size from "../components/restaurantDetailed/Size";
 import TakeAway from "../components/restaurantDetailed/TakeAway";
+import Delivery from "../components/restaurantDetailed/Delivery";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
   );
-
-  function showDelivery() {
-    const delivery = singleRestaurant.delivery;
-    const deliveryDetails = singleRestaurant.deliveryDetails;
-    const deliveryInfo = deliveryDetails;
-    if (delivery) {
-      return (
-        <span className="info-line">
-          <Delivery className="info-svg" />
-          <p className="info-text">{deliveryInfo}</p>
-        </span>
-      );
-    }
-  }
 
   function showAdress() {
     const adress = singleRestaurant.contact.adress;
@@ -168,7 +154,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Price restaurant={singleRestaurant} />
             <Size restaurant={singleRestaurant} />
             <TakeAway restaurant={singleRestaurant} />
-            {showDelivery()}
+            <Delivery restaurant={singleRestaurant} />
             {showSmoking()}
           </div>
           <div className="detailed-info__text-bottom">
