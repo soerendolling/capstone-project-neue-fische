@@ -1,5 +1,5 @@
 import "./RestaurantDetailedPage.css";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
 import { ReactComponent as Clock } from "../icons/clock.svg";
 import { ReactComponent as TakeAway } from "../icons/take-away.svg";
@@ -7,7 +7,7 @@ import { ReactComponent as Terrace } from "../icons/terrace.svg";
 import { ReactComponent as Binoculars } from "../icons/binoculars.svg";
 import { ReactComponent as Pin } from "../icons/pin.svg";
 import { ReactComponent as Phone } from "../icons/phone.svg";
-import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
+// import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
 // import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
@@ -20,6 +20,7 @@ import { ReactComponent as Email } from "../icons/at.svg";
 import { ReactComponent as Michelin } from "../icons/michelin.svg";
 import { displayTime } from "../utilities/displayTime";
 import GoBackButton from "./GoBackButton";
+import MainButton from "./MainButton";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -181,7 +182,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <Pin className="info-svg" />
           <a href={adressLink}>
             <p className="info-text">{adress}</p>
-            <p className="info-text">Show on google maps</p>
           </a>
         </span>
       );
@@ -358,6 +358,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       </main>
       <footer className="detailed-footer">
         <GoBackButton className="go-back-button__rdp" />
+        <MainButton text="open on gmaps" />
         {/* <HeartFull className="header-bookmark" /> */}
       </footer>
     </div>
