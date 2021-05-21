@@ -41,26 +41,44 @@
 .bookmark-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .bookmark-footer__button {
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 50px;
   width: auto;
   height: 44px;
   border: transparent;
   border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
   background: var(--gold-color);
   font-size: var(--mainButton-size);
+  font-weight: 200;
   letter-spacing: var(--mainButton-spacing);
-  color: var(--mainButton-color);
-  cursor: pointer;
+  color: var(--background-color);
+}
+
+.bookmark-footer__back {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  width: auto;
+  height: 44px;
+  border: transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
+  background: var(--gold-color);
+  font-size: var(--mainButton-size);
+  font-weight: 200;
+  letter-spacing: var(--mainButton-spacing);
+  color: var(--background-color);
 }
 
 .bookmark-footer__svg {
   height: 26px;
   width: 26px;
-  margin-right: 12px;
+  margin-right: 20px;
+  margin-top: 2px;
 }

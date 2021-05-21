@@ -1028,7 +1028,7 @@
         "bottom": 0
       },
       "meatless": {
-        "vegetarianOptions": false,
+        "vegetarianOptions": true,
         "veganOptions": false
       },
       "ambience": ["casual", "warm"],
@@ -1140,7 +1140,7 @@
         }
       },
       "contact": {
-        "adress": "Wexstrasse 34",
+        "adress": "Wexstrasse 34, 20355 Hamburg",
         "number": "04035713366",
         "email": "mail@trattoria-enzo.de",
         "website": "www.trattoria-enzo.de"
@@ -1149,7 +1149,7 @@
         "area": ["neustadt", "großneumakrt"],
         "view": "",
         "restaurantOutdoor": true,
-        "restaurantOutdoorDetail": "",
+        "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
         "water": "",

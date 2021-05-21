@@ -1,12 +1,14 @@
 import "./ResultsPage.css";
 import RestaurantBox from "./RestaurantBox";
-import { ReactComponent as SaveHeart } from "../icons/save-heart.svg";
-import { Link } from "react-router-dom";
+import { ReactComponent as Heart } from "../icons/heart-empty-button.svg";
+import { Link, useHistory } from "react-router-dom";
 import MainButton from "./MainButton";
 import { getDataFromLocalStorage } from "../utilities/localStorage";
+import { ReactComponent as ArrowLeft } from "../icons/arrow-left.svg";
 
 export default function ResultsPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
+  const history = useHistory();
 
   function checkIfBookmarked(id) {
     const theBookmarkedRestaurant = bookmarkedRestaurants.find((restaurant) => {
@@ -48,13 +50,16 @@ export default function ResultsPage({ restaurantData }) {
       </header>
       <main className="results-main">{renderRestaurants()}</main>
       <footer className="results-footer">
-        <Link to={`/bookmark-page`}>
-          <button className="results-footer__button">
-            <SaveHeart className="results-footer__bookmark" />
-          </button>
-        </Link>
+        <button className="results-footer__back">
+          <ArrowLeft onClick={() => history.goBack()} />
+        </button>
         <Link to={`/take-away-page`}>
           <MainButton className="results-footer__button" text="start again" />
+        </Link>
+        <Link to={`/bookmark-page`}>
+          <button className="results-footer__back">
+            <Heart className="results-footer__bookmark" />
+          </button>
         </Link>
       </footer>
     </div>

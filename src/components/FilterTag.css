@@ -5,6 +5,7 @@
   box-shadow: 3px 3px 6px var(--bright-color);
   background: var(--background-color);
   font-size: var(--tag-size);
+  font-weight: 200;
   text-align: center;
   letter-spacing: var(--tag-spacing);
   color: var(--dark-color);

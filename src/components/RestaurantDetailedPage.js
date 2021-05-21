@@ -80,7 +80,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
         ? "vegan options"
         : vegetarian
         ? "vegetarian options"
-        : "no meatless options";
+        : "no vegetarian options on the menu";
 
     return (
       <span className="info-line">
@@ -183,6 +183,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
           <Pin className="info-svg" />
           <a href={adressLink}>
             <p className="info-text">{adress}</p>
+            <p className="info-text">Show on google maps</p>
           </a>
         </span>
       );

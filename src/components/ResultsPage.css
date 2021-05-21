@@ -35,7 +35,7 @@ a {
 .results-footer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .results-footer__button {
@@ -54,8 +54,27 @@ a {
 }
 
 .results-footer__bookmark {
-  width: 25px;
-  height: 25px;
-  fill: var(--background-color);
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.results-footer__back {
+  /* display: block;
+  margin: 0 auto; */
+  padding: 0 15px;
+  width: auto;
+  height: 44px;
+  border: transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
+  background: var(--gold-color);
+  font-size: var(--mainButton-size);
+  font-weight: 200;
+  letter-spacing: var(--mainButton-spacing);
+  color: var(--background-color);
   cursor: pointer;
 }
