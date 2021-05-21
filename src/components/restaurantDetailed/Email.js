@@ -11,5 +11,7 @@ export default function Email({ restaurant }) {
         </a>
       </span>
     );
+  } else {
+    return null;
   }
 }

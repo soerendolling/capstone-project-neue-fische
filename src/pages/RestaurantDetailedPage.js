@@ -1,11 +1,6 @@
 import "./RestaurantDetailedPage.css";
 import { useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
-
-// import { ReactComponent as HeartFull } from "../icons/heart-full.svg";
-// import { ReactComponent as HeartEmpty } from "../icons/heart-empty.svg";
-import { ReactComponent as WWW } from "../icons/internet.svg";
-
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
 import WeekdayDisplay from "../components/restaurantDetailed/WeekdayDisplay";
@@ -23,26 +18,13 @@ import Smoking from "../components/restaurantDetailed/Smoking";
 import Adress from "../components/restaurantDetailed/Adress";
 import Phone from "../components/restaurantDetailed/Phone";
 import Email from "../components/restaurantDetailed/Email";
+import Website from "../components/restaurantDetailed/Website";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
   const singleRestaurant = restaurantData.find(
     (restaurant) => restaurant.id === Number(id)
   );
-
-  function showWebsite() {
-    const website = singleRestaurant?.contact?.website;
-    if (website !== "") {
-      return (
-        <span className="info-line">
-          <WWW className="info-svg" />
-          <a href={website}>
-            <p className="info-text">{website}</p>
-          </a>
-        </span>
-      );
-    }
-  }
 
   function showRestaurantImg() {
     if (singleRestaurant?.img === "") {
@@ -100,7 +82,7 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Adress restaurant={singleRestaurant} />
             <Phone restaurant={singleRestaurant} />
             <Email restaurant={singleRestaurant} />
-            {showWebsite()}
+            <Website restaurant={singleRestaurant} />
           </div>
         </div>
       </main>
