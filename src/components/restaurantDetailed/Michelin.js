@@ -1,12 +1,12 @@
-import { ReactComponent as Michelin } from "../../icons/michelin.svg";
+import { ReactComponent as MichelinIcon } from "../../icons/michelin.svg";
 
-export default function showMichelin({ restaurant }) {
+export default function Michelin({ restaurant }) {
   const michelin = restaurant.michelinAwarded;
   const michelinInfo = `${michelin[0]} - ${michelin[1]}`;
   if (michelin !== "") {
     return (
       <span className="info-line">
-        <Michelin className="info-svg" />
+        <MichelinIcon className="info-svg" />
         <p className="info-text">{michelinInfo}</p>
       </span>
     );

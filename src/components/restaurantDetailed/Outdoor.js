@@ -1,6 +1,6 @@
-import { ReactComponent as Terrace } from "../../icons/terrace.svg";
+import { ReactComponent as OutdoorIcon } from "../../icons/terrace.svg";
 
-export default function showOutdoor({ restaurant }) {
+export default function Outdoor({ restaurant }) {
   const outdoorDetail = restaurant.location.restaurantOutdoorDetail;
   const outdoorSeating = restaurant.location.restaurantOutdoor;
   const outdoorSeatingBar = restaurant.location.barOutdoor;
@@ -10,7 +10,7 @@ export default function showOutdoor({ restaurant }) {
       : outdoorDetail;
     return (
       <span className="info-line">
-        <Terrace className="info-svg" />
+        <OutdoorIcon className="info-svg" />
         <p className="info-text">{outdoorInfo}</p>
       </span>
     );

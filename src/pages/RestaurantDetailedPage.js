@@ -9,8 +9,6 @@ import { ReactComponent as Phone } from "../icons/phone.svg";
 import { ReactComponent as NoSmoking } from "../icons/no-smoking.svg";
 import { ReactComponent as WWW } from "../icons/internet.svg";
 import { ReactComponent as Delivery } from "../icons/delivery.svg";
-import { ReactComponent as Size } from "../icons/size.svg";
-import { ReactComponent as Euro } from "../icons/euro.svg";
 import { ReactComponent as Email } from "../icons/at.svg";
 import { displayTime } from "../utilities/displayTime";
 import GoBackButton from "../components/GoBackButton";
@@ -22,6 +20,8 @@ import Meatless from "../components/restaurantDetailed/Meatless";
 import Michelin from "../components/restaurantDetailed/Michelin";
 import Outdoor from "../components/restaurantDetailed/Outdoor";
 import View from "../components/restaurantDetailed/View";
+import Price from "../components/restaurantDetailed/Price";
+import Size from "../components/restaurantDetailed/Size";
 
 export default function RestaurantDetailedPage({ restaurantData }) {
   let { id } = useParams();
@@ -112,32 +112,6 @@ export default function RestaurantDetailedPage({ restaurantData }) {
     );
   }
 
-  function showSize() {
-    const size = `${singleRestaurant.size} space`;
-    if (size !== "") {
-      return (
-        <span className="info-line">
-          <Size className="info-svg" />
-          <p className="info-text">{size}</p>
-        </span>
-      );
-    }
-  }
-
-  function showPrice() {
-    const priceTop = singleRestaurant.averagePrice.top;
-    const priceBottom = singleRestaurant.averagePrice.bottom;
-    const priceInfo = `mains from ${priceBottom}€ to ${priceTop}€`;
-    if (priceTop > 0) {
-      return (
-        <span className="info-line">
-          <Euro className="info-svg" />
-          <p className="info-text">{priceInfo}</p>
-        </span>
-      );
-    }
-  }
-
   function showWebsite() {
     const website = singleRestaurant.contact.website;
     if (website !== "") {
@@ -212,8 +186,8 @@ export default function RestaurantDetailedPage({ restaurantData }) {
             <Michelin restaurant={singleRestaurant} />
             <Outdoor restaurant={singleRestaurant} />
             <View restaurant={singleRestaurant} />
-            {showPrice()}
-            {showSize()}
+            <Price restaurant={singleRestaurant} />
+            <Size restaurant={singleRestaurant} />
             {showTakeAwayOptions()}
             {showDelivery()}
             {showSmoking()}

@@ -1,4 +1,4 @@
-import { ReactComponent as Clock } from "../../icons/clock.svg";
+import { ReactComponent as OpeningTimesIcon } from "../../icons/clock.svg";
 import { displayTime } from "../../utilities/displayTime";
 
 export default function OpeningTimes({ restaurant }) {
@@ -10,7 +10,7 @@ export default function OpeningTimes({ restaurant }) {
   const close = restaurant.openingTimes[today].general.close;
   return (
     <span className="info-line">
-      <Clock className="info-svg" />
+      <OpeningTimesIcon className="info-svg" />
       <p className="info-text">{displayTime(open, close)}</p>
     </span>
   );

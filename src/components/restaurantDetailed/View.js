@@ -1,12 +1,12 @@
-import { ReactComponent as Binoculars } from "../../icons/binoculars.svg";
+import { ReactComponent as ViewIcon } from "../../icons/binoculars.svg";
 
-export default function showView({ restaurant }) {
+export default function View({ restaurant }) {
   const view = restaurant.location.view;
   const viewInfo = `${view} view`;
   if (view !== "") {
     return (
       <span className="info-line">
-        <Binoculars className="info-svg" />
+        <ViewIcon className="info-svg" />
         <p className="info-text">{viewInfo}</p>
       </span>
     );

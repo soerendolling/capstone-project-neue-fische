@@ -1,6 +1,6 @@
-import { ReactComponent as Vegetarian } from "../../icons/vegetarian.svg";
+import { ReactComponent as MeatlessIcon } from "../../icons/vegetarian.svg";
 
-export default function showMeatlessOptions({ restaurant }) {
+export default function Meatless({ restaurant }) {
   const vegetarian = restaurant.meatless.vegetarianOptions;
   const vegan = restaurant.meatless.veganOptions;
   const showMeatlessOptions =
@@ -14,7 +14,7 @@ export default function showMeatlessOptions({ restaurant }) {
 
   return (
     <span className="info-line">
-      <Vegetarian className="info-svg" />
+      <MeatlessIcon className="info-svg" />
       <p className="info-text">{showMeatlessOptions}</p>
     </span>
   );
