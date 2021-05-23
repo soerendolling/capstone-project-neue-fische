@@ -14,9 +14,11 @@ export default function OutdoorWeatherWidget() {
     if (data !== undefined) {
       if (data.current?.condition.text.includes("Partly cloudy")) {
         return <PartlyCloudy className="outdoor-weather__svg" />;
-      } else if (data.current?.condition.text.includes("sunny")) {
+      } else if (data.current?.condition.text.includes("Sunny")) {
         return <Sun className="outdoor-weather__svg" />;
-      } else if (data.current?.condition.text.includes("rain")) {
+      } else if (data.current?.condition.text.includes("Clear")) {
+        return <Sun className="outdoor-weather__svg" />;
+      } else if (data.current?.condition.text.includes("Rain")) {
         return <Rain className="outdoor-weather__svg" />;
       } else if (data.current?.condition.text.includes("Overcast")) {
         return <Cloudy className="outdoor-weather__svg" />;
