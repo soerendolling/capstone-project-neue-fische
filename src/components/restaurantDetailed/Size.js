@@ -9,5 +9,7 @@ export default function Size({ restaurant }) {
         <p className="info-text">{size}</p>
       </span>
     );
+  } else {
+    return null;
   }
 }

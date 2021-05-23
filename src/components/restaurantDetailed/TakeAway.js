@@ -11,7 +11,7 @@ export default function TakeAway({ restaurant }) {
   const open = restaurant?.openingTimes[today]?.takeAway.open;
   const close = restaurant?.openingTimes[today]?.takeAway.close;
   const takeAwayInfo = `${takeAwayDetails} from ${displayTime(open, close)}`;
-  if (takeAwayOptions) {
+  if (takeAwayOptions && open) {
     return (
       <span className="info-line">
         <TakeAwayIcon className="info-svg" />

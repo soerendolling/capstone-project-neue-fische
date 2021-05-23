@@ -11,11 +11,14 @@ export default function Meatless({ restaurant }) {
       : vegetarian
       ? "vegetarian options"
       : "no vegetarian options on the menu";
-
-  return (
-    <span className="info-line">
-      <MeatlessIcon className="info-svg" />
-      <p className="info-text">{showMeatlessOptions}</p>
-    </span>
-  );
+  if (showMeatlessOptions) {
+    return (
+      <span className="info-line">
+        <MeatlessIcon className="info-svg" />
+        <p className="info-text">{showMeatlessOptions}</p>
+      </span>
+    );
+  } else {
+    return null;
+  }
 }

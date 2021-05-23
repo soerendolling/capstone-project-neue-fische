@@ -12,5 +12,7 @@ export default function Adress({ restaurant }) {
         </a>
       </span>
     );
+  } else {
+    return null;
   }
 }
