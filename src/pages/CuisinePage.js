@@ -8,7 +8,7 @@ import FilterTagsGroup from "../components/FilterTagsGroup";
 export default function CuisinePage({ restaurantData }) {
   const tags = [
     "modern",
-    "creativ",
+    "creative",
     "vegan",
     "vegetarian",
     "local",
