@@ -151,7 +151,7 @@
     },
     {
       "id": 2,
-      "name": "Clouds Heaven's Bar and Kitchen",
+      "name": "Clouds Restaurant",
       "cuisine": ["international", "steak"],
       "takeAway": false,
       "takeAwayDetails": "",

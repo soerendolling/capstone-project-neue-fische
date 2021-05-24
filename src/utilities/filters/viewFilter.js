@@ -10,7 +10,7 @@ export function viewFilter(restaurants, filters) {
     const filterCanal = restaurant.location.view.includes("canal");
     const filterPark = restaurant.location.view.includes("park");
     if (alster && habor && canal && park) {
-      return restaurant;
+      return filterAlster || filterHabor || filterCanal || filterPark;
     } else if (alster && habor && canal) {
       return filterAlster || filterHabor || filterCanal;
     } else if (alster && habor && park) {

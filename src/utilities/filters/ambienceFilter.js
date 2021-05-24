@@ -846,7 +846,7 @@ export function ambienceFilter(restaurants, filters) {
     } else if (elegant && rustic) {
       return filterElegant || filterRustic;
     } else if (elegant && alternative) {
-      return filterElegant || alternative;
+      return filterElegant || filterAlternative;
     } else if (elegant && warm) {
       return filterElegant || filterWarm;
     } else if (elegant && hanseatic) {
