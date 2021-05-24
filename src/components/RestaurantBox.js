@@ -19,6 +19,7 @@ export default function RestaurantBox({
   area,
   getBookmarked,
   openingTimes,
+  img,
 }) {
   const [bookmarked, setBookmarked] = useState(getBookmarked);
 
@@ -29,6 +30,8 @@ export default function RestaurantBox({
     cuisine,
     area,
     isBookmarked,
+    openingTimes,
+    img,
   };
 
   function handleBookmarked() {
@@ -74,9 +77,17 @@ export default function RestaurantBox({
       (openingTimes[today].lunch.open < hour &&
         openingTimes[today].lunch.close > hour)
     ) {
-      return "Open";
+      return "open";
     } else {
-      return "Closed";
+      return "closed";
+    }
+  }
+
+  function showRestaurantImg() {
+    if (img === "") {
+      return restaurantImgOne;
+    } else {
+      return img;
     }
   }
 
@@ -92,7 +103,7 @@ export default function RestaurantBox({
       >
         <article className="restaurant-box__content">
           <img
-            src={restaurantImgOne}
+            src={showRestaurantImg()}
             alt="a restaurant"
             className="restaurant-box__image"
           />

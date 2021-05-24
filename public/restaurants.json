@@ -77,7 +77,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -147,7 +147,7 @@
         "water": "alster lake",
         "publicTransport": ["central station"]
       },
-      "img": ""
+      "img": "https://www.heritage-hamburg.com/wp-content/uploads/2018/12/Heritage-Hamburg_Alsterblick-von-der-Empore-1.jpg"
     },
     {
       "id": 2,
@@ -221,7 +221,7 @@
         "thursday": {
           "general": {
             "open": 17,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -365,7 +365,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22
+            "close": 22
           },
           "lunch": {
             "open": 0,
@@ -435,7 +435,7 @@
         "water": "",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://image.jimcdn.com/app/cms/image/transf/none/path/sae4285e8eed341c8/backgroundarea/i09499971fa82b5c6/version/1550521154/image.jpg"
     },
     {
       "id": 4,
@@ -509,7 +509,7 @@
         "thursday": {
           "general": {
             "open": 17.3,
-            "closing": 23
+            "close": 23
           },
           "lunch": {
             "open": 0,
@@ -579,7 +579,7 @@
         "water": "habor",
         "publicTransport": [""]
       },
-      "img": ""
+      "img": "https://saltandsilver.net/wp-content/uploads/2018/01/W3A3442-1024x682.jpg"
     },
     {
       "id": 5,
@@ -653,7 +653,7 @@
         "thursday": {
           "general": {
             "open": 18,
-            "closing": 22.3
+            "close": 22.3
           },
           "lunch": {
             "open": 0,
@@ -723,7 +723,7 @@
         "water": "habor",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://saltandsilver.net/wp-content/uploads/2018/07/W3A7551.jpg"
     },
     {
       "id": 6,
@@ -1011,7 +1011,7 @@
         "water": "alster lake",
         "publicTransport": ["u3", "u1", "u2", "s1"]
       },
-      "img": ""
+      "img": "https://www.ivigneri.de/Files/Pictures/1299251292-b07_gross.jpg"
     },
     {
       "id": 8,
@@ -1028,7 +1028,7 @@
         "bottom": 0
       },
       "meatless": {
-        "vegetarianOptions": false,
+        "vegetarianOptions": true,
         "veganOptions": false
       },
       "ambience": ["casual", "warm"],
@@ -1140,7 +1140,7 @@
         }
       },
       "contact": {
-        "adress": "Wexstrasse 34",
+        "adress": "Wexstrasse 34, 20355 Hamburg",
         "number": "04035713366",
         "email": "mail@trattoria-enzo.de",
         "website": "www.trattoria-enzo.de"
@@ -1149,7 +1149,7 @@
         "area": ["neustadt", "großneumakrt"],
         "view": "",
         "restaurantOutdoor": true,
-        "restaurantOutdoorDetail": "",
+        "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
         "water": "",
@@ -1299,7 +1299,7 @@
         "water": "",
         "publicTransport": ["s1", "u3"]
       },
-      "img": ""
+      "img": "https://www.pizza-bande.de/images/images1/bg-anfahrt.jpg"
     },
     {
       "id": 10,
@@ -1587,7 +1587,7 @@
         "water": "alster lake",
         "publicTransport": ["u3", "s1", "u2", "u1"]
       },
-      "img": ""
+      "img": "https://www.le-plat-du-jour.de/wp-content/uploads/2016/10/Restaurant-flach.jpg"
     },
     {
       "id": 12,
@@ -1731,7 +1731,7 @@
         "water": "habor",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://carls-brasserie.de/wp-content/uploads/sites/2/2021/05/CARLS-Aussenansicht-1-2-1.jpg"
     },
     {
       "id": 13,
@@ -2163,7 +2163,7 @@
         "water": "habor",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://d3h1lg3ksw6i6b.cloudfront.net/guide/de/2020/xlarge/1154727_pro_2.jpg"
     },
     {
       "id": 16,
@@ -2307,7 +2307,7 @@
         "water": "",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://i1.wp.com/brooklynburgerbar.de/wp-content/uploads/2018/12/karte.jpg?fit=1280%2C720&ssl=1"
     },
     {
       "id": 17,
@@ -2451,7 +2451,7 @@
         "water": "",
         "publicTransport": ["u2", "u3"]
       },
-      "img": ""
+      "img": "https://dulfsburger.de/wp-content/gf-uploads/2020/02/karo_01.jpg"
     },
     {
       "id": 18,
@@ -2580,8 +2580,8 @@
         }
       },
       "contact": {
-        "adress": "Neuer Pferdemarkt",
-        "number": "0404397823",
+        "adress": "Neuer Pferdemarkt 5, 20359 Hamburg",
+        "number": "040 4397823",
         "email": "",
         "website": "www.restaurant-nil.de"
       },
@@ -2595,7 +2595,7 @@
         "water": "",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://restaurant-nil.de/wp-content/uploads/2021/01/cropped-6header-1.jpg"
     },
     {
       "id": 19,
@@ -2746,7 +2746,7 @@
         "water": "habor",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://www.oldcommercialroom.de/wp-content/uploads/2018/07/06.jpg"
     },
     {
       "id": 20,
@@ -2890,7 +2890,7 @@
         "water": "habor",
         "publicTransport": ["u3"]
       },
-      "img": ""
+      "img": "https://www.deichgraf-hamburg.de/wp-content/uploads/2016/10/deichgraf_mg_0377_1200px.jpg"
     },
     {
       "id": 21,
@@ -3034,7 +3034,7 @@
         "water": "alster lake",
         "publicTransport": ["u3", "s1", "s11", "s21", "s31", "u1", "u2"]
       },
-      "img": ""
+      "img": "https://fraumoeller.com/wp-content/uploads/2018/10/2018_10_14_FRAU-MOELLER_DSC_2796.jpg"
     },
     {
       "id": 22,
@@ -3178,7 +3178,7 @@
         "water": "",
         "publicTransport": ["u3", "s31", "s21", "s31", "s11"]
       },
-      "img": ""
+      "img": "http://www.erikas-eck.de/wp-content/uploads/2021/01/10-500x214.jpg"
     },
     {
       "id": 23,
@@ -3322,7 +3322,7 @@
         "water": "",
         "publicTransport": [""]
       },
-      "img": ""
+      "img": "http://restaurant-dorf.de/wp-content/uploads/2016/10/11.jpeg"
     }
   ]
 }

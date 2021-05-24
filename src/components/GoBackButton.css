@@ -1,0 +1,14 @@
+.go-back-button {
+  padding: 0 15px;
+  width: auto;
+  height: 44px;
+  border: transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px var(--bright-color);
+  background: var(--gold-color);
+  font-size: var(--mainButton-size);
+  font-weight: 200;
+  letter-spacing: var(--mainButton-spacing);
+  color: var(--background-color);
+  cursor: pointer;
+}
