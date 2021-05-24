@@ -3,7 +3,7 @@ export function partOfTownFilter(restaurants, filters) {
     if (filters.partOfTown?.includes("altstadt")) {
       return restaurant.location.area.includes("altstadt");
     } else if (filters.partOfTown?.includes("st. georg")) {
-      return restaurant.location.area.includes("saint georg");
+      return restaurant.location?.area?.includes("saint georg");
     } else if (filters.partOfTown?.includes("uhlenhorst")) {
       return restaurant.location.area.includes("uhlenhorst");
     } else if (filters.partOfTown?.includes("altona")) {

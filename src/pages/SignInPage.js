@@ -1,6 +1,6 @@
 import "./SignInPage.css";
 import { ReactComponent as SignInHeadline } from "../icons/name.svg";
-import MainButton from "./MainButton";
+import MainButton from "../components/MainButton";
 import { sendNameToLocalStorage } from "../utilities/localStorage";
 
 export default function SignInPage() {

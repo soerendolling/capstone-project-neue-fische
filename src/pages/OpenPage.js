@@ -1,33 +1,32 @@
-import "./AmbiencePage.css";
+import "./OpenPage.css";
 import { ReactComponent as RightArrow } from "../icons/arrow-right-thin.svg";
 import { ReactComponent as LeftArrow } from "../icons/arrow-left-thin.svg";
-import { ReactComponent as Progress } from "../icons/ambience-progress.svg";
+import { ReactComponent as Progress } from "../icons/open-progress.svg";
 import { Link } from "react-router-dom";
-import FilterTagsGroup from "./FilterTagsGroup";
+import FilterTagsGroup from "../components/FilterTagsGroup";
 
-export default function AmbiencePage({ restaurantData }) {
+export default function OpenPage({ restaurantData }) {
   const tags = [
-    "elegant",
-    "cosy",
-    "modern",
-    "busy",
-    "traditional",
-    "trendy",
-    "rustic",
-    "alternative",
-    "warm",
-    "hanseatic",
+    "now",
+    "today",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday",
   ];
 
   return (
     <div className="app-grid">
-      <header className="ambience-header">
-        <h1 className="ambience-heading">Ambience</h1>
-        <h2 className="ambience-subheading">choose one or more</h2>
+      <header className="open-header">
+        <h1 className="open-heading">Open</h1>
+        <h2 className="open-subheading">choose one or more</h2>
       </header>
-      <main className="ambience-main">
-        <div className="ambience-tag__layout">
-          <FilterTagsGroup filterPage="ambience" filterTags={tags} />
+      <main className="open-main">
+        <div className="open-tag__layout">
+          <FilterTagsGroup filterPage="openingTimes" filterTags={tags} />
         </div>
         <Link
           to={(location) => {
@@ -37,15 +36,15 @@ export default function AmbiencePage({ restaurantData }) {
             };
           }}
         >
-          <p className="ambience-main__amount">{restaurantData.length}</p>
+          <p className="open-main__amount">{restaurantData.length}</p>
         </Link>
       </main>
-      <footer className="ambience-footer">
+      <footer className="open-footer">
         <Link
           to={(location) => {
             return {
               ...location,
-              pathname: "/open-page",
+              pathname: "/take-away-page",
             };
           }}
         >
@@ -56,7 +55,7 @@ export default function AmbiencePage({ restaurantData }) {
           to={(location) => {
             return {
               ...location,
-              pathname: "/cuisine-page",
+              pathname: "/ambience-page",
             };
           }}
         >

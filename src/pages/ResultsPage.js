@@ -1,10 +1,10 @@
 import "./ResultsPage.css";
-import RestaurantBox from "./RestaurantBox";
-import { ReactComponent as Heart } from "../icons/heart-empty-button.svg";
 import { Link } from "react-router-dom";
-import MainButton from "./MainButton";
+import { ReactComponent as Heart } from "../icons/heart-empty-button.svg";
+import MainButton from "../components/MainButton";
+import GoBackButton from "../components/GoBackButton";
+import RestaurantBox from "../components/RestaurantBox";
 import { getDataFromLocalStorage } from "../utilities/localStorage";
-import GoBackButton from "./GoBackButton";
 
 export default function ResultsPage({ restaurantData }) {
   const bookmarkedRestaurants = getDataFromLocalStorage();
