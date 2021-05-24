@@ -2,33 +2,87 @@ export function openingTimesFilter(restaurants, filters) {
   let currentDate = new Date();
   let options = { weekday: "long" };
   const getDay = new Intl.DateTimeFormat("en-US", options).format(currentDate);
-  const today = getDay.toLowerCase();
+  const todayOpen = getDay.toLowerCase();
   const hour = currentDate.getHours();
 
   return restaurants.filter((restaurant) => {
-    if (filters.openingTimes?.includes("now")) {
+    const now = filters.openingTimes?.includes("now");
+    const today = filters.openingTimes?.includes("today");
+    const monday = filters.openingTimes?.includes("monday");
+    const tuesday = filters.openingTimes?.includes("tuesday");
+    const wednesday = filters.openingTimes?.includes("wednesday");
+    const thursday = filters.openingTimes?.includes("thursday");
+    const friday = filters.openingTimes?.includes("friday");
+    const saturday = filters.openingTimes?.includes("saturday");
+    const sunday = filters.openingTimes?.includes("sunday");
+
+    const filterNow =
+      (restaurant.openingTimes[todayOpen]?.general.open < hour &&
+        restaurant.openingTimes[todayOpen]?.general.close > hour) ||
+      (restaurant.openingTimes[todayOpen]?.lunch.open < hour &&
+        restaurant.openingTimes[todayOpen]?.lunch.close > hour);
+    const filterToday = restaurant.openingTimes[todayOpen]?.general.open > 0;
+    const filterMonday = restaurant.openingTimes?.monday.general.open > 0;
+    const filterTuesday = restaurant.openingTimes?.tuesday.general.open > 0;
+    const filterWednesday = restaurant.openingTimes?.wednesday.general.open > 0;
+    const filterThursday = restaurant.openingTimes?.thursday.general.open > 0;
+    const filterFriday = restaurant.openingTimes?.friday.general.open > 0;
+    const filterSaturday = restaurant.openingTimes?.saturday.general.open > 0;
+    const filterSunday = restaurant.openingTimes?.sunday.general.open > 0;
+
+    if (
+      now &&
+      today &&
+      monday &&
+      tuesday &&
+      wednesday &&
+      thursday &&
+      friday &&
+      saturday &&
+      sunday
+    ) {
+      return restaurant;
+    } else if (
+      now &&
+      today &&
+      monday &&
+      tuesday &&
+      wednesday &&
+      thursday &&
+      friday &&
+      saturday
+    ) {
       return (
-        (restaurant.openingTimes[today].general.open < hour &&
-          restaurant.openingTimes[today].general.close > hour) ||
-        (restaurant.openingTimes[today].lunch.open < hour &&
-          restaurant.openingTimes[today].lunch.close > hour)
+        filterNow &&
+        filterToday &&
+        filterMonday &&
+        filterTuesday &&
+        filterWednesday &&
+        filterThursday &&
+        filterFriday &&
+        filterSaturday
       );
-    } else if (filters.openingTimes?.includes("today")) {
-      return restaurant.openingTimes[today].general.open > 0;
-    } else if (filters.openingTimes?.includes("monday")) {
-      return restaurant.openingTimes.monday.general.open > 0;
-    } else if (filters.openingTimes?.includes("tuesday")) {
-      return restaurant.openingTimes.tuesday.general.open > 0;
-    } else if (filters.openingTimes?.includes("wednesday")) {
-      return restaurant.openingTimes.wednesday.general.open > 0;
-    } else if (filters.openingTimes?.includes("thursday")) {
-      return restaurant.openingTimes.thursday.general.open > 0;
-    } else if (filters.openingTimes?.includes("friday")) {
-      return restaurant.openingTimes.friday.general.open > 0;
-    } else if (filters.openingTimes?.includes("saturday")) {
-      return restaurant.openingTimes.saturday.general.open > 0;
-    } else if (filters.openingTimes?.includes("sunday")) {
-      return restaurant.openingTimes.sunday.general.open > 0;
+    }
+    if (now && sunday) {
+      return filterNow || filterSunday;
+    } else if (now) {
+      return filterNow;
+    } else if (today) {
+      return filterToday;
+    } else if (monday) {
+      return filterMonday;
+    } else if (tuesday) {
+      return filterTuesday;
+    } else if (wednesday) {
+      return filterWednesday;
+    } else if (thursday) {
+      return filterThursday;
+    } else if (friday) {
+      return filterFriday;
+    } else if (saturday) {
+      return filterSaturday;
+    } else if (sunday) {
+      return filterSunday;
     }
     return true;
   });
