@@ -58,6 +58,7 @@
   font-weight: 200;
   letter-spacing: var(--mainButton-spacing);
   color: var(--background-color);
+  cursor: pointer;
 }
 
 .bookmark-footer__back {

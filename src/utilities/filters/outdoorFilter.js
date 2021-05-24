@@ -15,7 +15,7 @@ export function outdoorFilter(restaurants, filters) {
         restaurant.location.restaurantOutdoorDetail.includes("rooftop") ||
         restaurant.location.barOutdoorDetail.includes("rooftop")
       );
-    } else if (filters.outdoor?.includes("park view")) {
+    } else if (filters.outdoor?.includes("park")) {
       return (
         restaurant.location.restaurantOutdoorDetail.includes("park") ||
         restaurant.location.barOutdoorDetail.includes("park")

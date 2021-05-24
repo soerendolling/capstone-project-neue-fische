@@ -9,10 +9,16 @@ export function ambienceFilter(restaurants, filters) {
     } else if (filters.ambience?.includes("busy")) {
       return restaurant.ambience.includes("busy");
     } else if (filters.ambience?.includes("traditional")) {
+      return restaurant.ambience.includes("traditional");
+    } else if (filters.ambience?.includes("trendy")) {
       return restaurant.ambience.includes("trendy");
     } else if (filters.ambience?.includes("rustic")) {
+      return restaurant.ambience.includes("rustic");
+    } else if (filters.ambience?.includes("alternative")) {
       return restaurant.ambience.includes("alternative");
     } else if (filters.ambience?.includes("warm")) {
+      return restaurant.ambience.includes("warm");
+    } else if (filters.ambience?.includes("hanseatic")) {
       return restaurant.ambience.includes("hanseatic");
     }
     return true;
