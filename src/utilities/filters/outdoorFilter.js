@@ -35,7 +35,7 @@ export function outdoorFilter(restaurants, filters) {
     } else if (rooftop && park) {
       return filterRooftop || filterPark;
     } else if (backyard && rooftop) {
-      return filterBackyard || filterRooftop;
+      return filterBackyard + filterRooftop;
     } else if (backyard && park) {
       return filterBackyard || filterPark;
     } else if (terrace && rooftop) {
