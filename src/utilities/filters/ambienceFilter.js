@@ -835,30 +835,100 @@ export function ambienceFilter(restaurants, filters) {
       return filterCosy || filterModern || filterBusy;
     } else if (elegant && cosy) {
       return filterElegant || filterCosy;
-    } else if (elegant && hanseatic) {
-      return filterElegant || filterHanseatic;
-    } else if (warm && hanseatic) {
-      return filterWarm || filterHanseatic;
-    } else if (alternative && warm) {
-      return filterAlternative || filterWarm;
-    } else if (rustic && alternative) {
-      return filterRustic || filterAlternative;
-    } else if (trendy && rustic) {
-      return filterTrendy || filterRustic;
-    } else if (traditional && trendy) {
-      return filterTraditional || filterTrendy;
-    } else if (busy && traditional) {
-      return filterTraditional || filterTrendy;
+    } else if (elegant && modern) {
+      return filterElegant || filterModern;
+    } else if (elegant && busy) {
+      return filterElegant || filterBusy;
+    } else if (elegant && traditional) {
+      return filterElegant || filterTraditional;
+    } else if (elegant && trendy) {
+      return filterElegant || filterTrendy;
+    } else if (elegant && rustic) {
+      return filterElegant || filterRustic;
+    } else if (elegant && alternative) {
+      return filterElegant || alternative;
     } else if (elegant && warm) {
       return filterElegant || filterWarm;
-    } else if (modern && busy) {
-      return filterModern || filterBusy;
-    } else if (cosy && modern) {
-      return filterCosy || filterModern;
-    } else if (elegant && cosy) {
-      return filterElegant || filterCosy;
     } else if (elegant && hanseatic) {
       return filterElegant || filterHanseatic;
+    } else if (modern && cosy) {
+      return filterModern || filterCosy;
+    } else if (modern && busy) {
+      return filterModern || filterBusy;
+    } else if (modern && traditional) {
+      return filterModern || filterTraditional;
+    } else if (modern && trendy) {
+      return filterModern || filterTrendy;
+    } else if (modern && rustic) {
+      return filterModern || filterRustic;
+    } else if (modern && alternative) {
+      return filterModern || filterAlternative;
+    } else if (modern && warm) {
+      return filterModern || filterWarm;
+    } else if (modern && hanseatic) {
+      return filterModern || filterHanseatic;
+    } else if (cosy && busy) {
+      return filterCosy || filterBusy;
+    } else if (cosy && traditional) {
+      return filterCosy || filterTraditional;
+    } else if (cosy && trendy) {
+      return filterCosy || filterTrendy;
+    } else if (cosy && rustic) {
+      return filterCosy || filterRustic;
+    } else if (cosy && alternative) {
+      return filterCosy || filterAlternative;
+    } else if (cosy && warm) {
+      return filterCosy || filterWarm;
+    } else if (cosy && hanseatic) {
+      return filterCosy || filterHanseatic;
+    } else if (busy && traditional) {
+      return filterBusy || filterTraditional;
+    } else if (busy && trendy) {
+      return filterBusy || filterTrendy;
+    } else if (busy && rustic) {
+      return filterBusy || filterRustic;
+    } else if (busy && alternative) {
+      return filterBusy || filterAlternative;
+    } else if (busy && warm) {
+      return filterBusy || filterWarm;
+    } else if (busy && hanseatic) {
+      return filterBusy || filterHanseatic;
+    } else if (traditional && trendy) {
+      return filterTraditional || filterTrendy;
+    } else if (traditional && rustic) {
+      return filterTraditional || filterRustic;
+    } else if (traditional && alternative) {
+      return filterTraditional || filterAlternative;
+    } else if (traditional && trendy) {
+      return filterTraditional || filterTrendy;
+    } else if (traditional && rustic) {
+      return filterTraditional || filterRustic;
+    } else if (traditional && alternative) {
+      return filterTraditional || filterAlternative;
+    } else if (traditional && warm) {
+      return filterTraditional || filterWarm;
+    } else if (traditional && hanseatic) {
+      return filterTraditional || filterHanseatic;
+    } else if (trendy || rustic) {
+      return filterTrendy || filterRustic;
+    } else if (trendy || alternative) {
+      return filterTrendy || filterAlternative;
+    } else if (trendy || warm) {
+      return filterTrendy || filterWarm;
+    } else if (trendy || hanseatic) {
+      return filterTrendy || filterHanseatic;
+    } else if (rustic || alternative) {
+      return filterRustic || filterAlternative;
+    } else if (rustic || warm) {
+      return filterRustic || filterWarm;
+    } else if (rustic || hanseatic) {
+      return filterRustic || filterHanseatic;
+    } else if (alternative && warm) {
+      return filterAlternative || filterWarm;
+    } else if (alternative && hanseatic) {
+      return filterAlternative || filterHanseatic;
+    } else if (warm && hanseatic) {
+      return filterWarm || filterHanseatic;
     } else if (elegant) {
       return filterElegant;
     } else if (cosy) {
