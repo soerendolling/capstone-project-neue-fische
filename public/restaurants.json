@@ -4763,6 +4763,150 @@
         "publicTransport": ["u3"]
       },
       "img": "https://www.kinfelts.de/wp-content/gallery/impressionen/KINFELTS_LOCATION_M22_Querformat_RGB.png"
+    },
+    {
+      "id": 34,
+      "name": "Haebel",
+      "cuisine": ["french", "regional"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 90,
+        "bottom": 80
+      },
+      "meatless": {
+        "vegetarianOptions": false,
+        "veganOptions": false
+      },
+      "ambience": ["casual", "fine-dining"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "",
+        "number": "",
+        "email": "",
+        "website": ""
+      },
+      "location": {
+        "area": [""],
+        "view": "",
+        "restaurantOutdoor": false,
+        "restaurantOutdoorDetail": "",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": [""]
+      },
+      "img": "https://www.sternefresser.de/typo3temp/GB/624ee7e7a7.jpg"
     }
   ]
 }
