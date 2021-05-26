@@ -1,4 +1,9 @@
 import { ReactComponent as WebsiteIcon } from "../../icons/internet.svg";
+import PropTypes from "prop-types";
+
+Website.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Website({ restaurant }) {
   const website = restaurant?.contact?.website;

@@ -1,4 +1,9 @@
 import { ReactComponent as DeliveryIcon } from "../../icons/delivery.svg";
+import PropTypes from "prop-types";
+
+Delivery.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Delivery({ restaurant }) {
   let currentDate = new Date();

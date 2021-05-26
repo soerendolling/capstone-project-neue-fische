@@ -1,6 +1,12 @@
 import { ReactComponent as OpeningTimesIcon } from "../../icons/clock.svg";
 import { displayTime } from "../../utilities/displayTime";
 
+import PropTypes from "prop-types";
+
+OpeningTimes.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
+
 export default function OpeningTimes({ restaurant }) {
   let currentDate = new Date();
   let options = { weekday: "long" };

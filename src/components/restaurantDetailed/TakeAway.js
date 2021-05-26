@@ -1,5 +1,10 @@
 import { displayTime } from "../../utilities/displayTime";
 import { ReactComponent as TakeAwayIcon } from "../../icons/take-away.svg";
+import PropTypes from "prop-types";
+
+TakeAway.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function TakeAway({ restaurant }) {
   let currentDate = new Date();

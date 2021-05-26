@@ -3615,7 +3615,7 @@
     {
       "id": 26,
       "name": "Rive",
-      "cuisine": ["modern", "fish", "regional"],
+      "cuisine": ["fish", "seafood", "modern", "regional"],
       "takeAway": true,
       "takeAwayDetails": "pre order",
       "delivery": false,

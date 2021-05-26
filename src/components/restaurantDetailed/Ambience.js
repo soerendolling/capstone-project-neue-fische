@@ -1,3 +1,9 @@
+import PropTypes from "prop-types";
+
+Ambience.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
+
 export default function Ambience({ restaurant }) {
   const ambienceZero =
     restaurant?.ambience[0] === undefined ? "" : restaurant?.ambience[0];

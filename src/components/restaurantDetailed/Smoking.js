@@ -1,4 +1,9 @@
 import { ReactComponent as NoSmokingIcon } from "../../icons/no-smoking.svg";
+import PropTypes from "prop-types";
+
+Smoking.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Smoking({ restaurant }) {
   const smokingInside = restaurant?.smoking?.inside;

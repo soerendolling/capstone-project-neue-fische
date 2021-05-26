@@ -1,4 +1,9 @@
 import { ReactComponent as PriceIcon } from "../../icons/euro.svg";
+import PropTypes from "prop-types";
+
+Price.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Price({ restaurant }) {
   const priceTop = restaurant?.averagePrice?.top;
