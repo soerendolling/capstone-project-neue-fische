@@ -311,7 +311,7 @@
         "vegetarianOptions": true,
         "veganOptions": false
       },
-      "ambience": ["modern", "casual", "trendy"],
+      "ambience": ["trendy", "casual", "model"],
       "crowd": ["mixed", "casual"],
       "smoking": {
         "inside": false,
@@ -1016,7 +1016,7 @@
     {
       "id": 8,
       "name": "Trattoria da Enzo",
-      "cuisine": ["classic", "italian"],
+      "cuisine": ["italian", "classic"],
       "takeAway": true,
       "takeAwayDetails": "pick up at Trattoria Due",
       "delivery": false,
@@ -4479,7 +4479,7 @@
     {
       "id": 32,
       "name": "Zum Spätzle",
-      "cuisine": ["classic", "swabian", "german"],
+      "cuisine": ["swabian", "classic", "german"],
       "takeAway": false,
       "takeAwayDetails": "",
       "delivery": true,
@@ -4623,7 +4623,7 @@
     {
       "id": 33,
       "name": "Kinfelts Kitchen & Wine",
-      "cuisine": ["modern", "regional", "seasonal"],
+      "cuisine": ["regional", "modern", "seasonal"],
       "takeAway": true,
       "takeAwayDetails": "",
       "delivery": false,
@@ -4789,7 +4789,7 @@
         "outside": false
       },
       "bar": false,
-      "size": "",
+      "size": "small",
       "openingTimes": {
         "monday": {
           "general": {
@@ -4897,14 +4897,14 @@
         "website": ""
       },
       "location": {
-        "area": [""],
+        "area": ["saint pauli"],
         "view": "",
         "restaurantOutdoor": false,
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
         "water": "",
-        "publicTransport": [""]
+        "publicTransport": ["u3"]
       },
       "img": "https://www.sternefresser.de/typo3temp/GB/624ee7e7a7.jpg"
     }

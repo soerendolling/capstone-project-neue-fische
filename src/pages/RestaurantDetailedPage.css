@@ -84,6 +84,7 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  gap: 15px;
 }
 
 .bookmark {
