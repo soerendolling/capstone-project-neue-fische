@@ -3324,152 +3324,9 @@
       },
       "img": "http://restaurant-dorf.de/wp-content/uploads/2016/10/11.jpeg"
     },
+
     {
       "id": 24,
-      "name": "Berta Emil Richard Schneider",
-      "cuisine": ["modern", "regional", "german"],
-      "takeAway": true,
-      "takeAwayDetails": "",
-      "delivery": false,
-      "deliveryDetails": "",
-      "kitchenSpecials": "",
-      "michelinAwarded": "",
-      "averagePrice": {
-        "top": 30,
-        "bottom": 10
-      },
-      "meatless": {
-        "vegetarianOptions": false,
-        "veganOptions": true
-      },
-      "ambience": ["dark", "modern", "busy", "casual"],
-      "crowd": ["mixed", "trendy"],
-      "smoking": {
-        "inside": false,
-        "outside": true
-      },
-      "bar": false,
-      "size": "small",
-      "openingTimes": {
-        "monday": {
-          "general": {
-            "open": 17,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        },
-        "tuesday": {
-          "general": {
-            "open": 17,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        },
-        "wednesday": {
-          "general": {
-            "open": 17,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        },
-        "thursday": {
-          "general": {
-            "open": 17,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        },
-        "friday": {
-          "general": {
-            "open": 9,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        },
-        "saturday": {
-          "general": {
-            "open": 9,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 11,
-            "close": 16
-          }
-        },
-        "sunday": {
-          "general": {
-            "open": 9,
-            "close": 24
-          },
-          "lunch": {
-            "open": 0,
-            "close": 0
-          },
-          "takeAway": {
-            "open": 0,
-            "close": 0
-          }
-        }
-      },
-      "contact": {
-        "adress": "Kampstraße 25-27, 20357 Hamburg",
-        "number": "04020956295",
-        "email": "moin@berta-emil-richard-schneider.de",
-        "website": "https://berta-emil-richard-schneider.de/"
-      },
-      "location": {
-        "area": ["sternschanze"],
-        "view": "",
-        "restaurantOutdoor": true,
-        "restaurantOutdoorDetail": "terrace",
-        "barOutdoor": false,
-        "barOutdoorDetail": "",
-        "water": "",
-        "publicTransport": ["u3"]
-      },
-      "img": "https://cdn.website.dish.co/media/72/90/241650/berschneiderrrr-135.jpg"
-    },
-    {
-      "id": 25,
       "name": "Witthüs",
       "cuisine": ["german", "regional", "seasonal"],
       "takeAway": false,
@@ -3613,7 +3470,7 @@
       "img": "https://www.witthues.com/wp-content/uploads/2016/04/terrasse-sommer-768x512.jpg"
     },
     {
-      "id": 26,
+      "id": 25,
       "name": "Rive",
       "cuisine": ["fish", "seafood", "modern", "regional"],
       "takeAway": true,
@@ -3757,7 +3614,7 @@
       "img": "https://www.rive.de/wp-content/uploads/2019/11/Rive-Restaurant.jpg"
     },
     {
-      "id": 27,
+      "id": 26,
       "name": "Fischereihafen Restaurant",
       "cuisine": ["fish", "regional", "classic", "traditional"],
       "takeAway": true,
@@ -3901,7 +3758,7 @@
       "img": "https://www.sternklasse.de/wp-content/uploads/2016/01/12-Fischereihafen-Restaurant-HAMBURG-STERNKLASSE.jpg"
     },
     {
-      "id": 28,
+      "id": 27,
       "name": "Jellyfish",
       "cuisine": ["fish", "modern", "creative"],
       "takeAway": true,
@@ -4045,7 +3902,7 @@
       "img": "https://www.jellyfish-restaurant.de/wp-content/uploads/2020/11/Jellyfish_Food_300dpi_010-scaled-e1604597552524.jpg"
     },
     {
-      "id": 29,
+      "id": 28,
       "name": "Altes Mädchen",
       "cuisine": ["german", "modern", "regional"],
       "takeAway": false,
@@ -4189,7 +4046,7 @@
       "img": "https://altes-maedchen.com/wp-content/uploads/2020/10/P9110074.jpg"
     },
     {
-      "id": 30,
+      "id": 29,
       "name": "Tschebull",
       "cuisine": ["austrian", "modern"],
       "takeAway": true,
@@ -4333,7 +4190,7 @@
       "img": "https://www.tschebull.de/cache/widgetkit/gallery/2/rest_01-27d46ec5d6.jpg"
     },
     {
-      "id": 31,
+      "id": 30,
       "name": "Bistrot Vienna",
       "cuisine": ["austrian", "modern", "french"],
       "takeAway": true,
@@ -4477,7 +4334,7 @@
       "img": "https://hamburg.mitvergnuegen.com/wp-content/uploads/sites/2/2016/05/vienna_01-680x454.jpg"
     },
     {
-      "id": 32,
+      "id": 31,
       "name": "Zum Spätzle",
       "cuisine": ["swabian", "classic", "german"],
       "takeAway": false,
@@ -4621,7 +4478,7 @@
       "img": "https://zumspaetzle.de/____impro/1/onewebmedia/DSC_3200.jpg?etag=%22182bd-569a30a9%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=535%2B802&extract=0%2B0%2B509%2B766&quality=85"
     },
     {
-      "id": 33,
+      "id": 32,
       "name": "Kinfelts Kitchen & Wine",
       "cuisine": ["regional", "modern", "seasonal"],
       "takeAway": true,
@@ -4765,7 +4622,7 @@
       "img": "https://www.kinfelts.de/wp-content/gallery/impressionen/KINFELTS_LOCATION_M22_Querformat_RGB.png"
     },
     {
-      "id": 34,
+      "id": 33,
       "name": "Haebel",
       "cuisine": ["french", "regional"],
       "takeAway": true,
