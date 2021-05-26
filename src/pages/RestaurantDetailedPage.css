@@ -82,9 +82,8 @@ a {
 .detailed-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
-  gap: 15px;
 }
 
 .bookmark {
