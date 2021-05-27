@@ -379,7 +379,7 @@ export function openingTimesFilter(restaurants, filters) {
         filterSaturday
       );
     } else if (now) {
-      return filterNow || filterMonday;
+      return filterNow;
     } else if (today) {
       return filterToday;
     } else if (monday) {

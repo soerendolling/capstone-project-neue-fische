@@ -8,14 +8,14 @@ import FilterTagsGroup from "../components/FilterTagsGroup";
 export default function PartOfTownPage({ restaurantData }) {
   const tags = [
     "altstadt",
-    "st.georg",
+    "st. georg",
     "uhlenhorst",
     "altona",
     "sternschanze",
     "winterhude",
     "neustadt",
     "rotherbaum",
-    "habor",
+    "harbor",
     "hafencity",
     "st. pauli",
     "eppendorf",

@@ -288,7 +288,7 @@
         "restaurantOutdoorDetail": "",
         "barOutdoor": true,
         "barOutdoorDetail": "rooftop",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": ""
@@ -571,12 +571,12 @@
       },
       "location": {
         "area": ["saint pauli", "park fiction"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": [""]
       },
       "img": "https://saltandsilver.net/wp-content/uploads/2018/01/W3A3442-1024x682.jpg"
@@ -720,7 +720,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://saltandsilver.net/wp-content/uploads/2018/07/W3A7551.jpg"
@@ -1723,12 +1723,12 @@
       },
       "location": {
         "area": ["hafencity", "kaiserkai"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://carls-brasserie.de/wp-content/uploads/sites/2/2021/05/CARLS-Aussenansicht-1-2-1.jpg"
@@ -2155,12 +2155,12 @@
       },
       "location": {
         "area": ["hafencity", "kaiserkai"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://d3h1lg3ksw6i6b.cloudfront.net/guide/de/2020/xlarge/1154727_pro_2.jpg"
@@ -2743,7 +2743,7 @@
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://www.oldcommercialroom.de/wp-content/uploads/2018/07/06.jpg"
@@ -2887,7 +2887,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://www.deichgraf-hamburg.de/wp-content/uploads/2016/10/deichgraf_mg_0377_1200px.jpg"
@@ -3603,12 +3603,12 @@
       },
       "location": {
         "area": ["altona"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": [""]
       },
       "img": "https://www.rive.de/wp-content/uploads/2019/11/Rive-Restaurant.jpg"
@@ -3747,12 +3747,12 @@
       },
       "location": {
         "area": ["altona"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": [""]
       },
       "img": "https://www.sternklasse.de/wp-content/uploads/2016/01/12-Fischereihafen-Restaurant-HAMBURG-STERNKLASSE.jpg"
@@ -4616,7 +4616,7 @@
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://www.kinfelts.de/wp-content/gallery/impressionen/KINFELTS_LOCATION_M22_Querformat_RGB.png"

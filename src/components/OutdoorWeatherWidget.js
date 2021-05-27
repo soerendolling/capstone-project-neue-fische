@@ -18,9 +18,13 @@ export default function OutdoorWeatherWidget() {
         return <Sun className="outdoor-weather__svg" />;
       } else if (data.current?.condition.text.includes("Clear")) {
         return <Sun className="outdoor-weather__svg" />;
-      } else if (data.current?.condition.text.includes("Moderate rain")) {
+      } else if (
+        data.current?.condition.text.includes("Moderate or heavy rain shower")
+      ) {
         return <Rain className="outdoor-weather__svg" />;
       } else if (data.current?.condition.text.includes("Rain")) {
+        return <Rain className="outdoor-weather__svg" />;
+      } else if (data.current?.condition.text.includes("Light rain")) {
         return <Rain className="outdoor-weather__svg" />;
       } else if (data.current?.condition.text.includes("Overcast")) {
         return <Cloudy className="outdoor-weather__svg" />;
