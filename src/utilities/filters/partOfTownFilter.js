@@ -16,11 +16,11 @@ export function partOfTownFilter(restaurants, filters) {
       return restaurant.location.area.includes("neustadt");
     } else if (filters.partOfTown?.includes("rotherbaum")) {
       return restaurant.location.area.includes("rotherbaum");
-    } else if (filters.partOfTown?.includes("habor")) {
+    } else if (filters.partOfTown?.includes("harbor")) {
       return (
-        restaurant.location.area.includes("habor") ||
-        restaurant.location.view.includes("habor") ||
-        restaurant.location.water.includes("habor")
+        restaurant.location.area.includes("harbor") ||
+        restaurant.location.view.includes("harbor") ||
+        restaurant.location.water.includes("harbor")
       );
     } else if (filters.partOfTown?.includes("hafencity")) {
       return restaurant.location.area.includes("hafencity");

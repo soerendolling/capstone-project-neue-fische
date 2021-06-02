@@ -151,7 +151,7 @@
     },
     {
       "id": 2,
-      "name": "Clouds Heaven's Bar and Kitchen",
+      "name": "Clouds Restaurant",
       "cuisine": ["international", "steak"],
       "takeAway": false,
       "takeAwayDetails": "",
@@ -288,7 +288,7 @@
         "restaurantOutdoorDetail": "",
         "barOutdoor": true,
         "barOutdoorDetail": "rooftop",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": ""
@@ -311,7 +311,7 @@
         "vegetarianOptions": true,
         "veganOptions": false
       },
-      "ambience": ["modern", "casual", "trendy"],
+      "ambience": ["trendy", "casual", "model"],
       "crowd": ["mixed", "casual"],
       "smoking": {
         "inside": false,
@@ -571,12 +571,12 @@
       },
       "location": {
         "area": ["saint pauli", "park fiction"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": [""]
       },
       "img": "https://saltandsilver.net/wp-content/uploads/2018/01/W3A3442-1024x682.jpg"
@@ -720,7 +720,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://saltandsilver.net/wp-content/uploads/2018/07/W3A7551.jpg"
@@ -1016,7 +1016,7 @@
     {
       "id": 8,
       "name": "Trattoria da Enzo",
-      "cuisine": ["classic", "italian"],
+      "cuisine": ["italian", "classic"],
       "takeAway": true,
       "takeAwayDetails": "pick up at Trattoria Due",
       "delivery": false,
@@ -1723,12 +1723,12 @@
       },
       "location": {
         "area": ["hafencity", "kaiserkai"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://carls-brasserie.de/wp-content/uploads/sites/2/2021/05/CARLS-Aussenansicht-1-2-1.jpg"
@@ -2155,12 +2155,12 @@
       },
       "location": {
         "area": ["hafencity", "kaiserkai"],
-        "view": "habor",
+        "view": "harbor",
         "restaurantOutdoor": true,
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://d3h1lg3ksw6i6b.cloudfront.net/guide/de/2020/xlarge/1154727_pro_2.jpg"
@@ -2743,7 +2743,7 @@
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://www.oldcommercialroom.de/wp-content/uploads/2018/07/06.jpg"
@@ -2887,7 +2887,7 @@
         "restaurantOutdoorDetail": "terrace",
         "barOutdoor": false,
         "barOutdoorDetail": "",
-        "water": "habor",
+        "water": "harbor",
         "publicTransport": ["u3"]
       },
       "img": "https://www.deichgraf-hamburg.de/wp-content/uploads/2016/10/deichgraf_mg_0377_1200px.jpg"
@@ -3191,21 +3191,1462 @@
       "kitchenSpecials": "",
       "michelinAwarded": "",
       "averagePrice": {
-        "top": 0,
-        "bottom": 0
+        "top": 40,
+        "bottom": 20
       },
       "meatless": {
-        "vegetarianOptions": false,
+        "vegetarianOptions": true,
         "veganOptions": false
       },
-      "ambience": [""],
+      "ambience": ["dark", "rustic", "cosy", "warm"],
+      "crowd": ["mixed"],
+      "smoking": {
+        "inside": false,
+        "outside": true
+      },
+      "bar": false,
+      "size": "medium",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 18,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 18,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 18,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 18,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 18,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 0,
+            "close": 0
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "Lange Reihe 39, 20099 Hamburg",
+        "number": "04024614",
+        "email": "info@restaurant-dorf.de",
+        "website": "www.restaurant-dorf.de/"
+      },
+      "location": {
+        "area": ["saint georg"],
+        "view": "",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "terrace",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "alster lake",
+        "publicTransport": ["central station"]
+      },
+      "img": "http://restaurant-dorf.de/wp-content/uploads/2016/10/11.jpeg"
+    },
+
+    {
+      "id": 24,
+      "name": "Witthüs",
+      "cuisine": ["german", "regional", "seasonal"],
+      "takeAway": false,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 40,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["cosy", "hanseatic", "warm", "classic", "country style"],
       "crowd": [""],
       "smoking": {
         "inside": false,
         "outside": false
       },
       "bar": false,
-      "size": "",
+      "size": "medium",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 12,
+            "close": 15
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 18,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 12,
+            "close": 15
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "Elbchaussee 499a, 22587 Hamburg",
+        "number": "040860173",
+        "email": "info@witthues.de ",
+        "website": "https://www.witthues.com/contact/"
+      },
+      "location": {
+        "area": ["groß flottbek"],
+        "view": "park",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "terrace",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": [""]
+      },
+      "img": "https://www.witthues.com/wp-content/uploads/2016/04/terrasse-sommer-768x512.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Rive",
+      "cuisine": ["fish", "seafood", "modern", "regional"],
+      "takeAway": true,
+      "takeAwayDetails": "pre order",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": ["plate", "good-comfort"],
+      "averagePrice": {
+        "top": 60,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": false,
+        "veganOptions": false
+      },
+      "ambience": ["modern", "elegant"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": true
+      },
+      "bar": false,
+      "size": "medium",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 0,
+            "close": 0
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 12,
+            "close": 21.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "Van-der-Smissen-Straße 2, 22767 Hamburg",
+        "number": "0403805919",
+        "email": "info@rive.de",
+        "website": "www.rive.de"
+      },
+      "location": {
+        "area": ["altona"],
+        "view": "harbor",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "terrace",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "harbor",
+        "publicTransport": [""]
+      },
+      "img": "https://www.rive.de/wp-content/uploads/2019/11/Rive-Restaurant.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Fischereihafen Restaurant",
+      "cuisine": ["fish", "regional", "classic", "traditional"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": ["plate", "very good comfort"],
+      "averagePrice": {
+        "top": 60,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["elegant", "hanseatic", "warm", "traditional"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": true
+      },
+      "bar": true,
+      "size": "large",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 11.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 11.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 11.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 11.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 11.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 11.3,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 11.3,
+            "close": 22.3
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        }
+      },
+      "contact": {
+        "adress": "Große Elbstraße 143, 22767 Hamburg",
+        "number": "040381816",
+        "email": "info@fischereihafenrestaurant.de",
+        "website": "www.fischereihafenrestaurant.de"
+      },
+      "location": {
+        "area": ["altona"],
+        "view": "harbor",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "terrace",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "harbor",
+        "publicTransport": [""]
+      },
+      "img": "https://www.sternklasse.de/wp-content/uploads/2016/01/12-Fischereihafen-Restaurant-HAMBURG-STERNKLASSE.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Jellyfish",
+      "cuisine": ["fish", "modern", "creative"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": ["plate", "standard-comfort"],
+      "averagePrice": {
+        "top": 60,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["modern", "casual"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "small",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 11.3,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 11.3,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 11.3,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 11.3,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 14,
+            "close": 18
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 11.3,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 14,
+            "close": 18
+          }
+        }
+      },
+      "contact": {
+        "adress": "Weidenallee 12, 20357 Hamburg",
+        "number": "0404105414",
+        "email": "info@jellyfish-restaurant.de",
+        "website": "www.jellyfish-restaurant.de"
+      },
+      "location": {
+        "area": ["eimsbüttel", "sternschanze"],
+        "view": "",
+        "restaurantOutdoor": false,
+        "restaurantOutdoorDetail": "",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": ["u3"]
+      },
+      "img": "https://www.jellyfish-restaurant.de/wp-content/uploads/2020/11/Jellyfish_Food_300dpi_010-scaled-e1604597552524.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Altes Mädchen",
+      "cuisine": ["german", "modern", "regional"],
+      "takeAway": false,
+      "takeAwayDetails": "",
+      "delivery": true,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 20,
+        "bottom": 10
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["rustic", "modern", "casual", "busy"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": true
+      },
+      "bar": false,
+      "size": "large",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 12,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "Lagerstraße 28b, 20357 Hamburg",
+        "number": "040800077750",
+        "email": "info@altes-maedchen.com",
+        "website": "www.altes-maedchen.com"
+      },
+      "location": {
+        "area": ["sternschanze"],
+        "view": "",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "backyard",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": ["u3"]
+      },
+      "img": "https://altes-maedchen.com/wp-content/uploads/2020/10/P9110074.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Tschebull",
+      "cuisine": ["austrian", "modern"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 30,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": false,
+        "veganOptions": false
+      },
+      "ambience": ["elegant", "modern", "warm"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "medium",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 12,
+            "close": 16
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 12,
+            "close": 16
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 12,
+            "close": 16
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 16
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 12,
+            "close": 16
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 17,
+            "close": 21
+          },
+          "lunch": {
+            "open": 12,
+            "close": 16
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 0,
+            "close": 0
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        }
+      },
+      "contact": {
+        "adress": "Mönckebergstraße 7, 20095 Hamburg",
+        "number": "04032964796",
+        "email": "restaurant@tschebull.de",
+        "website": "www.tschebull.de"
+      },
+      "location": {
+        "area": ["altstadt"],
+        "view": "",
+        "restaurantOutdoor": false,
+        "restaurantOutdoorDetail": "",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": [""]
+      },
+      "img": "https://www.tschebull.de/cache/widgetkit/gallery/2/rest_01-27d46ec5d6.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Bistrot Vienna",
+      "cuisine": ["austrian", "modern", "french"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 30,
+        "bottom": 10
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["cosy", "busy", "warm"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": true
+      },
+      "bar": false,
+      "size": "small",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 0,
+            "close": 0
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 17.3,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 17.3,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 17.3,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 17.3,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 17.3,
+            "close": 23
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 17.3,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 16,
+            "close": 20.3
+          }
+        }
+      },
+      "contact": {
+        "adress": "Fettstrasse 2, 20357 Hamburg",
+        "number": "0404399192",
+        "email": "info@bistrot-vienna.de",
+        "website": "ww.vienna-hamburg.de"
+      },
+      "location": {
+        "area": ["eimsbüttel", "sternschanze"],
+        "view": "",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "terrace",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": ["u3"]
+      },
+      "img": "https://hamburg.mitvergnuegen.com/wp-content/uploads/sites/2/2016/05/vienna_01-680x454.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Zum Spätzle",
+      "cuisine": ["swabian", "classic", "german"],
+      "takeAway": false,
+      "takeAwayDetails": "",
+      "delivery": true,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 20,
+        "bottom": 5
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": true
+      },
+      "ambience": ["cosy", "warm", "busy", "traditional"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "small",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20.3
+          }
+        }
+      },
+      "contact": {
+        "adress": "Wexstraße 31, 20355 Hamburg",
+        "number": "04035739516",
+        "email": "kontakt@zumspaetzle.de",
+        "website": "www.zumspaetzle.de/"
+      },
+      "location": {
+        "area": ["neustadt", "großneumakrt"],
+        "view": "",
+        "restaurantOutdoor": false,
+        "restaurantOutdoorDetail": "",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "",
+        "publicTransport": [""]
+      },
+      "img": "https://zumspaetzle.de/____impro/1/onewebmedia/DSC_3200.jpg?etag=%22182bd-569a30a9%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=535%2B802&extract=0%2B0%2B509%2B766&quality=85"
+    },
+    {
+      "id": 32,
+      "name": "Kinfelts Kitchen & Wine",
+      "cuisine": ["regional", "modern", "seasonal"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": ["plate", "standard-comfort"],
+      "averagePrice": {
+        "top": 50,
+        "bottom": 20
+      },
+      "meatless": {
+        "vegetarianOptions": true,
+        "veganOptions": false
+      },
+      "ambience": ["elgant", "modern"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "medium",
+      "openingTimes": {
+        "monday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 17,
+            "close": 20
+          }
+        },
+        "tuesday": {
+          "general": {
+            "open": 18,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 17,
+            "close": 20
+          }
+        },
+        "wednesday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 17,
+            "close": 20
+          }
+        },
+        "thursday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 17,
+            "close": 20
+          }
+        },
+        "friday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "saturday": {
+          "general": {
+            "open": 12,
+            "close": 22
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        },
+        "sunday": {
+          "general": {
+            "open": 0,
+            "close": 0
+          },
+          "lunch": {
+            "open": 0,
+            "close": 0
+          },
+          "takeAway": {
+            "open": 12,
+            "close": 20
+          }
+        }
+      },
+      "contact": {
+        "adress": "Am Kaiserkai 56, 20457 Hamburg",
+        "number": "04030068369",
+        "email": "info@kinfelts.de",
+        "website": "www.kinfelts.de"
+      },
+      "location": {
+        "area": ["hafencity"],
+        "view": "canal",
+        "restaurantOutdoor": true,
+        "restaurantOutdoorDetail": "",
+        "barOutdoor": false,
+        "barOutdoorDetail": "",
+        "water": "harbor",
+        "publicTransport": ["u3"]
+      },
+      "img": "https://www.kinfelts.de/wp-content/gallery/impressionen/KINFELTS_LOCATION_M22_Querformat_RGB.png"
+    },
+    {
+      "id": 33,
+      "name": "Haebel",
+      "cuisine": ["french", "regional"],
+      "takeAway": true,
+      "takeAwayDetails": "",
+      "delivery": false,
+      "deliveryDetails": "",
+      "kitchenSpecials": "",
+      "michelinAwarded": "",
+      "averagePrice": {
+        "top": 90,
+        "bottom": 80
+      },
+      "meatless": {
+        "vegetarianOptions": false,
+        "veganOptions": false
+      },
+      "ambience": ["casual", "fine-dining"],
+      "crowd": [""],
+      "smoking": {
+        "inside": false,
+        "outside": false
+      },
+      "bar": false,
+      "size": "small",
       "openingTimes": {
         "monday": {
           "general": {
@@ -3313,16 +4754,16 @@
         "website": ""
       },
       "location": {
-        "area": [""],
+        "area": ["saint pauli"],
         "view": "",
         "restaurantOutdoor": false,
         "restaurantOutdoorDetail": "",
         "barOutdoor": false,
         "barOutdoorDetail": "",
         "water": "",
-        "publicTransport": [""]
+        "publicTransport": ["u3"]
       },
-      "img": "http://restaurant-dorf.de/wp-content/uploads/2016/10/11.jpeg"
+      "img": "https://www.sternefresser.de/typo3temp/GB/624ee7e7a7.jpg"
     }
   ]
 }

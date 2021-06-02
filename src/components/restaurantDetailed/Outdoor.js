@@ -1,4 +1,9 @@
 import { ReactComponent as OutdoorIcon } from "../../icons/terrace.svg";
+import PropTypes from "prop-types";
+
+Outdoor.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Outdoor({ restaurant }) {
   const outdoorDetail = restaurant?.location?.restaurantOutdoorDetail;

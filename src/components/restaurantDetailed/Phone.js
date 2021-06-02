@@ -1,4 +1,9 @@
 import { ReactComponent as PhoneIcon } from "../../icons/phone.svg";
+import PropTypes from "prop-types";
+
+Phone.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Phone({ restaurant }) {
   const number = restaurant?.contact?.number;

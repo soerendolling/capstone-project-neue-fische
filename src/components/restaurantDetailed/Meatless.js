@@ -1,4 +1,9 @@
 import { ReactComponent as MeatlessIcon } from "../../icons/vegetarian.svg";
+import PropTypes from "prop-types";
+
+Meatless.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Meatless({ restaurant }) {
   const vegetarian = restaurant?.meatless?.vegetarianOptions;

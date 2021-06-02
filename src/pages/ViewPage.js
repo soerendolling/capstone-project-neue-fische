@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import FilterTagsGroup from "../components/FilterTagsGroup";
 
 export default function ViewPage({ restaurantData }) {
-  const tags = ["habor view", "park view", "canal view", "alster lake view"];
+  const tags = ["harbor view", "park view", "canal view", "alster lake view"];
 
   return (
     <div className="app-grid">

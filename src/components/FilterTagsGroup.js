@@ -3,6 +3,13 @@ import { stringify, parse } from "../utilities/queryString";
 import { toggleValueInArray } from "../utilities/toggleValueInArray";
 import FilterTag from "./FilterTag";
 
+import PropTypes from "prop-types";
+
+FilterTagsGroup.propTypes = {
+  filterPage: PropTypes.string.isRequired,
+  filterTags: PropTypes.array.isRequired,
+};
+
 export default function FilterTagsGroup({ filterPage, filterTags }) {
   const location = useLocation();
   const history = useHistory();

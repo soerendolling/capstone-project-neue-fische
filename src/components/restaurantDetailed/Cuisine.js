@@ -1,3 +1,9 @@
+import PropTypes from "prop-types";
+
+Cuisine.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
+
 export default function Cuisine({ restaurant }) {
   const cuisineZero =
     restaurant?.cuisine[0] === undefined ? "" : restaurant?.cuisine[0];

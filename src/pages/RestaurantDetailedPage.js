@@ -1,5 +1,5 @@
 import "./RestaurantDetailedPage.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import restaurantImgOne from "../img/restaurant1.png";
 import GoBackButton from "../components/GoBackButton";
 import MainButton from "../components/MainButton";
@@ -76,7 +76,13 @@ export default function RestaurantDetailedPage({ restaurantData }) {
       </main>
       <footer className="detailed-footer">
         <GoBackButton className="go-back-button__rdp" />
-        <MainButton text="open on gmaps" />
+
+        <Link
+          className="detailed-footer__gmaps"
+          to={`https://www.google.com/maps/search/${singleRestaurant?.name}${singleRestaurant?.adress}`}
+        >
+          <MainButton text="open on gmaps" />
+        </Link>
       </footer>
     </div>
   );

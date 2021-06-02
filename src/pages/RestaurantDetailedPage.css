@@ -19,6 +19,7 @@ a {
   letter-spacing: var(--heading-spacing);
   font-size: var(--heading-size);
   color: var(--heading-color);
+  word-break: break-all;
 }
 
 .detailed-subheading {
@@ -82,7 +83,7 @@ a {
 .detailed-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
 }
 

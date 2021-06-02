@@ -1,13 +1,13 @@
 {
   "id": 1000,
-  "name": "",
-  "kitchen": [""],
+  "name": "Das Dorf",
+  "cuisine": ["german", "seasonal", "regional"],
   "takeAway": false,
   "takeAwayDetails": "",
   "delivery": false,
   "deliveryDetails": "",
   "kitchenSpecials": "",
-  "michelinAwarded": [""],
+  "michelinAwarded": "",
   "averagePrice": {
     "top": 0,
     "bottom": 0
@@ -16,7 +16,7 @@
     "vegetarianOptions": false,
     "veganOptions": false
   },
-  "atmosphere": [""],
+  "ambience": [""],
   "crowd": [""],
   "smoking": {
     "inside": false,
@@ -140,5 +140,5 @@
     "water": "",
     "publicTransport": [""]
   },
-  "img": ""
+  "img": "http://restaurant-dorf.de/wp-content/uploads/2016/10/11.jpeg"
 }

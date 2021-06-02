@@ -12,6 +12,17 @@ import {
   removeDataFromLocalStorageById,
 } from "../utilities/localStorage";
 
+import PropTypes from "prop-types";
+
+RestaurantBox.propTypes = {
+  restaurantId: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  cuisine: PropTypes.string.isRequired,
+  area: PropTypes.string.isRequired,
+  getBookmarked: PropTypes.bool.isRequired,
+  img: PropTypes.string,
+};
+
 export default function RestaurantBox({
   restaurantId,
   name,

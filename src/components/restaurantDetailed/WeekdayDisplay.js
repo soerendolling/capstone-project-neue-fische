@@ -1,4 +1,9 @@
 import "./WeekdayDisplay.css";
+import PropTypes from "prop-types";
+
+WeekdayDisplay.propTypes = {
+  singleRestaurant: PropTypes.object.isRequired,
+};
 
 export default function WeekdayDisplay({ singleRestaurant }) {
   let classForMonday;

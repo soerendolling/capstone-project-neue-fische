@@ -1,6 +1,11 @@
 import "./Lunch";
 import { displayTime } from "../../utilities/displayTime";
 import { ReactComponent as LunchIcon } from "../../icons/lunch.svg";
+import PropTypes from "prop-types";
+
+Lunch.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Lunch({ restaurant }) {
   let currentDate = new Date();

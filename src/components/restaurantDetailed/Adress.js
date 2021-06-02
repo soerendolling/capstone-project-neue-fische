@@ -1,4 +1,9 @@
 import { ReactComponent as AdressIcon } from "../../icons/pin.svg";
+import PropTypes from "prop-types";
+
+Adress.propTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
 
 export default function Adress({ restaurant }) {
   const adress = restaurant?.contact?.adress;
